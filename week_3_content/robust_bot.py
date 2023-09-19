@@ -3,7 +3,6 @@
 
 #%%
 # Ask user how it's going and make a comment
-
 print("How's it going?")
 reply = input()
 
@@ -12,8 +11,6 @@ if reply == "Good":
     print("What's something good that happened?")
     good_thing = input()
     print(good_thing.strip(".") + "? That's great.")
-
-
 
 # %%
 # === SECOND VERSION: Using .lower()
@@ -45,8 +42,8 @@ print(
 # %%
 # === the in keyword ===
 print("Enter year you were born")
-year = input.strip(" ,!.")
-pig_years = ["1935, 1947, 1959, 1971", "1983", "1995", "2007"]
+year = input().strip(" ,!.")
+pig_years = ["1935", "1947", "1959", "1971", "1983", "1995", "2007"]
 
 # use the in keyword to check for "inclusion"
 if year in pig_years:
@@ -85,3 +82,17 @@ if "good" in reply:
 # Get the dish name
 # Check if the dish is in any categories
 # If so, suggest a restaurant of that category
+
+japanese_foods = ["sushi", "tempura"]
+singaporean_foods = ["laksa", "chicken rice"]
+
+dish_name_from_user = input(
+    "Please tell me a food you like (e.g. laksa, sushi)"
+)
+
+japanese_restaurant_name = "TOGO Sushi"
+singaporean_restaurant_name = "Hawker Restaurant"
+if dish_name_from_user in japanese_foods:
+    print("Try out " + japanese_restaurant_name)
+elif dish_name_from_user in singaporean_foods:
+    print("Try out " + singaporean_restaurant_name)

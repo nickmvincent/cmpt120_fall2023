@@ -302,7 +302,7 @@ my_list = ["apple", "banana"]
 # Use `in` to see if a value appears as an entry of the list entries
 print(
     "apple" in my_list,
-    "kiki" in my_list
+    "kiwi" in my_list
 )
 
 # %% [markdown]
@@ -314,7 +314,7 @@ print(
 # Use `in` to see if a string appears as "substring" in another string
 
 print(
-    "app" in "apple"
+    "app" in "apple",
     "banana" in "apple"
 )
 

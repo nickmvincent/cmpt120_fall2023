@@ -1,5 +1,5 @@
 ---
-title: "Week 3-3"
+title: "CMPT 120 Week 3-3"
 date: "2023-09-20"
 author: "Nick Vincent"
 institute: "Simon Fraser University"
@@ -20,8 +20,8 @@ Housekeeping
 
 Review
 
-- Concepts (high-level) vs. spells (language rules)
-- Walk through code of all examples
+- Concepts (high-level) vs. recipes (language rules)
+- Review via code examples
 - Special focus on Loops and Range (last lecture)
 
 ## If time
@@ -315,7 +315,7 @@ print(
 # Use `in` to see if a string appears as "substring" in another string
 
 print(
-    "app" in "apple"
+    "app" in "apple",
     "banana" in "apple"
 )
 ```
@@ -488,7 +488,7 @@ Let's take a minute -- in your favorite REPL, try out as many combinations of co
 
 ## Ethics and applications
 
-- Concerns you have an are interested in?
+- Concerns you have?
 
 - Applied examples
   - Public health context

@@ -416,7 +416,7 @@ Prof.&nbsp;Nick Vincent
 <h2>Housekeeping</h2>
 <ul>
 <li>New assignment will be posted tonight.</li>
-<li>Clarifying late submissions and fixing errors</li>
+<li>Clarifying late submissions and fixing errors.</li>
 <li>Housekeeping check-in?
 <ul>
 <li>How is Canvas working for you? How about Discord?</li>
@@ -431,8 +431,7 @@ Prof.&nbsp;Nick Vincent
 <li>Concept review: loops and why we use them
 <ul>
 <li>DRY: Don’t repeat yourself</li>
-<li>An “algorithm” for when to use loops</li>
-<li>Changing things within a loop</li>
+<li>When to use loops</li>
 </ul></li>
 <li>Concept review: types and converting
 <ul>
@@ -440,7 +439,6 @@ Prof.&nbsp;Nick Vincent
 </ul></li>
 <li>Coding practice</li>
 <li>Break</li>
-<li>Start lecture 4-2</li>
 </ul>
 </section>
 <section id="practice-questions" class="slide level2">
@@ -455,37 +453,64 @@ Prof.&nbsp;Nick Vincent
 <h2>Question 1&amp;2</h2>
 <p>What would the following code output?</p>
 <p>Question 1</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"!.?hellothere"</span>.strip(<span class="st">"!.h"</span>).upper())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="bu">print</span>(<span class="st">"!.?hellothere"</span>.strip(<span class="st">"!.h"</span>).upper())</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(<span class="st">"!.?hellothere"</span>.strip(<span class="st">"!.?h"</span>).upper())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>?HELLOTHERE
+ELLOTHERE</code></pre>
+</div>
+</div>
 <p>Question 2</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>foods <span class="op">=</span> [<span class="st">"Shakshuka"</span>, <span class="st">"Burrito"</span>, <span class="st">"Burger"</span>]</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">print</span>(<span class="st">"Burger"</span>.upper().lower() <span class="kw">in</span> foods)</span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="bu">print</span>(<span class="st">"Burrito"</span>.lower().upper() <span class="kw">in</span> foods)</span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="bu">print</span>(<span class="st">"Taco"</span> <span class="kw">in</span> foods)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>foods <span class="op">=</span> [<span class="st">"Shakshuka"</span>, <span class="st">"Burrito"</span>, <span class="st">"Burger"</span>]</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="bu">print</span>(<span class="st">"Burger"</span>.upper().lower() <span class="kw">in</span> foods)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="bu">print</span>(<span class="st">"Burrito"</span>.lower().upper() <span class="kw">in</span> foods)</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="bu">print</span>(<span class="st">"Taco"</span> <span class="kw">in</span> foods)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>False
+False
+False</code></pre>
+</div>
+</div>
 </section>
 <section id="practice-question-3" class="slide level2">
 <h2>Practice Question 3</h2>
 <p>What would the following code output?</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>a <span class="op">=</span> <span class="st">"apple"</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a>b <span class="op">=</span> <span class="st">"banana"</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>c <span class="op">=</span> <span class="st">"cherry"</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="cf">if</span> a <span class="op">+</span> b <span class="kw">in</span> [<span class="st">"apple"</span>, <span class="st">"applebanana"</span>, <span class="st">"applecherry"</span>]:</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="bu">print</span>(<span class="st">"Hello"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7"></a><span class="cf">else</span>:</span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="bu">print</span>(<span class="st">"Goodbye"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>a <span class="op">=</span> <span class="st">"apple"</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>b <span class="op">=</span> <span class="st">"banana"</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>c <span class="op">=</span> <span class="st">"cherry"</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="cf">if</span> a <span class="op">+</span> b <span class="kw">in</span> [<span class="st">"apple"</span>, <span class="st">"applebanana"</span>, <span class="st">"applecherry"</span>]:</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="bu">print</span>(<span class="st">"Hello"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="cf">else</span>:</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    <span class="bu">print</span>(<span class="st">"Goodbye"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello</code></pre>
+</div>
+</div>
 </section>
 <section id="practice-question-4" class="slide level2">
 <h2>Practice Question 4</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="st">"0"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>]:</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="st">"0"</span>, <span class="st">"1"</span>, <span class="st">"2"</span>]:</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2</code></pre>
+</div>
+</div>
 </section>
 <section id="practice-question-5" class="slide level2">
 <h2>Practice Question 5</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>is_a_good_day <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>response <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Was today a good day?"</span>).lower()</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="cf">if</span> response <span class="kw">in</span> [<span class="st">"good"</span>, <span class="st">"great"</span>, <span class="st">"awesome"</span>]:</span>
-<span id="cb5-4"><a href="#cb5-4"></a>    is_a_good_day <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="bu">print</span>(is_a_good_day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>is_a_good_day <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>response <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Was today a good day?"</span>).lower()</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="cf">if</span> response <span class="kw">in</span> [<span class="st">"good"</span>, <span class="st">"great"</span>, <span class="st">"awesome"</span>]:</span>
+<span id="cb9-5"><a href="#cb9-5"></a>    is_a_good_day <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="bu">print</span>(is_a_good_day)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>What does this code print if user inputs:</p>
 <ul>
 <li>“I feel bad today”?</li>
@@ -514,20 +539,20 @@ Prof.&nbsp;Nick Vincent
 <section id="dry-in-practice" class="slide level2">
 <h2>DRY in practice</h2>
 <p>If you find yourself writing</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>item1 <span class="op">=</span> <span class="st">"soup"</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>item2 <span class="op">=</span> <span class="st">"salad"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item1 <span class="op">+</span> <span class="st">'~~~'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item2 <span class="op">+</span> <span class="st">'~~~'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>item1 <span class="op">=</span> <span class="st">"soup"</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>item2 <span class="op">=</span> <span class="st">"salad"</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item1 <span class="op">+</span> <span class="st">'~~~'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item2 <span class="op">+</span> <span class="st">'~~~'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>~~~soup~~~
 ~~~salad~~~</code></pre>
 </div>
 </div>
 <p>You may really want</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="cf">for</span> item <span class="kw">in</span> [item1, item2]:</span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item <span class="op">+</span> <span class="st">'~~~'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">for</span> item <span class="kw">in</span> [item1, item2]:</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    <span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item <span class="op">+</span> <span class="st">'~~~'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>~~~soup~~~
 ~~~salad~~~</code></pre>
@@ -538,9 +563,9 @@ Prof.&nbsp;Nick Vincent
 <h2>Quick gotcha</h2>
 <p>I actually made this error while prepping these slides!</p>
 <p>Can anyone catch it?</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="cf">for</span> item <span class="kw">in</span> [item1, item2]:</span>
-<span id="cb10-2"><a href="#cb10-2"></a>    <span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item1 <span class="op">+</span> <span class="st">'~~~'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="cf">for</span> item <span class="kw">in</span> [item1, item2]:</span>
+<span id="cb14-2"><a href="#cb14-2"></a>    <span class="bu">print</span>(<span class="st">'~~~'</span> <span class="op">+</span> item1 <span class="op">+</span> <span class="st">'~~~'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>~~~soup~~~
 ~~~soup~~~</code></pre>
@@ -556,12 +581,12 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="more-motivation-1" class="slide level2">
 <h2>More motivation</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>a <span class="op">=</span> complicated_function(x)</span>
-<span id="cb12-3"><a href="#cb12-3"></a>b <span class="op">=</span> complicated_function(a) <span class="op">+</span> other_variable</span>
-<span id="cb12-4"><a href="#cb12-4"></a>c <span class="op">=</span> random_numer</span>
-<span id="cb12-5"><a href="#cb12-5"></a>d <span class="op">=</span> a <span class="op">+</span> b <span class="op">+</span> c</span>
-<span id="cb12-6"><a href="#cb12-6"></a><span class="bu">print</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>a <span class="op">=</span> complicated_function(x)</span>
+<span id="cb16-3"><a href="#cb16-3"></a>b <span class="op">=</span> complicated_function(a) <span class="op">+</span> other_variable</span>
+<span id="cb16-4"><a href="#cb16-4"></a>c <span class="op">=</span> random_numer</span>
+<span id="cb16-5"><a href="#cb16-5"></a>d <span class="op">=</span> a <span class="op">+</span> b <span class="op">+</span> c</span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="bu">print</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>I don’t want to write this 5 times, let alone 100!</p>
 </section>
 <section id="getting-extreme-with-nested-loops" class="slide level2">
@@ -569,11 +594,11 @@ Prof.&nbsp;Nick Vincent
 <p>Loops become even more powerful when we have multiple lists.</p>
 <p>We’ll see a variety of ways later on to handle many combinations of items.</p>
 <p>As a quick example, say we want to print out a grid that looks like a game board.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
-<span id="cb13-2"><a href="#cb13-2"></a>    <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
-<span id="cb13-3"><a href="#cb13-3"></a>        <span class="bu">print</span>(<span class="st">"()"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
-<span id="cb13-4"><a href="#cb13-4"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
+<span id="cb17-2"><a href="#cb17-2"></a>    <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
+<span id="cb17-3"><a href="#cb17-3"></a>        <span class="bu">print</span>(<span class="st">"()"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>() () () () () 
 () () () () () 
@@ -590,11 +615,11 @@ Prof.&nbsp;Nick Vincent
 <li><code>end</code> is a “keyword argument” we can “pass” to the <code>print()</code> function</li>
 <li>Useful to print without a newline character!</li>
 </ul>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="bu">print</span>(<span class="st">"This"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="bu">print</span>(<span class="st">"is all"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="bu">print</span>(<span class="st">"on the same"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
-<span id="cb15-4"><a href="#cb15-4"></a><span class="bu">print</span>(<span class="st">"line."</span>, end<span class="op">=</span><span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="bu">print</span>(<span class="st">"This"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="bu">print</span>(<span class="st">"is all"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="bu">print</span>(<span class="st">"on the same"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="bu">print</span>(<span class="st">"line."</span>, end<span class="op">=</span><span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>This is all on the same line.</code></pre>
 </div>
@@ -602,12 +627,12 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="preview-example-times-table" class="slide level2">
 <h2>Preview example: Times table</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
-<span id="cb17-2"><a href="#cb17-2"></a>    <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
-<span id="cb17-3"><a href="#cb17-3"></a>        answer <span class="op">=</span> x <span class="op">*</span> y</span>
-<span id="cb17-4"><a href="#cb17-4"></a>        <span class="bu">print</span>(<span class="bu">str</span>(answer).zfill(<span class="dv">2</span>), end<span class="op">=</span><span class="st">" "</span>)</span>
-<span id="cb17-5"><a href="#cb17-5"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="cf">for</span> x <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
+<span id="cb21-2"><a href="#cb21-2"></a>    <span class="cf">for</span> y <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]:</span>
+<span id="cb21-3"><a href="#cb21-3"></a>        answer <span class="op">=</span> x <span class="op">*</span> y</span>
+<span id="cb21-4"><a href="#cb21-4"></a>        <span class="bu">print</span>(<span class="bu">str</span>(answer).zfill(<span class="dv">2</span>), end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb21-5"><a href="#cb21-5"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>01 02 03 04 05 
 02 04 06 08 10 
@@ -647,19 +672,19 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="implict-type-conversion-examples" class="slide level2">
 <h2>Implict Type Conversion examples</h2>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>result <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span>  <span class="co"># Integer division that results in a float</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="bu">print</span>(result)  <span class="co"># Output will be 2.5</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a><span class="bu">print</span>(<span class="bu">type</span>(result))  <span class="co"># Output will be &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>result <span class="op">=</span> <span class="dv">5</span> <span class="op">/</span> <span class="dv">2</span>  <span class="co"># Integer division that results in a float</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="bu">print</span>(result)  <span class="co"># Output will be 2.5</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="bu">print</span>(<span class="bu">type</span>(result))  <span class="co"># Output will be &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2.5
 &lt;class 'float'&gt;</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>result <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="fl">2.0</span>  <span class="co"># Integer + Float = Float</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="bu">print</span>(result)  <span class="co"># Output will be 7.0</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a><span class="bu">print</span>(<span class="bu">type</span>(result))  <span class="co"># Output will be &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>result <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="fl">2.0</span>  <span class="co"># Integer + Float = Float</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="bu">print</span>(result)  <span class="co"># Output will be 7.0</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="bu">print</span>(<span class="bu">type</span>(result))  <span class="co"># Output will be &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>7.0
 &lt;class 'float'&gt;</code></pre>
@@ -677,21 +702,21 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="explicit-type-conversions" class="slide level2">
 <h2>Explicit Type Conversions</h2>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>float_num <span class="op">=</span> <span class="fl">3.5</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a>int_num <span class="op">=</span> <span class="bu">int</span>(float_num)  <span class="co"># Converting float to integer</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a><span class="bu">print</span>(int_num)  <span class="co"># Output will be 3</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a><span class="bu">print</span>(<span class="bu">type</span>(int_num))  <span class="co"># Output will be &lt;class 'int'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a>float_num <span class="op">=</span> <span class="fl">3.5</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>int_num <span class="op">=</span> <span class="bu">int</span>(float_num)  <span class="co"># Converting float to integer</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a><span class="bu">print</span>(int_num)  <span class="co"># Output will be 3</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="bu">print</span>(<span class="bu">type</span>(int_num))  <span class="co"># Output will be &lt;class 'int'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3
 &lt;class 'int'&gt;</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>int_num <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a>str_num <span class="op">=</span> <span class="bu">str</span>(int_num)  <span class="co"># Converting integer to string</span></span>
-<span id="cb25-3"><a href="#cb25-3"></a><span class="bu">print</span>(str_num)  <span class="co"># Output will be '5'</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a><span class="bu">print</span>(<span class="bu">type</span>(str_num))  <span class="co"># Output will be &lt;class 'str'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a>int_num <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a>str_num <span class="op">=</span> <span class="bu">str</span>(int_num)  <span class="co"># Converting integer to string</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="bu">print</span>(str_num)  <span class="co"># Output will be '5'</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="bu">print</span>(<span class="bu">type</span>(str_num))  <span class="co"># Output will be &lt;class 'str'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>5
 &lt;class 'str'&gt;</code></pre>
@@ -701,11 +726,11 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="explicit-type-conversions-1" class="slide level2">
 <h2>Explicit Type Conversions</h2>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a>str_num <span class="op">=</span> <span class="st">"3.5"</span></span>
-<span id="cb27-2"><a href="#cb27-2"></a>float_num <span class="op">=</span> <span class="bu">float</span>(str_num)  <span class="co"># Converting string to float</span></span>
-<span id="cb27-3"><a href="#cb27-3"></a><span class="bu">print</span>(float_num)  <span class="co"># Output will be 3.5</span></span>
-<span id="cb27-4"><a href="#cb27-4"></a><span class="bu">print</span>(<span class="bu">type</span>(float_num))  <span class="co"># Output will be &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>str_num <span class="op">=</span> <span class="st">"3.5"</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>float_num <span class="op">=</span> <span class="bu">float</span>(str_num)  <span class="co"># Converting string to float</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="bu">print</span>(float_num)  <span class="co"># Output will be 3.5</span></span>
+<span id="cb31-4"><a href="#cb31-4"></a><span class="bu">print</span>(<span class="bu">type</span>(float_num))  <span class="co"># Output will be &lt;class 'float'&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>3.5
 &lt;class 'float'&gt;</code></pre>
@@ -739,8 +764,8 @@ Prof.&nbsp;Nick Vincent
 </ul></li>
 </ul>
 <p>Assume we get user input in two variables like so:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a>likes_spicy <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Do you like spicy food?"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2"></a>eats_meat <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Do you eat meat?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a>likes_spicy <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Do you like spicy food?"</span>)</span>
+<span id="cb33-2"><a href="#cb33-2"></a>eats_meat <span class="op">=</span> <span class="bu">input</span>(<span class="st">'Do you eat meat?'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>How should we print out a recommendation?</p>
 </section>
 <section id="break" class="slide level2">
@@ -799,7 +824,7 @@ Prof.&nbsp;Nick Vincent
 <p>RecSys might seem mostly relevant to people who want “tech” jobs</p>
 <p>But the core task of recsys: use what I like and what everybody else likes to match some content to me is broadly applicable</p>
 <p>Polling and voting can be modelled as recsys problem (“Top 10 candidates for you!”)</p>
-<p>Recommendation can be made subject to constraints – suggest me something fun to do with minimal externalities</p>
+<p>Recommendation can be made subject to constraints – suggest me something fun to do with minimal externalities.</p>
 <p>Think about how this might be relevant to you! We’ll come back to it.</p>
 </section>
 <section id="ethical-questions" class="slide level2">
@@ -821,31 +846,31 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="counting" class="slide level2">
 <h2>Counting</h2>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="co"># This program should get input 5 times</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a><span class="co"># Each time, the program should ask users</span></span>
-<span id="cb30-3"><a href="#cb30-3"></a><span class="co"># for report their favorite place to get coffee</span></span>
-<span id="cb30-4"><a href="#cb30-4"></a><span class="co"># For this version, use a fixed set of options</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># This program should get input 5 times</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="co"># Each time, the program should ask users</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a><span class="co"># for report their favorite place to get coffee</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a><span class="co"># For this version, use a fixed set of options</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="building-up-our-code-part-1" class="slide level2">
 <h2>Building up our code: part 1</h2>
-<div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># Store votes for starbucks in a variable. </span></span>
-<span id="cb31-2"><a href="#cb31-2"></a><span class="co"># the variable starts at 0.</span></span>
-<span id="cb31-3"><a href="#cb31-3"></a>starbucks_votes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb31-4"><a href="#cb31-4"></a></span>
-<span id="cb31-5"><a href="#cb31-5"></a><span class="co"># Get user input</span></span>
-<span id="cb31-6"><a href="#cb31-6"></a><span class="co"># choice = input("What's your favorite place to get coffee?")</span></span>
-<span id="cb31-7"><a href="#cb31-7"></a></span>
-<span id="cb31-8"><a href="#cb31-8"></a><span class="co"># placeholder answer for testing</span></span>
-<span id="cb31-9"><a href="#cb31-9"></a>choice <span class="op">=</span> <span class="st">"starbucks"</span></span>
-<span id="cb31-10"><a href="#cb31-10"></a></span>
-<span id="cb31-11"><a href="#cb31-11"></a><span class="co"># if the answers was starbucks, add one vote</span></span>
-<span id="cb31-12"><a href="#cb31-12"></a><span class="cf">if</span> choice.lower() <span class="op">==</span> <span class="st">"starbucks"</span>:</span>
-<span id="cb31-13"><a href="#cb31-13"></a>    starbucks_votes <span class="op">=</span> starbucks_votes <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb31-14"><a href="#cb31-14"></a></span>
-<span id="cb31-15"><a href="#cb31-15"></a><span class="bu">print</span>(starbucks_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># Store votes for starbucks in a variable. </span></span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="co"># the variable starts at 0.</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a>starbucks_votes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb35-4"><a href="#cb35-4"></a></span>
+<span id="cb35-5"><a href="#cb35-5"></a><span class="co"># Get user input</span></span>
+<span id="cb35-6"><a href="#cb35-6"></a><span class="co"># choice = input("What's your favorite place to get coffee?")</span></span>
+<span id="cb35-7"><a href="#cb35-7"></a></span>
+<span id="cb35-8"><a href="#cb35-8"></a><span class="co"># placeholder answer for testing</span></span>
+<span id="cb35-9"><a href="#cb35-9"></a>choice <span class="op">=</span> <span class="st">"starbucks"</span></span>
+<span id="cb35-10"><a href="#cb35-10"></a></span>
+<span id="cb35-11"><a href="#cb35-11"></a><span class="co"># if the answers was starbucks, add one vote</span></span>
+<span id="cb35-12"><a href="#cb35-12"></a><span class="cf">if</span> choice.lower() <span class="op">==</span> <span class="st">"starbucks"</span>:</span>
+<span id="cb35-13"><a href="#cb35-13"></a>    starbucks_votes <span class="op">=</span> starbucks_votes <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb35-14"><a href="#cb35-14"></a></span>
+<span id="cb35-15"><a href="#cb35-15"></a><span class="bu">print</span>(starbucks_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1</code></pre>
 </div>
@@ -867,24 +892,24 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="building-up-our-code-part-2" class="slide level2">
 <h2>Building up our code: part 2</h2>
-<div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Store votes for starbucks in a variable. </span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="co"># the variable starts at 0.</span></span>
-<span id="cb33-3"><a href="#cb33-3"></a>starbucks_votes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb33-4"><a href="#cb33-4"></a>tims_votes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb33-5"><a href="#cb33-5"></a></span>
-<span id="cb33-6"><a href="#cb33-6"></a><span class="co"># Get user input</span></span>
-<span id="cb33-7"><a href="#cb33-7"></a><span class="co"># choice = input("What's your favorite place to get coffee?")</span></span>
-<span id="cb33-8"><a href="#cb33-8"></a>choice <span class="op">=</span> <span class="st">"starbucks"</span></span>
-<span id="cb33-9"><a href="#cb33-9"></a></span>
-<span id="cb33-10"><a href="#cb33-10"></a><span class="co"># if the answers was starbucks, add one vote</span></span>
-<span id="cb33-11"><a href="#cb33-11"></a><span class="cf">if</span> choice.lower() <span class="op">==</span> <span class="st">"starbucks"</span>:</span>
-<span id="cb33-12"><a href="#cb33-12"></a>    starbucks_votes <span class="op">=</span> starbucks_votes <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb33-13"><a href="#cb33-13"></a><span class="cf">elif</span> choice.lower() <span class="op">==</span> <span class="st">"tim hortons"</span>:</span>
-<span id="cb33-14"><a href="#cb33-14"></a>    tims_votes <span class="op">=</span> tims_votes <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb33-15"><a href="#cb33-15"></a></span>
-<span id="cb33-16"><a href="#cb33-16"></a><span class="bu">print</span>(starbucks_votes)</span>
-<span id="cb33-17"><a href="#cb33-17"></a><span class="bu">print</span>(tims_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># Store votes for starbucks in a variable. </span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="co"># the variable starts at 0.</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a>starbucks_votes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a>tims_votes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb37-5"><a href="#cb37-5"></a></span>
+<span id="cb37-6"><a href="#cb37-6"></a><span class="co"># Get user input</span></span>
+<span id="cb37-7"><a href="#cb37-7"></a><span class="co"># choice = input("What's your favorite place to get coffee?")</span></span>
+<span id="cb37-8"><a href="#cb37-8"></a>choice <span class="op">=</span> <span class="st">"starbucks"</span></span>
+<span id="cb37-9"><a href="#cb37-9"></a></span>
+<span id="cb37-10"><a href="#cb37-10"></a><span class="co"># if the answers was starbucks, add one vote</span></span>
+<span id="cb37-11"><a href="#cb37-11"></a><span class="cf">if</span> choice.lower() <span class="op">==</span> <span class="st">"starbucks"</span>:</span>
+<span id="cb37-12"><a href="#cb37-12"></a>    starbucks_votes <span class="op">=</span> starbucks_votes <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb37-13"><a href="#cb37-13"></a><span class="cf">elif</span> choice.lower() <span class="op">==</span> <span class="st">"tim hortons"</span>:</span>
+<span id="cb37-14"><a href="#cb37-14"></a>    tims_votes <span class="op">=</span> tims_votes <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb37-15"><a href="#cb37-15"></a></span>
+<span id="cb37-16"><a href="#cb37-16"></a><span class="bu">print</span>(starbucks_votes)</span>
+<span id="cb37-17"><a href="#cb37-17"></a><span class="bu">print</span>(tims_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 0</code></pre>
@@ -896,37 +921,37 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="one-answer" class="slide level2">
 <h2>One answer</h2>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># This program should get input 5 times</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a><span class="co"># Each time, the program should ask users</span></span>
-<span id="cb35-3"><a href="#cb35-3"></a><span class="co"># for report their favorite place to get coffee</span></span>
-<span id="cb35-4"><a href="#cb35-4"></a><span class="co"># For this version, use a fixed set of options</span></span>
-<span id="cb35-5"><a href="#cb35-5"></a></span>
-<span id="cb35-6"><a href="#cb35-6"></a><span class="co"># Initialize vote counts for each coffee place to 0</span></span>
-<span id="cb35-7"><a href="#cb35-7"></a>starbucks_votes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb35-8"><a href="#cb35-8"></a>tims_votes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb35-9"><a href="#cb35-9"></a>other_votes <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb35-10"><a href="#cb35-10"></a></span>
-<span id="cb35-11"><a href="#cb35-11"></a><span class="co"># Loop 5 times to get 5 different inputs</span></span>
-<span id="cb35-12"><a href="#cb35-12"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb35-13"><a href="#cb35-13"></a>    <span class="co"># Display the options to the user</span></span>
-<span id="cb35-14"><a href="#cb35-14"></a>    <span class="bu">print</span>(<span class="st">"Options: Starbucks, Tim Hortons, Other"</span>)</span>
-<span id="cb35-15"><a href="#cb35-15"></a>    </span>
-<span id="cb35-16"><a href="#cb35-16"></a>    <span class="co"># Get user input</span></span>
-<span id="cb35-17"><a href="#cb35-17"></a>    choice <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What's your favorite place to get coffee? "</span>)</span>
-<span id="cb35-18"><a href="#cb35-18"></a></span>
-<span id="cb35-19"><a href="#cb35-19"></a>    <span class="co"># Update vote counts based on user input</span></span>
-<span id="cb35-20"><a href="#cb35-20"></a>    <span class="cf">if</span> choice.lower() <span class="op">==</span> <span class="st">"starbucks"</span>:</span>
-<span id="cb35-21"><a href="#cb35-21"></a>        starbucks_votes <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb35-22"><a href="#cb35-22"></a>    <span class="cf">elif</span> choice.lower() <span class="op">==</span> <span class="st">"tim hortons"</span>:</span>
-<span id="cb35-23"><a href="#cb35-23"></a>        tims_votes <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb35-24"><a href="#cb35-24"></a>    <span class="cf">else</span>:</span>
-<span id="cb35-25"><a href="#cb35-25"></a>        other_votes <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb35-26"><a href="#cb35-26"></a></span>
-<span id="cb35-27"><a href="#cb35-27"></a><span class="co"># Display the final vote counts</span></span>
-<span id="cb35-28"><a href="#cb35-28"></a><span class="bu">print</span>(<span class="st">"Vote Counts:"</span>)</span>
-<span id="cb35-29"><a href="#cb35-29"></a><span class="bu">print</span>(<span class="st">"Starbucks:"</span>, starbucks_votes)</span>
-<span id="cb35-30"><a href="#cb35-30"></a><span class="bu">print</span>(<span class="st">"Tim Hortons:"</span>, tims_votes)</span>
-<span id="cb35-31"><a href="#cb35-31"></a><span class="bu">print</span>(<span class="st">"Other:"</span>, other_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a><span class="co"># This program should get input 5 times</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="co"># Each time, the program should ask users</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a><span class="co"># for report their favorite place to get coffee</span></span>
+<span id="cb39-4"><a href="#cb39-4"></a><span class="co"># For this version, use a fixed set of options</span></span>
+<span id="cb39-5"><a href="#cb39-5"></a></span>
+<span id="cb39-6"><a href="#cb39-6"></a><span class="co"># Initialize vote counts for each coffee place to 0</span></span>
+<span id="cb39-7"><a href="#cb39-7"></a>starbucks_votes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb39-8"><a href="#cb39-8"></a>tims_votes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb39-9"><a href="#cb39-9"></a>other_votes <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb39-10"><a href="#cb39-10"></a></span>
+<span id="cb39-11"><a href="#cb39-11"></a><span class="co"># Loop 5 times to get 5 different inputs</span></span>
+<span id="cb39-12"><a href="#cb39-12"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb39-13"><a href="#cb39-13"></a>    <span class="co"># Display the options to the user</span></span>
+<span id="cb39-14"><a href="#cb39-14"></a>    <span class="bu">print</span>(<span class="st">"Options: Starbucks, Tim Hortons, Other"</span>)</span>
+<span id="cb39-15"><a href="#cb39-15"></a>    </span>
+<span id="cb39-16"><a href="#cb39-16"></a>    <span class="co"># Get user input</span></span>
+<span id="cb39-17"><a href="#cb39-17"></a>    choice <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What's your favorite place to get coffee? "</span>)</span>
+<span id="cb39-18"><a href="#cb39-18"></a></span>
+<span id="cb39-19"><a href="#cb39-19"></a>    <span class="co"># Update vote counts based on user input</span></span>
+<span id="cb39-20"><a href="#cb39-20"></a>    <span class="cf">if</span> choice.lower() <span class="op">==</span> <span class="st">"starbucks"</span>:</span>
+<span id="cb39-21"><a href="#cb39-21"></a>        starbucks_votes <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb39-22"><a href="#cb39-22"></a>    <span class="cf">elif</span> choice.lower() <span class="op">==</span> <span class="st">"tim hortons"</span>:</span>
+<span id="cb39-23"><a href="#cb39-23"></a>        tims_votes <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb39-24"><a href="#cb39-24"></a>    <span class="cf">else</span>:</span>
+<span id="cb39-25"><a href="#cb39-25"></a>        other_votes <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb39-26"><a href="#cb39-26"></a></span>
+<span id="cb39-27"><a href="#cb39-27"></a><span class="co"># Display the final vote counts</span></span>
+<span id="cb39-28"><a href="#cb39-28"></a><span class="bu">print</span>(<span class="st">"Vote Counts:"</span>)</span>
+<span id="cb39-29"><a href="#cb39-29"></a><span class="bu">print</span>(<span class="st">"Starbucks:"</span>, starbucks_votes)</span>
+<span id="cb39-30"><a href="#cb39-30"></a><span class="bu">print</span>(<span class="st">"Tim Hortons:"</span>, tims_votes)</span>
+<span id="cb39-31"><a href="#cb39-31"></a><span class="bu">print</span>(<span class="st">"Other:"</span>, other_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="what-if-we-want-to-use-string-concatenation" class="slide level2">
 <h2>What if we want to use string concatenation</h2>
@@ -935,13 +960,13 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="using-string-concatenation-we-have-to-convert" class="slide level2">
 <h2>Using string concatenation: we have to convert</h2>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"></a>starbucks_votes <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a>tims_votes <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb36-3"><a href="#cb36-3"></a>other_votes <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb36-4"><a href="#cb36-4"></a><span class="bu">print</span>(<span class="st">"Starbucks:"</span> <span class="op">+</span> <span class="bu">str</span>(starbucks_votes))</span>
-<span id="cb36-5"><a href="#cb36-5"></a><span class="bu">print</span>(<span class="st">"Tim Hortons:"</span> <span class="op">+</span> <span class="bu">str</span>(tims_votes))</span>
-<span id="cb36-6"><a href="#cb36-6"></a><span class="bu">print</span>(<span class="st">"Other:"</span> <span class="op">+</span> <span class="bu">str</span>(other_votes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a>starbucks_votes <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>tims_votes <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb40-3"><a href="#cb40-3"></a>other_votes <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb40-4"><a href="#cb40-4"></a><span class="bu">print</span>(<span class="st">"Starbucks:"</span> <span class="op">+</span> <span class="bu">str</span>(starbucks_votes))</span>
+<span id="cb40-5"><a href="#cb40-5"></a><span class="bu">print</span>(<span class="st">"Tim Hortons:"</span> <span class="op">+</span> <span class="bu">str</span>(tims_votes))</span>
+<span id="cb40-6"><a href="#cb40-6"></a><span class="bu">print</span>(<span class="st">"Other:"</span> <span class="op">+</span> <span class="bu">str</span>(other_votes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Starbucks:15
 Tim Hortons:30
@@ -960,26 +985,26 @@ Other:5</code></pre>
 </section>
 <section id="percentage-example" class="slide level2">
 <h2>Percentage example:</h2>
-<div class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1"></a><span class="co"># imagine we polled 50 people</span></span>
-<span id="cb38-2"><a href="#cb38-2"></a>starbucks_votes <span class="op">=</span> <span class="dv">15</span></span>
-<span id="cb38-3"><a href="#cb38-3"></a>tims_votes <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb38-4"><a href="#cb38-4"></a>other_votes <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb38-5"><a href="#cb38-5"></a><span class="co"># Calculate the total number of votes</span></span>
-<span id="cb38-6"><a href="#cb38-6"></a>total_votes <span class="op">=</span> starbucks_votes <span class="op">+</span> tims_votes <span class="op">+</span> other_votes</span>
-<span id="cb38-7"><a href="#cb38-7"></a><span class="co"># Calculate the percentage of votes for each option</span></span>
-<span id="cb38-8"><a href="#cb38-8"></a><span class="cf">if</span> total_votes <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb38-9"><a href="#cb38-9"></a>    starbucks_percentage <span class="op">=</span> (starbucks_votes <span class="op">/</span> total_votes) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb38-10"><a href="#cb38-10"></a>    tims_percentage <span class="op">=</span> (tims_votes <span class="op">/</span> total_votes) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb38-11"><a href="#cb38-11"></a>    other_percentage <span class="op">=</span> (other_votes <span class="op">/</span> total_votes) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb38-12"><a href="#cb38-12"></a></span>
-<span id="cb38-13"><a href="#cb38-13"></a>    <span class="co"># Display the final vote counts and percentages</span></span>
-<span id="cb38-14"><a href="#cb38-14"></a>    <span class="bu">print</span>(<span class="st">"Vote Counts and percentages:"</span>)</span>
-<span id="cb38-15"><a href="#cb38-15"></a>    <span class="bu">print</span>(<span class="st">"Starbucks: "</span> <span class="op">+</span> <span class="bu">str</span>(starbucks_votes) <span class="op">+</span> <span class="st">" ("</span> <span class="op">+</span> <span class="bu">str</span>(starbucks_votes <span class="op">/</span> total_votes <span class="op">*</span> <span class="dv">100</span>) <span class="op">+</span> <span class="st">")"</span>)</span>
-<span id="cb38-16"><a href="#cb38-16"></a>    <span class="bu">print</span>(<span class="st">"Tim Hortons: "</span> <span class="op">+</span> <span class="bu">str</span>(tims_votes) <span class="op">+</span> <span class="st">" ("</span> <span class="op">+</span> <span class="bu">str</span>(tims_votes <span class="op">/</span> total_votes <span class="op">*</span> <span class="dv">100</span>) <span class="op">+</span> <span class="st">")"</span>)</span>
-<span id="cb38-17"><a href="#cb38-17"></a>    <span class="bu">print</span>(<span class="st">"Other: "</span> <span class="op">+</span> <span class="bu">str</span>(other_votes) <span class="op">+</span> <span class="st">" ("</span> <span class="op">+</span> <span class="bu">str</span>(other_votes <span class="op">/</span> total_votes <span class="op">*</span> <span class="dv">100</span>) <span class="op">+</span> <span class="st">")"</span>)</span>
-<span id="cb38-18"><a href="#cb38-18"></a><span class="cf">else</span>:</span>
-<span id="cb38-19"><a href="#cb38-19"></a>    <span class="bu">print</span>(<span class="st">"No votes were cast."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a><span class="co"># imagine we polled 50 people</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>starbucks_votes <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb42-3"><a href="#cb42-3"></a>tims_votes <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb42-4"><a href="#cb42-4"></a>other_votes <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb42-5"><a href="#cb42-5"></a><span class="co"># Calculate the total number of votes</span></span>
+<span id="cb42-6"><a href="#cb42-6"></a>total_votes <span class="op">=</span> starbucks_votes <span class="op">+</span> tims_votes <span class="op">+</span> other_votes</span>
+<span id="cb42-7"><a href="#cb42-7"></a><span class="co"># Calculate the percentage of votes for each option</span></span>
+<span id="cb42-8"><a href="#cb42-8"></a><span class="cf">if</span> total_votes <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb42-9"><a href="#cb42-9"></a>    starbucks_percentage <span class="op">=</span> (starbucks_votes <span class="op">/</span> total_votes) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb42-10"><a href="#cb42-10"></a>    tims_percentage <span class="op">=</span> (tims_votes <span class="op">/</span> total_votes) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb42-11"><a href="#cb42-11"></a>    other_percentage <span class="op">=</span> (other_votes <span class="op">/</span> total_votes) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb42-12"><a href="#cb42-12"></a></span>
+<span id="cb42-13"><a href="#cb42-13"></a>    <span class="co"># Display the final vote counts and percentages</span></span>
+<span id="cb42-14"><a href="#cb42-14"></a>    <span class="bu">print</span>(<span class="st">"Vote Counts and percentages:"</span>)</span>
+<span id="cb42-15"><a href="#cb42-15"></a>    <span class="bu">print</span>(<span class="st">"Starbucks: "</span> <span class="op">+</span> <span class="bu">str</span>(starbucks_votes) <span class="op">+</span> <span class="st">" ("</span> <span class="op">+</span> <span class="bu">str</span>(starbucks_votes <span class="op">/</span> total_votes <span class="op">*</span> <span class="dv">100</span>) <span class="op">+</span> <span class="st">")"</span>)</span>
+<span id="cb42-16"><a href="#cb42-16"></a>    <span class="bu">print</span>(<span class="st">"Tim Hortons: "</span> <span class="op">+</span> <span class="bu">str</span>(tims_votes) <span class="op">+</span> <span class="st">" ("</span> <span class="op">+</span> <span class="bu">str</span>(tims_votes <span class="op">/</span> total_votes <span class="op">*</span> <span class="dv">100</span>) <span class="op">+</span> <span class="st">")"</span>)</span>
+<span id="cb42-17"><a href="#cb42-17"></a>    <span class="bu">print</span>(<span class="st">"Other: "</span> <span class="op">+</span> <span class="bu">str</span>(other_votes) <span class="op">+</span> <span class="st">" ("</span> <span class="op">+</span> <span class="bu">str</span>(other_votes <span class="op">/</span> total_votes <span class="op">*</span> <span class="dv">100</span>) <span class="op">+</span> <span class="st">")"</span>)</span>
+<span id="cb42-18"><a href="#cb42-18"></a><span class="cf">else</span>:</span>
+<span id="cb42-19"><a href="#cb42-19"></a>    <span class="bu">print</span>(<span class="st">"No votes were cast."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Vote Counts and percentages:
 Starbucks: 15 (30.0)
@@ -1013,7 +1038,7 @@ Other: 5 (10.0)</code></pre>
 <section id="how-to-use-f-strings" class="slide level2">
 <h2>How to use f strings</h2>
 <p>Recipe: - <code>f"Variable 1 is {variable_name1}"</code> - <code>f"Variable 2 with two decimal places is {variable_name2:.2f}"</code> - <code>{variable_name1}</code> says look for a variable named variable_name1 and fill in its values - <code>{variable_name:.2f}</code> says look for a variables named variable_name2 and print it as a float with 2 decimal places (.2 = two decimal places, f = float)</p>
-<div class="cell" data-execution_count="17">
+<div class="cell" data-execution_count="21">
 <div class="cell-output cell-output-stdout">
 <pre><code>Vote Counts:
 Starbucks: 15 (30.00%)
@@ -1025,8 +1050,8 @@ Other: 5 (10.00%)</code></pre>
 <section id="preview-the-string-format-method" class="slide level2">
 <h2>Preview: the string <code>format</code> method</h2>
 <p>We can also define a string with <code>{}</code> or <code>{:.2f}</code> in it and call <code>.format()</code> to fill it in</p>
-<div class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1"></a><span class="bu">print</span>(<span class="st">"Starbucks %: </span><span class="sc">{:.2f}</span><span class="st">)"</span>.<span class="bu">format</span>(starbucks_percentage))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a><span class="bu">print</span>(<span class="st">"Starbucks %: </span><span class="sc">{:.2f}</span><span class="st">)"</span>.<span class="bu">format</span>(starbucks_percentage))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Starbucks %: 30.00)</code></pre>
 </div>
@@ -1044,16 +1069,16 @@ Other: 5 (10.00%)</code></pre>
 <li>using f strings</li>
 <li>using .format()</li>
 </ul>
-<div class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
-<span id="cb43-2"><a href="#cb43-2"></a><span class="co"># 1. Using string concatenation</span></span>
-<span id="cb43-3"><a href="#cb43-3"></a><span class="bu">print</span>(<span class="st">"Hello, "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span>)</span>
-<span id="cb43-4"><a href="#cb43-4"></a><span class="co"># 2. Using print() with multiple arguments</span></span>
-<span id="cb43-5"><a href="#cb43-5"></a><span class="bu">print</span>(<span class="st">"Hello, "</span>, name, <span class="st">"!"</span>, sep<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb43-6"><a href="#cb43-6"></a><span class="co"># 3. Using f-strings</span></span>
-<span id="cb43-7"><a href="#cb43-7"></a><span class="bu">print</span>(<span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span>)</span>
-<span id="cb43-8"><a href="#cb43-8"></a><span class="co"># 4. Using .format()</span></span>
-<span id="cb43-9"><a href="#cb43-9"></a><span class="bu">print</span>(<span class="st">"Hello, </span><span class="sc">{}</span><span class="st">!"</span>.<span class="bu">format</span>(name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a>name <span class="op">=</span> <span class="st">"Alice"</span></span>
+<span id="cb47-2"><a href="#cb47-2"></a><span class="co"># 1. Using string concatenation</span></span>
+<span id="cb47-3"><a href="#cb47-3"></a><span class="bu">print</span>(<span class="st">"Hello, "</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">"!"</span>)</span>
+<span id="cb47-4"><a href="#cb47-4"></a><span class="co"># 2. Using print() with multiple arguments</span></span>
+<span id="cb47-5"><a href="#cb47-5"></a><span class="bu">print</span>(<span class="st">"Hello, "</span>, name, <span class="st">"!"</span>, sep<span class="op">=</span><span class="st">""</span>)</span>
+<span id="cb47-6"><a href="#cb47-6"></a><span class="co"># 3. Using f-strings</span></span>
+<span id="cb47-7"><a href="#cb47-7"></a><span class="bu">print</span>(<span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span>)</span>
+<span id="cb47-8"><a href="#cb47-8"></a><span class="co"># 4. Using .format()</span></span>
+<span id="cb47-9"><a href="#cb47-9"></a><span class="bu">print</span>(<span class="st">"Hello, </span><span class="sc">{}</span><span class="st">!"</span>.<span class="bu">format</span>(name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello, Alice!
 Hello, Alice!
@@ -1061,22 +1086,31 @@ Hello, Alice!
 Hello, Alice!</code></pre>
 </div>
 </div>
-<p>You might also see old code using <code>%</code> operator to format strings. Not so common any more.</p>
+</section>
+<section id="see-summary-code-snippets-for-six-ways-to-do-string-formatting" class="slide level2">
+<h2>See Summary Code Snippets for six ways to do string formatting</h2>
+<p>You might also see old code using <code>%</code> operator to format strings. There’s also template strings</p>
+</section>
+<section id="recommended-approach" class="slide level2">
+<h2>Recommended approach</h2>
+<ul>
+<li>Consider trying a combination of concatenation, f strings, and .format().</li>
+</ul>
+</section>
+<section id="new-topic-counting-our-iterations" class="slide level2">
+<h2>New topic: Counting our iterations</h2>
+<p>What if we want to tell each user how many iterations have passed so far?</p>
 </section>
 <section id="counting-our-iterations" class="slide level2">
 <h2>Counting our iterations</h2>
-<p>What if we want to tell each user how many iterations have passed so far?</p>
-</section>
-<section id="counting-our-iterations-1" class="slide level2">
-<h2>Counting our iterations</h2>
-<div class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb45-2"><a href="#cb45-2"></a>    <span class="bu">print</span>(<span class="st">"You're user number "</span> <span class="op">+</span> <span class="bu">str</span>(i))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb49-2"><a href="#cb49-2"></a>    <span class="bu">print</span>(<span class="st">"You're user number "</span> <span class="op">+</span> <span class="bu">str</span>(i))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 <p>Any problems with this?</p>
 </section>
-<section id="counting-our-iterations-1-output" class="slide level2 output-location-slide"><h2>Counting our iterations</h2><div class="cell output-location-slide" data-execution_count="20">
+<section id="counting-our-iterations-output" class="slide level2 output-location-slide"><h2>Counting our iterations</h2><div class="cell output-location-slide" data-execution_count="24">
 <div class="cell-output cell-output-stdout">
 <pre><code>You're user number 0
 You're user number 1
@@ -1084,11 +1118,11 @@ You're user number 2
 You're user number 3
 You're user number 4</code></pre>
 </div>
-</div></section><section id="counting-our-iterations-2" class="slide level2">
+</div></section><section id="counting-our-iterations-1" class="slide level2">
 <h2>Counting our iterations</h2>
-<div class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb47-2"><a href="#cb47-2"></a>    <span class="bu">print</span>(<span class="st">"You're user number "</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb51-2"><a href="#cb51-2"></a>    <span class="bu">print</span>(<span class="st">"You're user number "</span> <span class="op">+</span> <span class="bu">str</span>(i<span class="op">+</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>You're user number 1
 You're user number 2
@@ -1097,9 +1131,9 @@ You're user number 4
 You're user number 5</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">6</span>):</span>
-<span id="cb49-2"><a href="#cb49-2"></a>    <span class="bu">print</span>(<span class="st">"You're user number "</span> <span class="op">+</span> <span class="bu">str</span>(i))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">6</span>):</span>
+<span id="cb53-2"><a href="#cb53-2"></a>    <span class="bu">print</span>(<span class="st">"You're user number "</span> <span class="op">+</span> <span class="bu">str</span>(i))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>You're user number 1
 You're user number 2
@@ -1139,15 +1173,13 @@ You're user number 5</code></pre>
 <section id="practice-questions-round-2.-question-1" class="slide level2">
 <h2>Practice Questions, Round 2. Question 1</h2>
 <p>Look at the following code and answer the following questions.</p>
-<div class="cell" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1"></a>item1 <span class="op">=</span>  <span class="st">"1"</span></span>
-<span id="cb51-2"><a href="#cb51-2"></a>list1 <span class="op">=</span> [item1, <span class="st">"2"</span>, <span class="st">"3"</span>]</span>
-<span id="cb51-3"><a href="#cb51-3"></a></span>
-<span id="cb51-4"><a href="#cb51-4"></a>item4 <span class="op">=</span> <span class="st">"four"</span></span>
-<span id="cb51-5"><a href="#cb51-5"></a>list2 <span class="op">=</span> [item4, <span class="st">"five"</span>, <span class="st">"six"</span>]</span>
-<span id="cb51-6"><a href="#cb51-6"></a></span>
-<span id="cb51-7"><a href="#cb51-7"></a>item7 <span class="op">=</span> <span class="dv">7</span></span>
-<span id="cb51-8"><a href="#cb51-8"></a>list3 <span class="op">=</span> [item7, <span class="dv">8</span>, <span class="dv">9</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1"></a>item1 <span class="op">=</span>  <span class="st">"1"</span></span>
+<span id="cb55-2"><a href="#cb55-2"></a>list1 <span class="op">=</span> [item1, <span class="st">"2"</span>, <span class="st">"3"</span>]</span>
+<span id="cb55-3"><a href="#cb55-3"></a>item4 <span class="op">=</span> <span class="st">"four"</span></span>
+<span id="cb55-4"><a href="#cb55-4"></a>list2 <span class="op">=</span> [item4, <span class="st">"five"</span>, <span class="st">"six"</span>]</span>
+<span id="cb55-5"><a href="#cb55-5"></a>item7 <span class="op">=</span> <span class="dv">7</span></span>
+<span id="cb55-6"><a href="#cb55-6"></a>list3 <span class="op">=</span> [item7, <span class="dv">8</span>, <span class="dv">9</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>What is the data type of each of the following:</p>
 <ul>
@@ -1160,12 +1192,12 @@ You're user number 5</code></pre>
 <section id="question-2." class="slide level2">
 <h2>Question 2.</h2>
 <p>How could we rewrite this code with a manually defined list?</p>
-<div class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">100</span>, <span class="dv">101</span>, <span class="dv">102</span>]:</span>
-<span id="cb52-2"><a href="#cb52-2"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb52-3"><a href="#cb52-3"></a></span>
-<span id="cb52-4"><a href="#cb52-4"></a><span class="cf">for</span> j <span class="kw">in</span> [<span class="dv">102</span>, <span class="dv">101</span>, <span class="dv">100</span>]:</span>
-<span id="cb52-5"><a href="#cb52-5"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1"></a><span class="cf">for</span> i <span class="kw">in</span> [<span class="dv">100</span>, <span class="dv">101</span>, <span class="dv">102</span>]:</span>
+<span id="cb56-2"><a href="#cb56-2"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb56-3"><a href="#cb56-3"></a></span>
+<span id="cb56-4"><a href="#cb56-4"></a><span class="cf">for</span> j <span class="kw">in</span> [<span class="dv">102</span>, <span class="dv">101</span>, <span class="dv">100</span>]:</span>
+<span id="cb56-5"><a href="#cb56-5"></a>    <span class="bu">print</span>(i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>100
 101
@@ -1180,9 +1212,9 @@ You're user number 5</code></pre>
 <h2>Question 3</h2>
 <p>Consider the following code. What will happen if you paste it into an empty .py file and try to run?</p>
 <p>Can you make one edit to each line to make it print out “Your score is 20”?</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb54-2"><a href="#cb54-2"></a>votes <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb54-3"><a href="#cb54-3"></a><span class="bu">print</span>(<span class="st">"The total number of votes is "</span> <span class="op">+</span> score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb58-2"><a href="#cb58-2"></a>votes <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb58-3"><a href="#cb58-3"></a><span class="bu">print</span>(<span class="st">"The total number of votes is "</span> <span class="op">+</span> score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="question-4" class="slide level2">
 <h2>Question 4</h2>
@@ -1204,12 +1236,7 @@ You're user number 5</code></pre>
 <section id="question-7" class="slide level2">
 <h2>Question 7</h2>
 <p>What will this code output?</p>
-<div class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1"></a><span class="bu">print</span>(<span class="dv">3</span> <span class="op">/</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>1.0</code></pre>
-</div>
-</div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1"></a><span class="bu">print</span>(<span class="dv">3</span> <span class="op">/</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer footer-default">
 
 </div>

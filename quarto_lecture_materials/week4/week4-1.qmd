@@ -9,6 +9,7 @@ format:
     chalkboard: 
       buttons: false
     theme: solarized
+  pdf: default
 jupyter: python3
 ---
 

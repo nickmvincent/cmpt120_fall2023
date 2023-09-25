@@ -1,4 +1,3 @@
-# %%
 # %% [markdown]
 # ## Week 4
 # 
@@ -6,7 +5,7 @@
 # 
 # ## Housekeeping
 # - New assignment will be posted tonight.
-# - Clarifying late submissions and fixing errors
+# - Clarifying late submissions and fixing errors.
 # - Housekeeping check-in?
 #   - How is Canvas working for you? How about Discord?
 # - Suggestions on effective question asking
@@ -16,14 +15,11 @@
 # - Practice questions + discuss
 # - Concept review: loops and why we use them
 #   - DRY: Don't repeat yourself
-#   - An "algorithm" for when to use loops
-#   - Changing things within a loop
+#   - When to use loops
 # - Concept review: types and converting
 #   - implict vs explicit type conversions
 # - Coding practice
 # - Break
-# - Start lecture 4-2
-# 
 # 
 # ## Practice Questions
 # 
@@ -35,41 +31,49 @@
 # What would the following code output?
 # 
 # Question 1 
-# ```{.python}
-# print("!.?hellothere".strip("!.h").upper())
-# ```
-# 
+
+# %%
+#| echo: true
+print("!.?hellothere".strip("!.h").upper())
+print("!.?hellothere".strip("!.?h").upper())
+
+# %% [markdown]
 # Question 2
-# 
-# ```{.python}
-# foods = ["Shakshuka", "Burrito", "Burger"]
-# print("Burger".upper().lower() in foods)
-# print("Burrito".lower().upper() in foods)
-# print("Taco" in foods)
-# ```
-# 
+
+# %%
+#| echo: true
+foods = ["Shakshuka", "Burrito", "Burger"]
+print("Burger".upper().lower() in foods)
+print("Burrito".lower().upper() in foods)
+print("Taco" in foods)
+
+# %% [markdown]
 # ## Practice Question 3
 # What would the following code output?
-# 
-# ```{.python}
-# a = "apple"
-# b = "banana"
-# c = "cherry"
-# 
-# if a + b in ["apple", "applebanana", "applecherry"]:
-#     print("Hello")
-# else:
-#     print("Goodbye")
-# ```
-# 
+
+# %%
+#| echo: true
+a = "apple"
+b = "banana"
+c = "cherry"
+
+if a + b in ["apple", "applebanana", "applecherry"]:
+    print("Hello")
+else:
+    print("Goodbye")
+
+# %% [markdown]
 # ## Practice Question 4
-# ```{.python}
-# for i in ["0", "1", "2"]:
-#     print(i)
-# ```
-# 
+
+# %%
+#| echo: true
+for i in ["0", "1", "2"]:
+    print(i)
+
+# %% [markdown]
 # ## Practice Question 5
 # ```{.python}
+# #| echo: true
 # is_a_good_day = False
 # response = input("Was today a good day?").lower()
 # if response in ["good", "great", "awesome"]:
@@ -361,7 +365,7 @@ print(type(float_num))  # Output will be <class 'float'>
 # 
 # Polling and voting can be modelled as recsys problem ("Top 10 candidates for you!")
 # 
-# Recommendation can be made subject to constraints -- suggest me something fun to do with minimal externalities
+# Recommendation can be made subject to constraints -- suggest me something fun to do with minimal externalities.
 # 
 # Think about how this might be relevant to you! We'll come back to it.
 # 
@@ -611,9 +615,15 @@ print(f"Hello, {name}!")
 print("Hello, {}!".format(name))
 
 # %% [markdown]
-# You might also see old code using `%` operator to format strings. Not so common any more.
+# ## See Summary Code Snippets for six ways to do string formatting
 # 
-# ## Counting our iterations
+# You might also see old code using `%` operator to format strings. There's also template strings
+# 
+# ## Recommended approach
+# 
+# - Consider trying a combination of concatenation, f strings, and .format().
+# 
+# ## New topic: Counting our iterations
 # 
 # What if we want to tell each user how many iterations have passed so far?
 # 
@@ -670,10 +680,8 @@ for i in range(1,6):
 #|echo: true
 item1 =  "1"
 list1 = [item1, "2", "3"]
-
 item4 = "four"
 list2 = [item4, "five", "six"]
-
 item7 = 7
 list3 = [item7, 8, 9]
 
@@ -724,9 +732,9 @@ for j in [102, 101, 100]:
 # 
 # ## Question 7
 # What will this code output?
-
-# %%
-#| echo: true
-print(3 / 3)
+# ```{.python}
+# print(3 / 3)
+# ```
+# 
 
 

@@ -1,0 +1,16 @@
+---
+title: "CMPT 120 Lectures 4-3"
+date: "2023-09-27"
+author: "Prof. Nick Vincent"
+institute: "Simon Fraser University"
+format:
+  revealjs:
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    theme: solarized
+jupyter: python3
+---
+
+
+## Lecture 4-3

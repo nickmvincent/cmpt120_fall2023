@@ -13,10 +13,9 @@ print("----------------------")
 
 # 2. Removing specific characters:
 # You can specify characters to be removed. 
-chars_string = "xxxyHello, World!yxxx"
+chars_string = "zzzyHello, World!yzzz"
 print("Original:", repr(chars_string))
-print("Stripped:", repr(chars_string.strip('x')))
-# Notice how only the leading and trailing 'x' characters were removed, not the ones in the middle.
+print("Stripped:", repr(chars_string.strip('z')))
 print("----------------------")
 
 # 3. Removing multiple types of characters:

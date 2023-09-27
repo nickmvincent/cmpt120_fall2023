@@ -1,5 +1,5 @@
 ---
-title: "CMPT 120 Lectures 4-3"
+title: "CMPT 120 Lecture 4-3"
 date: "2023-09-27"
 author: "Prof. Nick Vincent"
 institute: "Simon Fraser University"
@@ -12,5 +12,337 @@ format:
 jupyter: python3
 ---
 
+## 4-3 Housekeeping
+- Assignment questions
+  - Some great questions in Discussion / Discord / email. Thank you!
+- Non-graded coding practice opportunities?
+  - Great discussion in Discord
+- Summary script examples
 
-## Lecture 4-3
+## Assignment questions
+- Clarification to Coding Exercise 3: user will give a non-negative number
+- initializing variables in `if` statements
+
+
+## Online platforms for coding practice
+
+These are very popular for interview prep down the line.
+
+Some platforms to try out:
+
+- https://www.codewars.com
+  - Important: sort answers by "Best Practice" instead of "Clever"
+- https://www.hackerrank.com/
+- https://www.codecademy.com/
+
+I'll try to curate some example exercises, but please feel free to share.
+
+## Some caveats
+
+Online coding problems / puzzles / challenges don't accurately reflect real-world programming.
+
+This is why many people are mad about CS interview practices (though there are advantages).
+
+That's where do *projects* is important.
+
+## Why you might want to try coding challenges
+
+- Getting instant feedback (seeing other people's solutions) can be really helpful.
+- Give it an honest try (say, 30 mins) and try to reflect on how it compares
+to doing class assignments, live coding, interactive textbook, etc.
+- Reflecting on learning methods that work for you is a great skill to practice for uni and life
+
+## 4-3 Agenda
+- Reading from files
+  - New methods for reading, splitting strings
+- List indexing
+  - How we grab a specific item from a list?
+- We'll weave these together as we work towards a recommendation example
+
+
+## Recommending with Data
+
+
+## "Big" Data
+- It's time to load data from a file!
+- Instead of populating our list right in the code, we'll *read* from a file
+- Can think of "databases" as fancy ways to handle files
+
+
+## Concepts we'll use
+- breaking up a long strings into list (`split()`)
+- open a file
+- read a file
+- accessing a specific element of a list ("indexing" using `my_list[1]`)
+- Comparing numbers
+
+## Introduction to List Indexing in Python
+
+- Python lists are a versatile data structure. 
+- They are ordered collections, which means items have a defined order that will not change. 
+- This allows us to access items in a list by their position, or "index".
+
+## Basic Indexing
+
+In Python, indexing starts from `0`, which means the first item is accessed using an index of `0`, the second with an index of `1`, and so on.
+
+```{python}
+#| echo: true
+my_list = ["apple", "banana", "cherry", "date"]
+first_fruit = my_list[0]
+print(first_fruit)  # Outputs: apple
+```
+
+## Negative Indexing
+
+Python also supports negative indexing. This means the last item has an index of -1, the second to last -2, and so on.
+
+```{python}
+#| echo: true
+last_fruit = my_list[-1]
+print(last_fruit)  # Outputs: date
+```
+
+## Index Out of Range
+If you try to access an index that does not exist in the list, you'll get an error.
+```{python}
+
+#| echo: true
+# Uncommenting the next line will cause an error
+# nonexistent_fruit = my_list[10]
+```
+
+## Indexing Summary Table {.smaller}
+| Action                                   | List Example                | String Example             |
+|------------------------------------------|-----------------------------|---------------------------|
+| Accessing by index                       | `my_list[2]`                | `my_string[2]`            |
+| Accessing from the end (negative index)  | `my_list[-1]`               | `my_string[-1]`           |
+| Slicing (start to end)                   | `my_list[1:3]`              | `my_string[1:3]`          |
+| Slicing (start to end, with step)        | `my_list[0:5:2]`            | `my_string[0:5:2]`        |
+| Slicing (everything until end)           | `my_list[2:]`               | `my_string[2:]`           |
+| Slicing (from start until position)      | `my_list[:3]`               | `my_string[:3]`           |
+| Slicing (using negative indices)         | `my_list[-3:-1]`            | `my_string[-3:-1]`        |
+| Accessing every nth element/character    | `my_list[::2]`              | `my_string[::2]`          |
+
+
+## Opening and Reading Files in Python
+
+- Files are a fundamental means of data storage. 
+- Python provides built-in functions to work with files
+- we can read from and write to them.
+
+## The `open` Function
+
+To work with a file, we first need to open it using the `open` function.
+
+```{python}
+#| echo: true
+# Syntax: open(filename, mode)
+file = open("example.csv", "r")
+```
+
+- filename: Name of the file you want to open. Have to watch out for path issues
+- mode: Mode in which you want to open the file ("r" for read, "w" for write, etc.)
+
+
+## Closing the file
+If we use `file = open("example.csv", "r")`, we also have to run `file.close()` after.
+
+## `with open(...)`
+
+Alternatively, we can using the `with` pattern
+
+```{python}
+#| echo: true
+with open("example.csv", "r") as file:
+    content = file.read()
+    print(content)
+```
+
+
+## `with open(...)`
+With this method, you don't need to explicitly close the file. It'll be closed automatically when the block of code is exited.
+
+## The `.readline()` Method in Python
+
+When working with files, `.readline()` provides a way to read individual lines.
+
+## Basic Usage
+
+Each call to `.readline()` reads the next line from the file.
+
+```{python}
+#| echo: true
+file = open("example.csv", "r")
+first_line = file.readline()
+print(first_line)
+file.close()
+```
+
+## Why Use .readline()
+
+- Efficient for reading large files without loading them into memory entirely.
+- Reading the first few lines of a file without processing the entire content.
+- Note: If called after reading the entire file, it returns an empty string ("").
+- Can also use it to "throw away" the first line (e.g., a header)
+
+## Reading line by line
+
+```{python}
+#| echo: true
+with open("example.csv", "r") as file:
+    for line in file:
+      print(line)
+```
+
+## Reading line by line (skip the first)
+
+```{python}
+#| echo: true
+with open("example.csv", "r") as file:
+    _ = file.readline()
+    for line in file:
+      print(line)
+```
+
+## String Splitting & Reading CSV Files in Python
+
+The `split()` method in Python is powerful for parsing strings, especially when reading structured data like CSV files.
+
+## Basic Splitting
+
+Split a string into a list based on a delimiter (default is whitespace).
+
+```{python}
+#| echo: true
+text = "apple,banana,cherry"
+fruits = text.split(",")
+print(fruits)  # Outputs: ['apple', 'banana', 'cherry']
+```
+
+## Open, go line by line, and print 
+
+```{python}
+#| echo: true
+with open("example.csv", "r") as file:
+    for line in file:
+        columns = line.strip().split(",")
+        print(columns)
+```
+
+
+## Notes about reading files with split
+
+- Note 1: if data contains commas (,), it might lead to incorrect splitting.
+- Note 2: in industry, you'll probably use libraries to do this kind of thing. But have the learn the "raw" way for now!
+
+
+## Task
+
+Create a Python script that:
+- Reads a CSV file named example.csv.
+- Skips the header line.
+- Prints each record in a readable format
+
+Example: "John Doe | Coffee | Lakers"
+
+
+## Answer
+```{python}
+#| echo: true
+with open("example.csv", "r") as file:
+    # Skip header
+    header = file.readline()
+    
+    # Process and print each record
+    for line in file:
+        columns = line.strip().split(",")
+        nice_output = ""
+        for column in columns:
+          nice_output += column + " | "
+        print(nice_output)
+```
+
+## Error Handling: A Crucial Skill
+
+When working with files, errors are inevitable. 
+
+You might try to open a nonexistent file or read past the end of a file.
+
+### Common File Errors
+
+- FileNotFoundError: The file you're trying to open doesn't exist.
+- PermissionError: You don't have permission to access the file.
+- IOError: A general error related to file I/O operations.
+
+## Handling File Errors in Python
+
+Using try and except blocks, you can gracefully handle these errors.
+
+```{python}
+#| echo: true
+try:
+    with open("nonexistent_file.csv", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("The file does not exist. Please check the filename.")
+except PermissionError:
+    print("You don't have the permission to read the file.")
+except IOError:
+    print("An error occurred while accessing the file.")
+```
+
+## Python Comparison Operators {.smaller}
+
+| Operator | Name              | Description                           | Example       | Result  |
+|----------|-------------------|---------------------------------------|---------------|---------|
+| `!=`     | Not equal to      | Checks if two values are not equal    | `5 != 3`      | True    |
+| `>`      | Greater than      | Checks if left value is greater       | `5 > 3`       | True    |
+| `>=`     | Greater or equal  | Checks if left value is greater/equal | `5 >= 5`      | True    |
+| `<`      | Less than         | Checks if left value is smaller       | `3 < 5`       | True    |
+| `<=`     | Less or equal     | Checks if left value is smaller/equal | `3 <= 5`      | True    |
+
+## Common Mistake: x == 5 or 6
+❌ Incorrect: writing  `x == 5 or 6`
+
+This checks if x is equal to 5 OR if 6 is a truthy value. Since 6 (or any non-zero number) is always truthy, this statement will always evaluate to True.
+
+✅ Correct: writing `x == 5 or x == 6`
+
+This checks if x is equal to 5 OR if x is equal to 6.
+
+## Python Operator Precedence {.smaller}
+
+| Precedence | Operators                           | Description                                          |
+|------------|------------------------------------|------------------------------------------------------|
+| 1          | `()`                               | Parentheses (grouping)                               |
+| 2          | `**`                               | Exponentiation                                       |
+| 3          | `+x`, `-x`, `~x`                   | Unary plus, Unary minus, Bitwise NOT                 |
+| 4          | `*`, `/`, `//`, `%`                | Multiplication, Division, Floor division, Modulus    |
+| 5          | `+`, `-`                           | Addition, Subtraction                                |
+| 6          | `<<`, `>>`                         | Bitwise shift left, Bitwise shift right              |
+| 7          | `&`                                | Bitwise AND                                          |
+| 8          | `^`                                | Bitwise XOR                                          |
+| 9          | `|`                                | Bitwise OR                                           |
+| 10         | `==`, `!=`, `<`, `<=`, `>`, `>=`   | Comparisons, Equality and Inequality                 |
+| 11         | `not`                              | Logical NOT                                          |
+| 12         | `and`                              | Logical AND                                          |
+| 13         | `or`                               | Logical OR                                           |
+| 14         | `=`, `+=`, `-=`, `*=`, ...         | Assignment operators                                 |
+
+## Python Operator Precedence (simpler)
+- `()`
+- `**`
+- `*`, `/`, `//` , `%`
+- `+`, `-`
+- `==`, `!=`
+- `not`
+- `and`
+- `or`
+- `=`
+
+
+## Live code with remaining time
+
+Let's try to count up and make a recommendation about both coffee vs. tea and Lakers vs. Raptors

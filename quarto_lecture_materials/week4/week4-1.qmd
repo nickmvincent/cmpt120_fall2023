@@ -705,7 +705,7 @@ What is the data type of each of the following:
 - list1
 
 ## Question 2.
-How could we rewrite this code with a manually defined list?
+How could we rewrite this code without a manually defined list?
 
 ```{python}
 #|echo: true

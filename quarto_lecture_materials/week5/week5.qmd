@@ -87,7 +87,6 @@ if z > 5 and <= 10:
 ```
 
 ## Question 3 -- answer
-#| echo: true
 ```{.python}
 z = int(input("Give me a number, any number: "))
 if z > 5 and z <= 10:
@@ -98,6 +97,7 @@ if z > 5 and z <= 10:
 ## Question 4
 What does this snippet output?
 ```{python}
+#| echo: true
 #| output-location: slide
 letters = ['a', 'b', 'c', 'd', 'e', 'f']
 print(len(letters))
@@ -110,14 +110,174 @@ print(letters[-1])
 print(letters[3:-1])
 ```
 
-## Trick to remember with slicing
+## Trick to remember slicing
 
-`letters[:4]` will give you 4 total items in your output!
+`letters[:4]` will give you 4 total items in your output! It must start at 0... hence you get 0,1,2, and 3.
 
 ## Accessing characters in strings
 - Just like accessing items in a list
 - If you think of strings as a list of characters, you're good to go
 - (As long as you know how lists work)
+
+## Accumulator review
+"Go through all the items in a pile and pick out the red ones"
+
+```{python}
+#| echo: true
+items = ["red", "blue", "red", "green"]
+items_we_grab = []
+for item in items:
+    if item == "red":
+        items_we_grab += [item]
+print(items_we_grab)
+```
+
+
+## Week 5 Learning Objective
+
+
+## Open + read lines from a file
+
+```{python}
+#| echo: true
+with open('fake_data.csv', 'r') as file:
+    lines = file.readlines()
+    print(len(lines))
+```
+
+## Split a string into a list
+
+```{python}
+#| echo: true
+text = "Python is fun"
+words = text.split()  # ['Python', 'is', 'fun']
+print(words)
+```
+
+## Access specific elements of a list using indexing/slicing
+
+```{python}
+#| echo: true
+numbers = [1, 2, 3, 4, 5]
+first_element = numbers[0]    # 1
+sliced_elements = numbers[1:4]  # [2, 3, 4]
+```
+
+## Access specific character in a string using indexing/slicing
+
+```{python}
+#| echo: true
+text = "Hello World"
+first_char = text[0]  # 'H'
+sliced_chars = text[6:11]  # 'World'
+```
+
+## Perform comparisons between numbers, taking into account order of operators (operator precedence)
+
+```{python}
+#| echo: true
+result = 2 + 3 * 4 > 10  # Evaluates to 2 + 12 > 10 => 14 > 10 => True
+print(result)
+```
+
+## Perform comparisons (e.g. !=, <,>) with strings
+```{python}
+#| echo: true
+string1 = "apple"
+string2 = "banana"
+print(string1 != string2)  # True
+print(string1 < string2)   # True, because 'a' comes before 'b' alphabetically
+```
+
+## Interpret code with nested conditionals + comparison operators (e.g. !=, <,>=)
+
+```{python}
+#| echo: true
+x = 5
+y = 10
+if x != y:
+    if x < y:
+        print("x is less than y")
+    else:
+        print("x is greater than y")
+else:
+    print("x is equal to y")
+```
+
+
+## Find the common elements between 2 lists
+
+```{python}
+#| echo: true
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+common_elements = []
+for x in list1:
+    if x in list2:
+        common_elements.append(x)
+print(common_elements)  # [3, 4]
+```
+
+## Understand + use nested for loops
+
+```{python}
+#| echo: true
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+```
+
+## Apply operator order to evaluate expressions
+
+```{python}
+#| echo: true
+result = 3 + 4 * 2 / (1 - 5)  # Evaluates using operator precedence: multiplication, division, subtraction, addition
+print(result)
+```
+
+## Concatenate lists
+
+```{python}
+#| echo: true
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+concatenated_list = list1 + list2
+print(concatenated_list)  # [1, 2, 3, 4, 5, 6]
+```
+
+## Apply accumulation pattern for strings and lists (previously was numbers)
+
+```{python}
+#| echo: true
+
+# For strings
+words = ["Hello", "World"]
+sentence = ""
+for word in words:
+    sentence += word + " "
+print(sentence.strip())  # Hello World
+
+# For lists
+matrix = [[1, 2], [3, 4]]
+flat_list = []
+for sublist in matrix:
+    for item in sublist:
+        flat_list.append(item)
+print(flat_list)  # [1, 2, 3, 4]
+```
+
+## Calculate the maximum among several values
+
+```{python}
+#| echo: true
+
+values = [3, 5, 2, 8, 6]
+maximum = values[0]
+for value in values:
+    if value > maximum:
+        maximum = value
+print(maximum)  # 8
+```
 
 ## Ok, back to content
 
@@ -318,9 +478,6 @@ top_record = ""
 recommendation = ""
 
 # load data
-    
-
-# load data
 with open("fake_data.csv", "r") as file:
     # Skip header
     header = file.readline()
@@ -373,10 +530,15 @@ As we write this code, at each step let's make our code print something out so w
 
 When you're feeling stuck, trying printing something for every new line of code you write.
 
-## Nested loop
 
+##
+![How to draw an owl dot jpeg](owl.jpg)
+
+
+## Nested loop
 ```{python}
 #| echo: true
+#| output-location: slide
 # select a user + init variables to keep track of scores
 index_of_user = 17
 top_score = 0
@@ -422,3 +584,7 @@ print(f"You have a similarity score of {top_score}")
 
 print("We recommend you watch", recommendation)
 ```
+
+## Ok, let's take a step back
+
+- switch to live coding here

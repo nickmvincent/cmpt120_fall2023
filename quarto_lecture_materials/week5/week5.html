@@ -504,7 +504,6 @@ False</code></pre>
 </section>
 <section id="question-3-answer" class="slide level2">
 <h2>Question 3 – answer</h2>
-<p>#| echo: true</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>z <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Give me a number, any number: "</span>))</span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="cf">if</span> z <span class="op">&gt;</span> <span class="dv">5</span> <span class="kw">and</span> z <span class="op">&lt;=</span> <span class="dv">10</span>:</span>
 <span id="cb10-3"><a href="#cb10-3"></a>    <span class="bu">print</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -513,6 +512,19 @@ False</code></pre>
 <h2>Question 4</h2>
 <p>What does this snippet output?</p>
 <div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>letters <span class="op">=</span> [<span class="st">'a'</span>, <span class="st">'b'</span>, <span class="st">'c'</span>, <span class="st">'d'</span>, <span class="st">'e'</span>, <span class="st">'f'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="bu">print</span>(<span class="bu">len</span>(letters))</span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="bu">print</span>(letters[<span class="dv">1</span>:<span class="dv">3</span>])</span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="bu">print</span>(letters[:<span class="dv">4</span>])</span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="bu">print</span>(letters[<span class="dv">3</span>:])</span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="bu">print</span>(letters[:])</span>
+<span id="cb11-8"><a href="#cb11-8"></a><span class="bu">print</span>(letters[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb11-9"><a href="#cb11-9"></a><span class="bu">print</span>(letters[<span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+</section>
+<section id="question-4-output" class="slide level2 output-location-slide"><h2>Question 4</h2><div class="cell output-location-slide" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>6
 ['b', 'c']
@@ -522,11 +534,9 @@ False</code></pre>
 f
 ['d', 'e']</code></pre>
 </div>
-</div>
-</section>
-<section id="trick-to-remember-with-slicing" class="slide level2">
-<h2>Trick to remember with slicing</h2>
-<p><code>letters[:4]</code> will give you 4 total items in your output!</p>
+</div></section><section id="trick-to-remember-slicing" class="slide level2">
+<h2>Trick to remember slicing</h2>
+<p><code>letters[:4]</code> will give you 4 total items in your output! It must start at 0… hence you get 0,1,2, and 3.</p>
 </section>
 <section id="accessing-characters-in-strings" class="slide level2">
 <h2>Accessing characters in strings</h2>
@@ -536,6 +546,192 @@ f
 <li>(As long as you know how lists work)</li>
 </ul>
 </section>
+<section id="accumulator-review" class="slide level2">
+<h2>Accumulator review</h2>
+<p>“Go through all the items in a pile and pick out the red ones”</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>items <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>]</span>
+<span id="cb13-2"><a href="#cb13-2"></a>items_we_grab <span class="op">=</span> []</span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="cf">if</span> item <span class="op">==</span> <span class="st">"red"</span>:</span>
+<span id="cb13-5"><a href="#cb13-5"></a>        items_we_grab <span class="op">+=</span> [item]</span>
+<span id="cb13-6"><a href="#cb13-6"></a><span class="bu">print</span>(items_we_grab)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['red', 'red']</code></pre>
+</div>
+</div>
+</section>
+<section id="week-5-learning-objective" class="slide level2">
+<h2>Week 5 Learning Objective</h2>
+</section>
+<section id="open-read-lines-from-a-file" class="slide level2">
+<h2>Open + read lines from a file</h2>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'fake_data.csv'</span>, <span class="st">'r'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb15-2"><a href="#cb15-2"></a>    lines <span class="op">=</span> <span class="bu">file</span>.readlines()</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="bu">print</span>(<span class="bu">len</span>(lines))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>51</code></pre>
+</div>
+</div>
+</section>
+<section id="split-a-string-into-a-list" class="slide level2">
+<h2>Split a string into a list</h2>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>text <span class="op">=</span> <span class="st">"Python is fun"</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>words <span class="op">=</span> text.split()  <span class="co"># ['Python', 'is', 'fun']</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="bu">print</span>(words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['Python', 'is', 'fun']</code></pre>
+</div>
+</div>
+</section>
+<section id="access-specific-elements-of-a-list-using-indexingslicing" class="slide level2">
+<h2>Access specific elements of a list using indexing/slicing</h2>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb19-2"><a href="#cb19-2"></a>first_element <span class="op">=</span> numbers[<span class="dv">0</span>]    <span class="co"># 1</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>sliced_elements <span class="op">=</span> numbers[<span class="dv">1</span>:<span class="dv">4</span>]  <span class="co"># [2, 3, 4]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="access-specific-character-in-a-string-using-indexingslicing" class="slide level2">
+<h2>Access specific character in a string using indexing/slicing</h2>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>text <span class="op">=</span> <span class="st">"Hello World"</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>first_char <span class="op">=</span> text[<span class="dv">0</span>]  <span class="co"># 'H'</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>sliced_chars <span class="op">=</span> text[<span class="dv">6</span>:<span class="dv">11</span>]  <span class="co"># 'World'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="perform-comparisons-between-numbers-taking-into-account-order-of-operators-operator-precedence" class="slide level2">
+<h2>Perform comparisons between numbers, taking into account order of operators (operator precedence)</h2>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>result <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span> <span class="op">&gt;</span> <span class="dv">10</span>  <span class="co"># Evaluates to 2 + 12 &gt; 10 =&gt; 14 &gt; 10 =&gt; True</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="bu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+</div>
+</section>
+<section id="perform-comparisons-e.g.-with-strings" class="slide level2">
+<h2>Perform comparisons (e.g.&nbsp;!=, &lt;,&gt;) with strings</h2>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>string1 <span class="op">=</span> <span class="st">"apple"</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>string2 <span class="op">=</span> <span class="st">"banana"</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="bu">print</span>(string1 <span class="op">!=</span> string2)  <span class="co"># True</span></span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="bu">print</span>(string1 <span class="op">&lt;</span> string2)   <span class="co"># True, because 'a' comes before 'b' alphabetically</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True
+True</code></pre>
+</div>
+</div>
+</section>
+<section id="interpret-code-with-nested-conditionals-comparison-operators-e.g." class="slide level2">
+<h2>Interpret code with nested conditionals + comparison operators (e.g.&nbsp;!=, &lt;,&gt;=)</h2>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>y <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="cf">if</span> x <span class="op">!=</span> y:</span>
+<span id="cb25-4"><a href="#cb25-4"></a>    <span class="cf">if</span> x <span class="op">&lt;</span> y:</span>
+<span id="cb25-5"><a href="#cb25-5"></a>        <span class="bu">print</span>(<span class="st">"x is less than y"</span>)</span>
+<span id="cb25-6"><a href="#cb25-6"></a>    <span class="cf">else</span>:</span>
+<span id="cb25-7"><a href="#cb25-7"></a>        <span class="bu">print</span>(<span class="st">"x is greater than y"</span>)</span>
+<span id="cb25-8"><a href="#cb25-8"></a><span class="cf">else</span>:</span>
+<span id="cb25-9"><a href="#cb25-9"></a>    <span class="bu">print</span>(<span class="st">"x is equal to y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>x is less than y</code></pre>
+</div>
+</div>
+</section>
+<section id="find-the-common-elements-between-2-lists" class="slide level2">
+<h2>Find the common elements between 2 lists</h2>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb27-2"><a href="#cb27-2"></a>list2 <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb27-3"><a href="#cb27-3"></a>common_elements <span class="op">=</span> []</span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="cf">for</span> x <span class="kw">in</span> list1:</span>
+<span id="cb27-5"><a href="#cb27-5"></a>    <span class="cf">if</span> x <span class="kw">in</span> list2:</span>
+<span id="cb27-6"><a href="#cb27-6"></a>        common_elements.append(x)</span>
+<span id="cb27-7"><a href="#cb27-7"></a><span class="bu">print</span>(common_elements)  <span class="co"># [3, 4]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[3, 4]</code></pre>
+</div>
+</div>
+</section>
+<section id="understand-use-nested-for-loops" class="slide level2">
+<h2>Understand + use nested for loops</h2>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb29-2"><a href="#cb29-2"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
+<span id="cb29-3"><a href="#cb29-3"></a>        <span class="bu">print</span>(i, j)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 0
+0 1
+1 0
+1 1
+2 0
+2 1</code></pre>
+</div>
+</div>
+</section>
+<section id="apply-operator-order-to-evaluate-expressions" class="slide level2">
+<h2>Apply operator order to evaluate expressions</h2>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1"></a>result <span class="op">=</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> <span class="dv">2</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">-</span> <span class="dv">5</span>)  <span class="co"># Evaluates using operator precedence: multiplication, division, subtraction, addition</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="bu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1.0</code></pre>
+</div>
+</div>
+</section>
+<section id="concatenate-lists" class="slide level2">
+<h2>Concatenate lists</h2>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb33-2"><a href="#cb33-2"></a>list2 <span class="op">=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb33-3"><a href="#cb33-3"></a>concatenated_list <span class="op">=</span> list1 <span class="op">+</span> list2</span>
+<span id="cb33-4"><a href="#cb33-4"></a><span class="bu">print</span>(concatenated_list)  <span class="co"># [1, 2, 3, 4, 5, 6]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+</section>
+<section id="apply-accumulation-pattern-for-strings-and-lists-previously-was-numbers" class="slide level2">
+<h2>Apply accumulation pattern for strings and lists (previously was numbers)</h2>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># For strings</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"World"</span>]</span>
+<span id="cb35-3"><a href="#cb35-3"></a>sentence <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb35-4"><a href="#cb35-4"></a><span class="cf">for</span> word <span class="kw">in</span> words:</span>
+<span id="cb35-5"><a href="#cb35-5"></a>    sentence <span class="op">+=</span> word <span class="op">+</span> <span class="st">" "</span></span>
+<span id="cb35-6"><a href="#cb35-6"></a><span class="bu">print</span>(sentence.strip())  <span class="co"># Hello World</span></span>
+<span id="cb35-7"><a href="#cb35-7"></a></span>
+<span id="cb35-8"><a href="#cb35-8"></a><span class="co"># For lists</span></span>
+<span id="cb35-9"><a href="#cb35-9"></a>matrix <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]]</span>
+<span id="cb35-10"><a href="#cb35-10"></a>flat_list <span class="op">=</span> []</span>
+<span id="cb35-11"><a href="#cb35-11"></a><span class="cf">for</span> sublist <span class="kw">in</span> matrix:</span>
+<span id="cb35-12"><a href="#cb35-12"></a>    <span class="cf">for</span> item <span class="kw">in</span> sublist:</span>
+<span id="cb35-13"><a href="#cb35-13"></a>        flat_list.append(item)</span>
+<span id="cb35-14"><a href="#cb35-14"></a><span class="bu">print</span>(flat_list)  <span class="co"># [1, 2, 3, 4]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World
+[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+</section>
+<section id="calculate-the-maximum-among-several-values" class="slide level2">
+<h2>Calculate the maximum among several values</h2>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1"></a>values <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">8</span>, <span class="dv">6</span>]</span>
+<span id="cb37-2"><a href="#cb37-2"></a>maximum <span class="op">=</span> values[<span class="dv">0</span>]</span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="cf">for</span> value <span class="kw">in</span> values:</span>
+<span id="cb37-4"><a href="#cb37-4"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> maximum:</span>
+<span id="cb37-5"><a href="#cb37-5"></a>        maximum <span class="op">=</span> value</span>
+<span id="cb37-6"><a href="#cb37-6"></a><span class="bu">print</span>(maximum)  <span class="co"># 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>8</code></pre>
+</div>
+</div>
+</section>
 <section id="ok-back-to-content" class="slide level2">
 <h2>Ok, back to content</h2>
 <ul>
@@ -544,71 +740,71 @@ f
 </section>
 <section id="lets-recap" class="slide level2">
 <h2>Let’s recap…</h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"example.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb12-2"><a href="#cb12-2"></a>    <span class="co"># Skip header</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>    header <span class="op">=</span> <span class="bu">file</span>.readline()</span>
-<span id="cb12-4"><a href="#cb12-4"></a>    </span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="co"># Process and print each record</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>    <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>:</span>
-<span id="cb12-7"><a href="#cb12-7"></a>        columns <span class="op">=</span> line.strip().split(<span class="st">","</span>)</span>
-<span id="cb12-8"><a href="#cb12-8"></a>        nice_output <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb12-9"><a href="#cb12-9"></a>        <span class="cf">for</span> column <span class="kw">in</span> columns:</span>
-<span id="cb12-10"><a href="#cb12-10"></a>          nice_output <span class="op">+=</span> column <span class="op">+</span> <span class="st">" | "</span></span>
-<span id="cb12-11"><a href="#cb12-11"></a>        <span class="bu">print</span>(nice_output)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"example.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb39-2"><a href="#cb39-2"></a>    <span class="co"># Skip header</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a>    header <span class="op">=</span> <span class="bu">file</span>.readline()</span>
+<span id="cb39-4"><a href="#cb39-4"></a>    </span>
+<span id="cb39-5"><a href="#cb39-5"></a>    <span class="co"># Process and print each record</span></span>
+<span id="cb39-6"><a href="#cb39-6"></a>    <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">file</span>:</span>
+<span id="cb39-7"><a href="#cb39-7"></a>        columns <span class="op">=</span> line.strip().split(<span class="st">","</span>)</span>
+<span id="cb39-8"><a href="#cb39-8"></a>        nice_output <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb39-9"><a href="#cb39-9"></a>        <span class="cf">for</span> column <span class="kw">in</span> columns:</span>
+<span id="cb39-10"><a href="#cb39-10"></a>          nice_output <span class="op">+=</span> column <span class="op">+</span> <span class="st">" | "</span></span>
+<span id="cb39-11"><a href="#cb39-11"></a>        <span class="bu">print</span>(nice_output)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="generating-data-advanced" class="slide level2">
 <h2>Generating data (advanced)</h2>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="im">import</span> csv</span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="im">import</span> random</span>
-<span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co"># Lists of names and diets</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a>names <span class="op">=</span> [<span class="st">"Michael Jordan"</span>, <span class="st">"Tom Hanks"</span>, <span class="st">"Arya Stark"</span>, <span class="st">"Goku"</span>, <span class="st">"Scarlett Johansson"</span>, </span>
-<span id="cb13-6"><a href="#cb13-6"></a>         <span class="st">"Mickey Mouse"</span>, <span class="st">"Hermione Granger"</span>, <span class="st">"Naruto"</span>, <span class="st">"Serena Williams"</span>, <span class="st">"Oprah Winfrey"</span>,</span>
-<span id="cb13-7"><a href="#cb13-7"></a>         <span class="st">"Leonardo DiCaprio"</span>, <span class="st">"Mario"</span>, <span class="st">"Taylor Swift"</span>, <span class="st">"Darth Vader"</span>, <span class="st">"James Bond"</span>,</span>
-<span id="cb13-8"><a href="#cb13-8"></a>         <span class="st">"Usain Bolt"</span>, <span class="st">"Tony Stark"</span>, <span class="st">"Bugs Bunny"</span>, <span class="st">"The Rock"</span>, <span class="st">"Walter White"</span>,</span>
-<span id="cb13-9"><a href="#cb13-9"></a>         <span class="st">"Sheldon Cooper"</span>, <span class="st">"Mulan"</span>, <span class="st">"Elsa"</span>, <span class="st">"Sherlock Holmes"</span>, <span class="st">"Jack Sparrow"</span>,</span>
-<span id="cb13-10"><a href="#cb13-10"></a>         <span class="st">"Luffy"</span>, <span class="st">"Luke Skywalker"</span>, <span class="st">"Marilyn Monroe"</span>, <span class="st">"Freddie Mercury"</span>, <span class="st">"Lady Gaga"</span>,</span>
-<span id="cb13-11"><a href="#cb13-11"></a>         <span class="st">"Superman"</span>, <span class="st">"Wonder Woman"</span>, <span class="st">"Neo"</span>, <span class="st">"Beyonce"</span>, <span class="st">"Ash Ketchum"</span>,</span>
-<span id="cb13-12"><a href="#cb13-12"></a>         <span class="st">"Lara Croft"</span>, <span class="st">"Elvis Presley"</span>, <span class="st">"Kermit the Frog"</span>, <span class="st">"Spider-Man"</span>, <span class="st">"Hannibal Lecter"</span>,</span>
-<span id="cb13-13"><a href="#cb13-13"></a>         <span class="st">"Indiana Jones"</span>, <span class="st">"Simba"</span>, <span class="st">"Rihanna"</span>, <span class="st">"Dexter Morgan"</span>, <span class="st">"Morpheus"</span>,</span>
-<span id="cb13-14"><a href="#cb13-14"></a>         <span class="st">"Wolverine"</span>, <span class="st">"Cinderella"</span>, <span class="st">"Captain America"</span>, <span class="st">"Thor"</span>, <span class="st">"Katniss Everdeen"</span>]</span>
-<span id="cb13-15"><a href="#cb13-15"></a></span>
-<span id="cb13-16"><a href="#cb13-16"></a>movies_by_genre <span class="op">=</span> {</span>
-<span id="cb13-17"><a href="#cb13-17"></a>    <span class="st">"Drama"</span>: [<span class="st">"The Shawshank Redemption"</span>, <span class="st">"Forrest Gump"</span>, <span class="st">"The Godfather"</span>, <span class="st">"Titanic"</span>, <span class="st">"Fight Club"</span>],</span>
-<span id="cb13-18"><a href="#cb13-18"></a>    <span class="st">"Action"</span>: [<span class="st">"The Dark Knight"</span>, <span class="st">"Avengers: Endgame"</span>, <span class="st">"Pulp Fiction"</span>, <span class="st">"Jurassic Park"</span>, <span class="st">"Lord of the Rings: The Fellowship of the Ring"</span>],</span>
-<span id="cb13-19"><a href="#cb13-19"></a>    <span class="st">"Sci-Fi"</span>: [<span class="st">"Inception"</span>, <span class="st">"The Matrix"</span>, <span class="st">"Back to the Future"</span>, <span class="st">"Star Wars: Episode IV"</span>, <span class="st">"Blade Runner"</span>],</span>
-<span id="cb13-20"><a href="#cb13-20"></a>    <span class="st">"Animation"</span>: [<span class="st">"The Lion King"</span>, <span class="st">"Toy Story"</span>, <span class="st">"Frozen"</span>, <span class="st">"Finding Nemo"</span>, <span class="st">"Shrek"</span>],</span>
-<span id="cb13-21"><a href="#cb13-21"></a>    <span class="st">"Classic"</span>: [<span class="st">"Casablanca"</span>, <span class="st">"Jaws"</span>, <span class="st">"Gone with the Wind"</span>, <span class="st">"Psycho"</span>, <span class="st">"Citizen Kane"</span>]</span>
-<span id="cb13-22"><a href="#cb13-22"></a>}</span>
-<span id="cb13-23"><a href="#cb13-23"></a></span>
-<span id="cb13-24"><a href="#cb13-24"></a>parties <span class="op">=</span> [<span class="st">"very left wing"</span>, <span class="st">"left wing"</span>, <span class="st">"right wing"</span>, <span class="st">"very right wing"</span>]</span>
-<span id="cb13-25"><a href="#cb13-25"></a></span>
-<span id="cb13-26"><a href="#cb13-26"></a>diets <span class="op">=</span> [<span class="st">"plant-heavy"</span>, <span class="st">"meat-heavy"</span>, <span class="st">"fruit-heavy"</span>, <span class="st">"balanced"</span>, <span class="st">"dairy-heavy"</span>]</span>
-<span id="cb13-27"><a href="#cb13-27"></a></span>
-<span id="cb13-28"><a href="#cb13-28"></a><span class="co"># Generate 50 records</span></span>
-<span id="cb13-29"><a href="#cb13-29"></a>records <span class="op">=</span> [[<span class="st">"name"</span>, <span class="st">"favorite_movie"</span>, <span class="st">"second_favorite_movie"</span>, <span class="st">"preferred_political_party"</span>, <span class="st">"ideal_diet"</span>]]</span>
-<span id="cb13-30"><a href="#cb13-30"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">50</span>):</span>
-<span id="cb13-31"><a href="#cb13-31"></a>    name <span class="op">=</span> random.choice(names)</span>
-<span id="cb13-32"><a href="#cb13-32"></a>    genre <span class="op">=</span> random.choice(<span class="bu">list</span>(movies_by_genre.keys()))</span>
-<span id="cb13-33"><a href="#cb13-33"></a>    movie <span class="op">=</span> random.choice(movies_by_genre[genre])</span>
-<span id="cb13-34"><a href="#cb13-34"></a>    movie2 <span class="op">=</span> random.choice(movies_by_genre[genre])</span>
-<span id="cb13-35"><a href="#cb13-35"></a>    party <span class="op">=</span> random.choice(parties)</span>
-<span id="cb13-36"><a href="#cb13-36"></a>    diet <span class="op">=</span> random.choice(diets)</span>
-<span id="cb13-37"><a href="#cb13-37"></a>    records.append([name, movie, movie2, party, diet])</span>
-<span id="cb13-38"><a href="#cb13-38"></a></span>
-<span id="cb13-39"><a href="#cb13-39"></a><span class="co"># Write to a CSV file</span></span>
-<span id="cb13-40"><a href="#cb13-40"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"w"</span>, newline<span class="op">=</span><span class="st">""</span>) <span class="im">as</span> csvfile:</span>
-<span id="cb13-41"><a href="#cb13-41"></a>    writer <span class="op">=</span> csv.writer(csvfile)</span>
-<span id="cb13-42"><a href="#cb13-42"></a>    writer.writerows(records)</span>
-<span id="cb13-43"><a href="#cb13-43"></a></span>
-<span id="cb13-44"><a href="#cb13-44"></a><span class="co"># Display the first few rows</span></span>
-<span id="cb13-45"><a href="#cb13-45"></a><span class="cf">for</span> row <span class="kw">in</span> records[:<span class="dv">3</span>]:</span>
-<span id="cb13-46"><a href="#cb13-46"></a>    <span class="bu">print</span>(<span class="st">", "</span>.join(row))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"></a><span class="im">import</span> csv</span>
+<span id="cb40-2"><a href="#cb40-2"></a><span class="im">import</span> random</span>
+<span id="cb40-3"><a href="#cb40-3"></a></span>
+<span id="cb40-4"><a href="#cb40-4"></a><span class="co"># Lists of names and diets</span></span>
+<span id="cb40-5"><a href="#cb40-5"></a>names <span class="op">=</span> [<span class="st">"Michael Jordan"</span>, <span class="st">"Tom Hanks"</span>, <span class="st">"Arya Stark"</span>, <span class="st">"Goku"</span>, <span class="st">"Scarlett Johansson"</span>, </span>
+<span id="cb40-6"><a href="#cb40-6"></a>         <span class="st">"Mickey Mouse"</span>, <span class="st">"Hermione Granger"</span>, <span class="st">"Naruto"</span>, <span class="st">"Serena Williams"</span>, <span class="st">"Oprah Winfrey"</span>,</span>
+<span id="cb40-7"><a href="#cb40-7"></a>         <span class="st">"Leonardo DiCaprio"</span>, <span class="st">"Mario"</span>, <span class="st">"Taylor Swift"</span>, <span class="st">"Darth Vader"</span>, <span class="st">"James Bond"</span>,</span>
+<span id="cb40-8"><a href="#cb40-8"></a>         <span class="st">"Usain Bolt"</span>, <span class="st">"Tony Stark"</span>, <span class="st">"Bugs Bunny"</span>, <span class="st">"The Rock"</span>, <span class="st">"Walter White"</span>,</span>
+<span id="cb40-9"><a href="#cb40-9"></a>         <span class="st">"Sheldon Cooper"</span>, <span class="st">"Mulan"</span>, <span class="st">"Elsa"</span>, <span class="st">"Sherlock Holmes"</span>, <span class="st">"Jack Sparrow"</span>,</span>
+<span id="cb40-10"><a href="#cb40-10"></a>         <span class="st">"Luffy"</span>, <span class="st">"Luke Skywalker"</span>, <span class="st">"Marilyn Monroe"</span>, <span class="st">"Freddie Mercury"</span>, <span class="st">"Lady Gaga"</span>,</span>
+<span id="cb40-11"><a href="#cb40-11"></a>         <span class="st">"Superman"</span>, <span class="st">"Wonder Woman"</span>, <span class="st">"Neo"</span>, <span class="st">"Beyonce"</span>, <span class="st">"Ash Ketchum"</span>,</span>
+<span id="cb40-12"><a href="#cb40-12"></a>         <span class="st">"Lara Croft"</span>, <span class="st">"Elvis Presley"</span>, <span class="st">"Kermit the Frog"</span>, <span class="st">"Spider-Man"</span>, <span class="st">"Hannibal Lecter"</span>,</span>
+<span id="cb40-13"><a href="#cb40-13"></a>         <span class="st">"Indiana Jones"</span>, <span class="st">"Simba"</span>, <span class="st">"Rihanna"</span>, <span class="st">"Dexter Morgan"</span>, <span class="st">"Morpheus"</span>,</span>
+<span id="cb40-14"><a href="#cb40-14"></a>         <span class="st">"Wolverine"</span>, <span class="st">"Cinderella"</span>, <span class="st">"Captain America"</span>, <span class="st">"Thor"</span>, <span class="st">"Katniss Everdeen"</span>]</span>
+<span id="cb40-15"><a href="#cb40-15"></a></span>
+<span id="cb40-16"><a href="#cb40-16"></a>movies_by_genre <span class="op">=</span> {</span>
+<span id="cb40-17"><a href="#cb40-17"></a>    <span class="st">"Drama"</span>: [<span class="st">"The Shawshank Redemption"</span>, <span class="st">"Forrest Gump"</span>, <span class="st">"The Godfather"</span>, <span class="st">"Titanic"</span>, <span class="st">"Fight Club"</span>],</span>
+<span id="cb40-18"><a href="#cb40-18"></a>    <span class="st">"Action"</span>: [<span class="st">"The Dark Knight"</span>, <span class="st">"Avengers: Endgame"</span>, <span class="st">"Pulp Fiction"</span>, <span class="st">"Jurassic Park"</span>, <span class="st">"Lord of the Rings: The Fellowship of the Ring"</span>],</span>
+<span id="cb40-19"><a href="#cb40-19"></a>    <span class="st">"Sci-Fi"</span>: [<span class="st">"Inception"</span>, <span class="st">"The Matrix"</span>, <span class="st">"Back to the Future"</span>, <span class="st">"Star Wars: Episode IV"</span>, <span class="st">"Blade Runner"</span>],</span>
+<span id="cb40-20"><a href="#cb40-20"></a>    <span class="st">"Animation"</span>: [<span class="st">"The Lion King"</span>, <span class="st">"Toy Story"</span>, <span class="st">"Frozen"</span>, <span class="st">"Finding Nemo"</span>, <span class="st">"Shrek"</span>],</span>
+<span id="cb40-21"><a href="#cb40-21"></a>    <span class="st">"Classic"</span>: [<span class="st">"Casablanca"</span>, <span class="st">"Jaws"</span>, <span class="st">"Gone with the Wind"</span>, <span class="st">"Psycho"</span>, <span class="st">"Citizen Kane"</span>]</span>
+<span id="cb40-22"><a href="#cb40-22"></a>}</span>
+<span id="cb40-23"><a href="#cb40-23"></a></span>
+<span id="cb40-24"><a href="#cb40-24"></a>parties <span class="op">=</span> [<span class="st">"very left wing"</span>, <span class="st">"left wing"</span>, <span class="st">"right wing"</span>, <span class="st">"very right wing"</span>]</span>
+<span id="cb40-25"><a href="#cb40-25"></a></span>
+<span id="cb40-26"><a href="#cb40-26"></a>diets <span class="op">=</span> [<span class="st">"plant-heavy"</span>, <span class="st">"meat-heavy"</span>, <span class="st">"fruit-heavy"</span>, <span class="st">"balanced"</span>, <span class="st">"dairy-heavy"</span>]</span>
+<span id="cb40-27"><a href="#cb40-27"></a></span>
+<span id="cb40-28"><a href="#cb40-28"></a><span class="co"># Generate 50 records</span></span>
+<span id="cb40-29"><a href="#cb40-29"></a>records <span class="op">=</span> [[<span class="st">"name"</span>, <span class="st">"favorite_movie"</span>, <span class="st">"second_favorite_movie"</span>, <span class="st">"preferred_political_party"</span>, <span class="st">"ideal_diet"</span>]]</span>
+<span id="cb40-30"><a href="#cb40-30"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">50</span>):</span>
+<span id="cb40-31"><a href="#cb40-31"></a>    name <span class="op">=</span> random.choice(names)</span>
+<span id="cb40-32"><a href="#cb40-32"></a>    genre <span class="op">=</span> random.choice(<span class="bu">list</span>(movies_by_genre.keys()))</span>
+<span id="cb40-33"><a href="#cb40-33"></a>    movie <span class="op">=</span> random.choice(movies_by_genre[genre])</span>
+<span id="cb40-34"><a href="#cb40-34"></a>    movie2 <span class="op">=</span> random.choice(movies_by_genre[genre])</span>
+<span id="cb40-35"><a href="#cb40-35"></a>    party <span class="op">=</span> random.choice(parties)</span>
+<span id="cb40-36"><a href="#cb40-36"></a>    diet <span class="op">=</span> random.choice(diets)</span>
+<span id="cb40-37"><a href="#cb40-37"></a>    records.append([name, movie, movie2, party, diet])</span>
+<span id="cb40-38"><a href="#cb40-38"></a></span>
+<span id="cb40-39"><a href="#cb40-39"></a><span class="co"># Write to a CSV file</span></span>
+<span id="cb40-40"><a href="#cb40-40"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"w"</span>, newline<span class="op">=</span><span class="st">""</span>) <span class="im">as</span> csvfile:</span>
+<span id="cb40-41"><a href="#cb40-41"></a>    writer <span class="op">=</span> csv.writer(csvfile)</span>
+<span id="cb40-42"><a href="#cb40-42"></a>    writer.writerows(records)</span>
+<span id="cb40-43"><a href="#cb40-43"></a></span>
+<span id="cb40-44"><a href="#cb40-44"></a><span class="co"># Display the first few rows</span></span>
+<span id="cb40-45"><a href="#cb40-45"></a><span class="cf">for</span> row <span class="kw">in</span> records[:<span class="dv">3</span>]:</span>
+<span id="cb40-46"><a href="#cb40-46"></a>    <span class="bu">print</span>(<span class="st">", "</span>.join(row))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>name, favorite_movie, second_favorite_movie, preferred_political_party, ideal_diet
-Sherlock Holmes, Finding Nemo, Finding Nemo, right wing, balanced
-Naruto, Forrest Gump, Forrest Gump, very right wing, plant-heavy</code></pre>
+Jack Sparrow, Lord of the Rings: The Fellowship of the Ring, Pulp Fiction, right wing, balanced
+Lara Croft, Frozen, Frozen, very right wing, dairy-heavy</code></pre>
 </div>
 </div>
 </section>
@@ -622,16 +818,16 @@ Naruto, Forrest Gump, Forrest Gump, very right wing, plant-heavy</code></pre>
 </section>
 <section id="check-that-you-can-read-it" class="slide level2">
 <h2>Check that you can read it</h2>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb15-2"><a href="#cb15-2"></a>    header <span class="op">=</span> <span class="bu">file</span>.readline()   </span>
-<span id="cb15-3"><a href="#cb15-3"></a>    <span class="bu">print</span>(header)</span>
-<span id="cb15-4"><a href="#cb15-4"></a>    line <span class="op">=</span> <span class="bu">file</span>.readline()</span>
-<span id="cb15-5"><a href="#cb15-5"></a>    <span class="bu">print</span>(line) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb42-2"><a href="#cb42-2"></a>    header <span class="op">=</span> <span class="bu">file</span>.readline()   </span>
+<span id="cb42-3"><a href="#cb42-3"></a>    <span class="bu">print</span>(header)</span>
+<span id="cb42-4"><a href="#cb42-4"></a>    line <span class="op">=</span> <span class="bu">file</span>.readline()</span>
+<span id="cb42-5"><a href="#cb42-5"></a>    <span class="bu">print</span>(line) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>name,favorite_movie,second_favorite_movie,preferred_political_party,ideal_diet
 
-Sherlock Holmes,Finding Nemo,Finding Nemo,right wing,balanced
+Jack Sparrow,Lord of the Rings: The Fellowship of the Ring,Pulp Fiction,right wing,balanced
 </code></pre>
 </div>
 </div>
@@ -697,69 +893,66 @@ Sherlock Holmes,Finding Nemo,Finding Nemo,right wing,balanced
 </section>
 <section id="our-pseudo-code" class="slide level2">
 <h2>Our pseudo code</h2>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># select a user (who will receive recommendation)</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="co"># init variables to hold top similarity score, top person, recommendation</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a></span>
-<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># load data</span></span>
-<span id="cb17-5"><a href="#cb17-5"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
-<span id="cb17-6"><a href="#cb17-6"></a>    <span class="co"># make sure to skip chosen user</span></span>
-<span id="cb17-7"><a href="#cb17-7"></a>    <span class="co"># split each record line into a list of items</span></span>
-<span id="cb17-8"><a href="#cb17-8"></a>        <span class="co"># use a nested loop to go through each item</span></span>
-<span id="cb17-9"><a href="#cb17-9"></a>        <span class="co"># make sure we compare columns correctly</span></span>
-<span id="cb17-10"><a href="#cb17-10"></a>    <span class="co"># check if similarity score is higher</span></span>
-<span id="cb17-11"><a href="#cb17-11"></a>        <span class="co"># update if so</span></span>
-<span id="cb17-12"><a href="#cb17-12"></a></span>
-<span id="cb17-13"><a href="#cb17-13"></a><span class="co"># print top score, record, and recommendation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># select a user (who will receive recommendation)</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a><span class="co"># init variables to hold top similarity score, top person, recommendation</span></span>
+<span id="cb44-3"><a href="#cb44-3"></a></span>
+<span id="cb44-4"><a href="#cb44-4"></a><span class="co"># load data</span></span>
+<span id="cb44-5"><a href="#cb44-5"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
+<span id="cb44-6"><a href="#cb44-6"></a>    <span class="co"># make sure to skip chosen user</span></span>
+<span id="cb44-7"><a href="#cb44-7"></a>    <span class="co"># split each record line into a list of items</span></span>
+<span id="cb44-8"><a href="#cb44-8"></a>        <span class="co"># use a nested loop to go through each item</span></span>
+<span id="cb44-9"><a href="#cb44-9"></a>        <span class="co"># make sure we compare columns correctly</span></span>
+<span id="cb44-10"><a href="#cb44-10"></a>    <span class="co"># check if similarity score is higher</span></span>
+<span id="cb44-11"><a href="#cb44-11"></a>        <span class="co"># update if so</span></span>
+<span id="cb44-12"><a href="#cb44-12"></a></span>
+<span id="cb44-13"><a href="#cb44-13"></a><span class="co"># print top score, record, and recommendation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="initialize-1" class="slide level2">
 <h2>Initialize</h2>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
-<span id="cb18-2"><a href="#cb18-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
-<span id="cb18-3"><a href="#cb18-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb18-4"><a href="#cb18-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb18-5"><a href="#cb18-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb18-6"><a href="#cb18-6"></a></span>
-<span id="cb18-7"><a href="#cb18-7"></a><span class="co"># load data</span></span>
-<span id="cb18-8"><a href="#cb18-8"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
-<span id="cb18-9"><a href="#cb18-9"></a>    <span class="co"># make sure to skip chosen user</span></span>
-<span id="cb18-10"><a href="#cb18-10"></a>    <span class="co"># split each record line into a list of items</span></span>
-<span id="cb18-11"><a href="#cb18-11"></a>        <span class="co"># use a nested loop to go through each item</span></span>
-<span id="cb18-12"><a href="#cb18-12"></a>        <span class="co"># make sure we compare columns correctly</span></span>
-<span id="cb18-13"><a href="#cb18-13"></a>    <span class="co"># check if similarity score is higher</span></span>
-<span id="cb18-14"><a href="#cb18-14"></a>        <span class="co"># update if so</span></span>
-<span id="cb18-15"><a href="#cb18-15"></a></span>
-<span id="cb18-16"><a href="#cb18-16"></a><span class="co"># print top score, record, and recommendation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
+<span id="cb45-2"><a href="#cb45-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
+<span id="cb45-3"><a href="#cb45-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb45-4"><a href="#cb45-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb45-5"><a href="#cb45-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb45-6"><a href="#cb45-6"></a></span>
+<span id="cb45-7"><a href="#cb45-7"></a><span class="co"># load data</span></span>
+<span id="cb45-8"><a href="#cb45-8"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
+<span id="cb45-9"><a href="#cb45-9"></a>    <span class="co"># make sure to skip chosen user</span></span>
+<span id="cb45-10"><a href="#cb45-10"></a>    <span class="co"># split each record line into a list of items</span></span>
+<span id="cb45-11"><a href="#cb45-11"></a>        <span class="co"># use a nested loop to go through each item</span></span>
+<span id="cb45-12"><a href="#cb45-12"></a>        <span class="co"># make sure we compare columns correctly</span></span>
+<span id="cb45-13"><a href="#cb45-13"></a>    <span class="co"># check if similarity score is higher</span></span>
+<span id="cb45-14"><a href="#cb45-14"></a>        <span class="co"># update if so</span></span>
+<span id="cb45-15"><a href="#cb45-15"></a></span>
+<span id="cb45-16"><a href="#cb45-16"></a><span class="co"># print top score, record, and recommendation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="load-data" class="slide level2">
 <h2>Load data</h2>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb19-4"><a href="#cb19-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb19-5"><a href="#cb19-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb19-6"><a href="#cb19-6"></a></span>
-<span id="cb19-7"><a href="#cb19-7"></a><span class="co"># load data</span></span>
-<span id="cb19-8"><a href="#cb19-8"></a>    </span>
-<span id="cb19-9"><a href="#cb19-9"></a></span>
-<span id="cb19-10"><a href="#cb19-10"></a><span class="co"># load data</span></span>
-<span id="cb19-11"><a href="#cb19-11"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb19-12"><a href="#cb19-12"></a>    <span class="co"># Skip header</span></span>
-<span id="cb19-13"><a href="#cb19-13"></a>    header <span class="op">=</span> <span class="bu">file</span>.readline()</span>
-<span id="cb19-14"><a href="#cb19-14"></a>    <span class="bu">print</span>(header)</span>
-<span id="cb19-15"><a href="#cb19-15"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
-<span id="cb19-16"><a href="#cb19-16"></a>    <span class="co"># make sure to skip chosen user</span></span>
-<span id="cb19-17"><a href="#cb19-17"></a>    <span class="co"># split each record line into a list of items</span></span>
-<span id="cb19-18"><a href="#cb19-18"></a>        <span class="co"># use a nested loop to go through each item</span></span>
-<span id="cb19-19"><a href="#cb19-19"></a>        <span class="co"># make sure we compare columns correctly</span></span>
-<span id="cb19-20"><a href="#cb19-20"></a>    <span class="co"># check if similarity score is higher</span></span>
-<span id="cb19-21"><a href="#cb19-21"></a>        <span class="co"># update if so</span></span>
-<span id="cb19-22"><a href="#cb19-22"></a></span>
-<span id="cb19-23"><a href="#cb19-23"></a><span class="co"># print top score, record, and recommendation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
+<span id="cb46-2"><a href="#cb46-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb46-4"><a href="#cb46-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb46-5"><a href="#cb46-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb46-6"><a href="#cb46-6"></a></span>
+<span id="cb46-7"><a href="#cb46-7"></a><span class="co"># load data</span></span>
+<span id="cb46-8"><a href="#cb46-8"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb46-9"><a href="#cb46-9"></a>    <span class="co"># Skip header</span></span>
+<span id="cb46-10"><a href="#cb46-10"></a>    header <span class="op">=</span> <span class="bu">file</span>.readline()</span>
+<span id="cb46-11"><a href="#cb46-11"></a>    <span class="bu">print</span>(header)</span>
+<span id="cb46-12"><a href="#cb46-12"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
+<span id="cb46-13"><a href="#cb46-13"></a>    <span class="co"># make sure to skip chosen user</span></span>
+<span id="cb46-14"><a href="#cb46-14"></a>    <span class="co"># split each record line into a list of items</span></span>
+<span id="cb46-15"><a href="#cb46-15"></a>        <span class="co"># use a nested loop to go through each item</span></span>
+<span id="cb46-16"><a href="#cb46-16"></a>        <span class="co"># make sure we compare columns correctly</span></span>
+<span id="cb46-17"><a href="#cb46-17"></a>    <span class="co"># check if similarity score is higher</span></span>
+<span id="cb46-18"><a href="#cb46-18"></a>        <span class="co"># update if so</span></span>
+<span id="cb46-19"><a href="#cb46-19"></a></span>
+<span id="cb46-20"><a href="#cb46-20"></a><span class="co"># print top score, record, and recommendation</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>name,favorite_movie,second_favorite_movie,preferred_political_party,ideal_diet
 </code></pre>
@@ -768,82 +961,82 @@ Sherlock Holmes,Finding Nemo,Finding Nemo,right wing,balanced
 </section>
 <section id="first-for-loop" class="slide level2">
 <h2>First for loop</h2>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
-<span id="cb21-2"><a href="#cb21-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb21-5"><a href="#cb21-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a></span>
-<span id="cb21-7"><a href="#cb21-7"></a><span class="co"># load data</span></span>
-<span id="cb21-8"><a href="#cb21-8"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb21-9"><a href="#cb21-9"></a>    <span class="co"># Skip header</span></span>
-<span id="cb21-10"><a href="#cb21-10"></a>    all_lines <span class="op">=</span> <span class="bu">file</span>.readlines()</span>
-<span id="cb21-11"><a href="#cb21-11"></a>    header <span class="op">=</span> all_lines[<span class="dv">0</span>]</span>
-<span id="cb21-12"><a href="#cb21-12"></a>    records <span class="op">=</span> all_lines[<span class="dv">1</span>:]</span>
-<span id="cb21-13"><a href="#cb21-13"></a></span>
-<span id="cb21-14"><a href="#cb21-14"></a>    user_record <span class="op">=</span> records[index_of_user]</span>
-<span id="cb21-15"><a href="#cb21-15"></a></span>
-<span id="cb21-16"><a href="#cb21-16"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
-<span id="cb21-17"><a href="#cb21-17"></a>    <span class="cf">for</span> record <span class="kw">in</span> records:</span>
-<span id="cb21-18"><a href="#cb21-18"></a>        <span class="cf">if</span> line <span class="op">==</span> user_record:</span>
-<span id="cb21-19"><a href="#cb21-19"></a>            <span class="cf">continue</span></span>
-<span id="cb21-20"><a href="#cb21-20"></a></span>
-<span id="cb21-21"><a href="#cb21-21"></a>        <span class="co"># split each record line into a list of items</span></span>
-<span id="cb21-22"><a href="#cb21-22"></a>        columns <span class="op">=</span> record.strip().split(<span class="st">","</span>)</span>
-<span id="cb21-23"><a href="#cb21-23"></a>        <span class="bu">print</span>(columns)</span>
-<span id="cb21-24"><a href="#cb21-24"></a>        <span class="co"># use a nested loop to go through each item</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
+<span id="cb48-3"><a href="#cb48-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb48-4"><a href="#cb48-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb48-5"><a href="#cb48-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb48-6"><a href="#cb48-6"></a></span>
+<span id="cb48-7"><a href="#cb48-7"></a><span class="co"># load data</span></span>
+<span id="cb48-8"><a href="#cb48-8"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb48-9"><a href="#cb48-9"></a>    <span class="co"># Skip header</span></span>
+<span id="cb48-10"><a href="#cb48-10"></a>    all_lines <span class="op">=</span> <span class="bu">file</span>.readlines()</span>
+<span id="cb48-11"><a href="#cb48-11"></a>    header <span class="op">=</span> all_lines[<span class="dv">0</span>]</span>
+<span id="cb48-12"><a href="#cb48-12"></a>    records <span class="op">=</span> all_lines[<span class="dv">1</span>:]</span>
+<span id="cb48-13"><a href="#cb48-13"></a></span>
+<span id="cb48-14"><a href="#cb48-14"></a>    user_record <span class="op">=</span> records[index_of_user]</span>
+<span id="cb48-15"><a href="#cb48-15"></a></span>
+<span id="cb48-16"><a href="#cb48-16"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
+<span id="cb48-17"><a href="#cb48-17"></a>    <span class="cf">for</span> record <span class="kw">in</span> records:</span>
+<span id="cb48-18"><a href="#cb48-18"></a>        <span class="cf">if</span> line <span class="op">==</span> user_record:</span>
+<span id="cb48-19"><a href="#cb48-19"></a>            <span class="cf">continue</span></span>
+<span id="cb48-20"><a href="#cb48-20"></a></span>
+<span id="cb48-21"><a href="#cb48-21"></a>        <span class="co"># split each record line into a list of items</span></span>
+<span id="cb48-22"><a href="#cb48-22"></a>        columns <span class="op">=</span> record.strip().split(<span class="st">","</span>)</span>
+<span id="cb48-23"><a href="#cb48-23"></a>        <span class="bu">print</span>(columns)</span>
+<span id="cb48-24"><a href="#cb48-24"></a>        <span class="co"># use a nested loop to go through each item</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['Sherlock Holmes', 'Finding Nemo', 'Finding Nemo', 'right wing', 'balanced']
-['Naruto', 'Forrest Gump', 'Forrest Gump', 'very right wing', 'plant-heavy']
-['Beyonce', 'Lord of the Rings: The Fellowship of the Ring', 'Jurassic Park', 'very right wing', 'balanced']
-['Luke Skywalker', 'Jurassic Park', 'The Dark Knight', 'very right wing', 'meat-heavy']
-['Scarlett Johansson', 'Toy Story', 'Frozen', 'right wing', 'meat-heavy']
-['Captain America', 'Titanic', 'The Godfather', 'left wing', 'fruit-heavy']
-['Thor', 'The Matrix', 'Inception', 'very left wing', 'dairy-heavy']
-['The Rock', 'Pulp Fiction', 'Avengers: Endgame', 'left wing', 'dairy-heavy']
-['Beyonce', 'The Lion King', 'Shrek', 'very right wing', 'meat-heavy']
-['Captain America', 'Jaws', 'Casablanca', 'very right wing', 'plant-heavy']
-['Elsa', 'Blade Runner', 'Back to the Future', 'very left wing', 'fruit-heavy']
-['Cinderella', 'Jaws', 'Gone with the Wind', 'right wing', 'meat-heavy']
-['Katniss Everdeen', 'Psycho', 'Jaws', 'right wing', 'balanced']
-['Wonder Woman', 'The Matrix', 'The Matrix', 'left wing', 'meat-heavy']
-['Wonder Woman', 'The Matrix', 'Inception', 'very left wing', 'dairy-heavy']
-['Luke Skywalker', 'Titanic', 'Forrest Gump', 'right wing', 'dairy-heavy']
-['Simba', 'The Matrix', 'Inception', 'right wing', 'fruit-heavy']
-['Luffy', 'Shrek', 'Finding Nemo', 'very right wing', 'meat-heavy']
-['Beyonce', 'Avengers: Endgame', 'Lord of the Rings: The Fellowship of the Ring', 'left wing', 'fruit-heavy']
-['Wonder Woman', 'Psycho', 'Citizen Kane', 'very right wing', 'plant-heavy']
-['James Bond', 'Toy Story', 'Frozen', 'very left wing', 'plant-heavy']
-['Jack Sparrow', 'Jurassic Park', 'Avengers: Endgame', 'left wing', 'balanced']
-['Katniss Everdeen', 'Fight Club', 'Titanic', 'left wing', 'meat-heavy']
-['Ash Ketchum', 'Finding Nemo', 'Finding Nemo', 'very left wing', 'meat-heavy']
-['Cinderella', 'Blade Runner', 'Back to the Future', 'very left wing', 'fruit-heavy']
-['The Rock', 'Back to the Future', 'Star Wars: Episode IV', 'very left wing', 'meat-heavy']
-['Naruto', 'Fight Club', 'The Godfather', 'right wing', 'dairy-heavy']
-['Sheldon Cooper', 'Casablanca', 'Jaws', 'very right wing', 'plant-heavy']
-['Indiana Jones', 'Jaws', 'Psycho', 'very left wing', 'fruit-heavy']
-['Bugs Bunny', 'Casablanca', 'Jaws', 'very right wing', 'balanced']
-['Simba', 'Titanic', 'The Godfather', 'very right wing', 'plant-heavy']
-['Taylor Swift', 'Psycho', 'Casablanca', 'left wing', 'meat-heavy']
-['Leonardo DiCaprio', 'Fight Club', 'The Shawshank Redemption', 'right wing', 'plant-heavy']
-['Tony Stark', 'Star Wars: Episode IV', 'Inception', 'right wing', 'fruit-heavy']
-['Usain Bolt', 'Pulp Fiction', 'Pulp Fiction', 'left wing', 'meat-heavy']
-['Leonardo DiCaprio', 'Inception', 'Inception', 'very left wing', 'plant-heavy']
-['Bugs Bunny', 'Blade Runner', 'Back to the Future', 'very left wing', 'meat-heavy']
-['Rihanna', 'Toy Story', 'Toy Story', 'very right wing', 'meat-heavy']
-['Taylor Swift', 'The Shawshank Redemption', 'The Shawshank Redemption', 'very left wing', 'meat-heavy']
-['Dexter Morgan', 'Avengers: Endgame', 'The Dark Knight', 'right wing', 'dairy-heavy']
-['Naruto', 'Avengers: Endgame', 'Avengers: Endgame', 'very right wing', 'plant-heavy']
-['Usain Bolt', 'Avengers: Endgame', 'Lord of the Rings: The Fellowship of the Ring', 'very right wing', 'dairy-heavy']
-['Spider-Man', 'Inception', 'The Matrix', 'very right wing', 'fruit-heavy']
-['Mickey Mouse', 'Jaws', 'Gone with the Wind', 'very left wing', 'fruit-heavy']
-['Leonardo DiCaprio', 'Fight Club', 'The Shawshank Redemption', 'very right wing', 'plant-heavy']
-['Cinderella', 'The Dark Knight', 'The Dark Knight', 'very right wing', 'balanced']
-['Thor', 'Psycho', 'Citizen Kane', 'left wing', 'fruit-heavy']
-['Marilyn Monroe', 'Shrek', 'Finding Nemo', 'very right wing', 'fruit-heavy']
-['Ash Ketchum', 'Psycho', 'Citizen Kane', 'very right wing', 'balanced']
-['Luke Skywalker', 'Star Wars: Episode IV', 'Star Wars: Episode IV', 'left wing', 'meat-heavy']</code></pre>
+<pre><code>['Jack Sparrow', 'Lord of the Rings: The Fellowship of the Ring', 'Pulp Fiction', 'right wing', 'balanced']
+['Lara Croft', 'Frozen', 'Frozen', 'very right wing', 'dairy-heavy']
+['Hannibal Lecter', 'Back to the Future', 'Star Wars: Episode IV', 'very right wing', 'fruit-heavy']
+['Marilyn Monroe', 'Psycho', 'Gone with the Wind', 'right wing', 'fruit-heavy']
+['Sheldon Cooper', 'Gone with the Wind', 'Jaws', 'very left wing', 'balanced']
+['James Bond', 'Pulp Fiction', 'Avengers: Endgame', 'right wing', 'balanced']
+['Katniss Everdeen', 'Shrek', 'Frozen', 'very right wing', 'meat-heavy']
+['Lady Gaga', 'Back to the Future', 'Star Wars: Episode IV', 'very left wing', 'balanced']
+['Arya Stark', 'Avengers: Endgame', 'The Dark Knight', 'very left wing', 'dairy-heavy']
+['Kermit the Frog', 'The Godfather', 'The Shawshank Redemption', 'very left wing', 'dairy-heavy']
+['Beyonce', 'Jaws', 'Casablanca', 'left wing', 'meat-heavy']
+['Hannibal Lecter', 'Jaws', 'Psycho', 'left wing', 'plant-heavy']
+['Goku', 'Fight Club', 'Forrest Gump', 'left wing', 'dairy-heavy']
+['Scarlett Johansson', 'Back to the Future', 'Star Wars: Episode IV', 'right wing', 'fruit-heavy']
+['James Bond', 'Shrek', 'Finding Nemo', 'left wing', 'plant-heavy']
+['Morpheus', 'Avengers: Endgame', 'Jurassic Park', 'left wing', 'balanced']
+['Taylor Swift', 'Back to the Future', 'Star Wars: Episode IV', 'very right wing', 'balanced']
+['Ash Ketchum', 'Casablanca', 'Citizen Kane', 'very right wing', 'meat-heavy']
+['Sheldon Cooper', 'Lord of the Rings: The Fellowship of the Ring', 'The Dark Knight', 'very left wing', 'dairy-heavy']
+['Freddie Mercury', 'The Shawshank Redemption', 'Fight Club', 'very right wing', 'meat-heavy']
+['Mulan', 'Casablanca', 'Casablanca', 'right wing', 'meat-heavy']
+['Taylor Swift', 'The Matrix', 'The Matrix', 'very left wing', 'balanced']
+['Elsa', 'Fight Club', 'Titanic', 'very right wing', 'balanced']
+['Spider-Man', 'Titanic', 'Fight Club', 'left wing', 'dairy-heavy']
+['Katniss Everdeen', 'Star Wars: Episode IV', 'The Matrix', 'very left wing', 'dairy-heavy']
+['Scarlett Johansson', 'Toy Story', 'Toy Story', 'very right wing', 'dairy-heavy']
+['Mickey Mouse', 'Fight Club', 'The Shawshank Redemption', 'very left wing', 'dairy-heavy']
+['Lara Croft', 'Titanic', 'The Shawshank Redemption', 'very left wing', 'meat-heavy']
+['Wonder Woman', 'Jurassic Park', 'The Dark Knight', 'right wing', 'dairy-heavy']
+['Bugs Bunny', 'Citizen Kane', 'Gone with the Wind', 'left wing', 'fruit-heavy']
+['Sheldon Cooper', 'Casablanca', 'Jaws', 'left wing', 'fruit-heavy']
+['Bugs Bunny', 'Toy Story', 'The Lion King', 'right wing', 'fruit-heavy']
+['James Bond', 'Titanic', 'The Godfather', 'left wing', 'meat-heavy']
+['Naruto', 'Back to the Future', 'Star Wars: Episode IV', 'very right wing', 'dairy-heavy']
+['Goku', 'The Lion King', 'The Lion King', 'left wing', 'dairy-heavy']
+['Cinderella', 'Citizen Kane', 'Gone with the Wind', 'left wing', 'meat-heavy']
+['Jack Sparrow', 'Star Wars: Episode IV', 'Inception', 'very left wing', 'meat-heavy']
+['Hannibal Lecter', 'Avengers: Endgame', 'The Dark Knight', 'very left wing', 'balanced']
+['Beyonce', 'Toy Story', 'Frozen', 'left wing', 'dairy-heavy']
+['Spider-Man', 'Citizen Kane', 'Casablanca', 'left wing', 'plant-heavy']
+['Rihanna', 'Jaws', 'Casablanca', 'very right wing', 'dairy-heavy']
+['Sherlock Holmes', 'The Lion King', 'Shrek', 'very right wing', 'balanced']
+['Mario', 'Citizen Kane', 'Psycho', 'right wing', 'balanced']
+['Rihanna', 'Jurassic Park', 'Lord of the Rings: The Fellowship of the Ring', 'very right wing', 'dairy-heavy']
+['Mickey Mouse', 'Star Wars: Episode IV', 'The Matrix', 'very left wing', 'fruit-heavy']
+['Neo', 'The Matrix', 'Blade Runner', 'right wing', 'balanced']
+['Simba', 'Back to the Future', 'Blade Runner', 'very left wing', 'balanced']
+['Luke Skywalker', 'Frozen', 'The Lion King', 'very left wing', 'dairy-heavy']
+['Michael Jordan', 'Inception', 'The Matrix', 'right wing', 'meat-heavy']
+['Mickey Mouse', 'Jurassic Park', 'Avengers: Endgame', 'left wing', 'plant-heavy']</code></pre>
 </div>
 </div>
 </section>
@@ -852,64 +1045,76 @@ Sherlock Holmes,Finding Nemo,Finding Nemo,right wing,balanced
 <p>As we write this code, at each step let’s make our code print something out so we know we’re making progress!</p>
 <p>When you’re feeling stuck, trying printing something for every new line of code you write.</p>
 </section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="owl.jpg" class="r-stretch quarto-figure-center"><p class="caption">How to draw an owl dot jpeg</p></section>
 <section id="nested-loop" class="slide level2">
 <h2>Nested loop</h2>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
-<span id="cb23-2"><a href="#cb23-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
-<span id="cb23-3"><a href="#cb23-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb23-5"><a href="#cb23-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
-<span id="cb23-6"><a href="#cb23-6"></a></span>
-<span id="cb23-7"><a href="#cb23-7"></a><span class="co"># load data</span></span>
-<span id="cb23-8"><a href="#cb23-8"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="cb23-9"><a href="#cb23-9"></a>    all_lines <span class="op">=</span> <span class="bu">file</span>.readlines()</span>
-<span id="cb23-10"><a href="#cb23-10"></a>    header <span class="op">=</span> all_lines[<span class="dv">0</span>]</span>
-<span id="cb23-11"><a href="#cb23-11"></a>    records <span class="op">=</span> all_lines[<span class="dv">1</span>:]</span>
-<span id="cb23-12"><a href="#cb23-12"></a></span>
-<span id="cb23-13"><a href="#cb23-13"></a>    user_record <span class="op">=</span> records[index_of_user].strip().split(<span class="st">","</span>)</span>
-<span id="cb23-14"><a href="#cb23-14"></a></span>
-<span id="cb23-15"><a href="#cb23-15"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
-<span id="cb23-16"><a href="#cb23-16"></a>    <span class="cf">for</span> record <span class="kw">in</span> records:</span>
-<span id="cb23-17"><a href="#cb23-17"></a>        columns <span class="op">=</span> record.strip().split(<span class="st">","</span>)</span>
-<span id="cb23-18"><a href="#cb23-18"></a></span>
-<span id="cb23-19"><a href="#cb23-19"></a>        <span class="cf">if</span> user_record[<span class="dv">0</span>] <span class="op">==</span> columns[<span class="dv">0</span>]:</span>
-<span id="cb23-20"><a href="#cb23-20"></a>            <span class="bu">print</span>(<span class="st">"Skipping "</span>, record)</span>
-<span id="cb23-21"><a href="#cb23-21"></a>            <span class="cf">continue</span></span>
-<span id="cb23-22"><a href="#cb23-22"></a></span>
-<span id="cb23-23"><a href="#cb23-23"></a>        score_for_current_record <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb23-24"><a href="#cb23-24"></a>        <span class="co"># split each record line into a list of items</span></span>
-<span id="cb23-25"><a href="#cb23-25"></a>        </span>
-<span id="cb23-26"><a href="#cb23-26"></a>        <span class="co"># use a nested loop to go through each item</span></span>
-<span id="cb23-27"><a href="#cb23-27"></a>        <span class="co"># use manually defined [1,3,4,5] to get only</span></span>
-<span id="cb23-28"><a href="#cb23-28"></a>        <span class="co"># favorite_movie, party, diet (skip)</span></span>
-<span id="cb23-29"><a href="#cb23-29"></a>        <span class="cf">for</span> column_index <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>]:</span>
-<span id="cb23-30"><a href="#cb23-30"></a>            <span class="cf">if</span> columns[column_index] <span class="op">==</span> user_record[column_index]:</span>
-<span id="cb23-31"><a href="#cb23-31"></a>                score_for_current_record <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb23-32"><a href="#cb23-32"></a>        </span>
-<span id="cb23-33"><a href="#cb23-33"></a>        <span class="cf">if</span> score_for_current_record <span class="op">&gt;</span> top_score:</span>
-<span id="cb23-34"><a href="#cb23-34"></a>            top_score <span class="op">=</span> score_for_current_record</span>
-<span id="cb23-35"><a href="#cb23-35"></a>            top_record <span class="op">=</span> record</span>
-<span id="cb23-36"><a href="#cb23-36"></a>            recommendation <span class="op">=</span> columns[<span class="dv">2</span>]</span>
-<span id="cb23-37"><a href="#cb23-37"></a></span>
-<span id="cb23-38"><a href="#cb23-38"></a><span class="bu">print</span>(<span class="st">"You are"</span>, user_record)</span>
-<span id="cb23-39"><a href="#cb23-39"></a></span>
-<span id="cb23-40"><a href="#cb23-40"></a><span class="bu">print</span>(<span class="st">"After careful consideration, we have found that the most similar user is"</span>)</span>
-<span id="cb23-41"><a href="#cb23-41"></a><span class="bu">print</span>(top_record)</span>
-<span id="cb23-42"><a href="#cb23-42"></a><span class="bu">print</span>(<span class="ss">f"You have a similarity score of </span><span class="sc">{</span>top_score<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb23-43"><a href="#cb23-43"></a></span>
-<span id="cb23-44"><a href="#cb23-44"></a><span class="bu">print</span>(<span class="st">"We recommend you watch"</span>, recommendation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Skipping  Luffy,Shrek,Finding Nemo,very right wing,meat-heavy
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1"></a><span class="co"># select a user + init variables to keep track of scores</span></span>
+<span id="cb50-2"><a href="#cb50-2"></a>index_of_user <span class="op">=</span> <span class="dv">17</span></span>
+<span id="cb50-3"><a href="#cb50-3"></a>top_score <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb50-4"><a href="#cb50-4"></a>top_record <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb50-5"><a href="#cb50-5"></a>recommendation <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb50-6"><a href="#cb50-6"></a></span>
+<span id="cb50-7"><a href="#cb50-7"></a><span class="co"># load data</span></span>
+<span id="cb50-8"><a href="#cb50-8"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"fake_data.csv"</span>, <span class="st">"r"</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb50-9"><a href="#cb50-9"></a>    all_lines <span class="op">=</span> <span class="bu">file</span>.readlines()</span>
+<span id="cb50-10"><a href="#cb50-10"></a>    header <span class="op">=</span> all_lines[<span class="dv">0</span>]</span>
+<span id="cb50-11"><a href="#cb50-11"></a>    records <span class="op">=</span> all_lines[<span class="dv">1</span>:]</span>
+<span id="cb50-12"><a href="#cb50-12"></a></span>
+<span id="cb50-13"><a href="#cb50-13"></a>    user_record <span class="op">=</span> records[index_of_user].strip().split(<span class="st">","</span>)</span>
+<span id="cb50-14"><a href="#cb50-14"></a></span>
+<span id="cb50-15"><a href="#cb50-15"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
+<span id="cb50-16"><a href="#cb50-16"></a>    <span class="cf">for</span> record <span class="kw">in</span> records:</span>
+<span id="cb50-17"><a href="#cb50-17"></a>        columns <span class="op">=</span> record.strip().split(<span class="st">","</span>)</span>
+<span id="cb50-18"><a href="#cb50-18"></a></span>
+<span id="cb50-19"><a href="#cb50-19"></a>        <span class="cf">if</span> user_record[<span class="dv">0</span>] <span class="op">==</span> columns[<span class="dv">0</span>]:</span>
+<span id="cb50-20"><a href="#cb50-20"></a>            <span class="bu">print</span>(<span class="st">"Skipping "</span>, record)</span>
+<span id="cb50-21"><a href="#cb50-21"></a>            <span class="cf">continue</span></span>
+<span id="cb50-22"><a href="#cb50-22"></a></span>
+<span id="cb50-23"><a href="#cb50-23"></a>        score_for_current_record <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb50-24"><a href="#cb50-24"></a>        <span class="co"># split each record line into a list of items</span></span>
+<span id="cb50-25"><a href="#cb50-25"></a>        </span>
+<span id="cb50-26"><a href="#cb50-26"></a>        <span class="co"># use a nested loop to go through each item</span></span>
+<span id="cb50-27"><a href="#cb50-27"></a>        <span class="co"># use manually defined [1,3,4,5] to get only</span></span>
+<span id="cb50-28"><a href="#cb50-28"></a>        <span class="co"># favorite_movie, party, diet (skip)</span></span>
+<span id="cb50-29"><a href="#cb50-29"></a>        <span class="cf">for</span> column_index <span class="kw">in</span> [<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>]:</span>
+<span id="cb50-30"><a href="#cb50-30"></a>            <span class="cf">if</span> columns[column_index] <span class="op">==</span> user_record[column_index]:</span>
+<span id="cb50-31"><a href="#cb50-31"></a>                score_for_current_record <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb50-32"><a href="#cb50-32"></a>        </span>
+<span id="cb50-33"><a href="#cb50-33"></a>        <span class="cf">if</span> score_for_current_record <span class="op">&gt;</span> top_score:</span>
+<span id="cb50-34"><a href="#cb50-34"></a>            top_score <span class="op">=</span> score_for_current_record</span>
+<span id="cb50-35"><a href="#cb50-35"></a>            top_record <span class="op">=</span> record</span>
+<span id="cb50-36"><a href="#cb50-36"></a>            recommendation <span class="op">=</span> columns[<span class="dv">2</span>]</span>
+<span id="cb50-37"><a href="#cb50-37"></a></span>
+<span id="cb50-38"><a href="#cb50-38"></a><span class="bu">print</span>(<span class="st">"You are"</span>, user_record)</span>
+<span id="cb50-39"><a href="#cb50-39"></a></span>
+<span id="cb50-40"><a href="#cb50-40"></a><span class="bu">print</span>(<span class="st">"After careful consideration, we have found that the most similar user is"</span>)</span>
+<span id="cb50-41"><a href="#cb50-41"></a><span class="bu">print</span>(top_record)</span>
+<span id="cb50-42"><a href="#cb50-42"></a><span class="bu">print</span>(<span class="ss">f"You have a similarity score of </span><span class="sc">{</span>top_score<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb50-43"><a href="#cb50-43"></a></span>
+<span id="cb50-44"><a href="#cb50-44"></a><span class="bu">print</span>(<span class="st">"We recommend you watch"</span>, recommendation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
-You are ['Luffy', 'Shrek', 'Finding Nemo', 'very right wing', 'meat-heavy']
+</section>
+<section id="nested-loop-output" class="slide level2 output-location-slide"><h2>Nested loop</h2><div class="cell output-location-slide" data-execution_count="26">
+<div class="cell-output cell-output-stdout">
+<pre><code>Skipping  Ash Ketchum,Casablanca,Citizen Kane,very right wing,meat-heavy
+
+You are ['Ash Ketchum', 'Casablanca', 'Citizen Kane', 'very right wing', 'meat-heavy']
 After careful consideration, we have found that the most similar user is
-Luke Skywalker,Jurassic Park,The Dark Knight,very right wing,meat-heavy
+Katniss Everdeen,Shrek,Frozen,very right wing,meat-heavy
 
 You have a similarity score of 2
-We recommend you watch The Dark Knight</code></pre>
+We recommend you watch Frozen</code></pre>
 </div>
-</div>
+</div></section><section id="ok-lets-take-a-step-back" class="slide level2">
+<h2>Ok, let’s take a step back</h2>
+<ul>
+<li>switch to live coding here</li>
+</ul>
 <div class="footer footer-default">
 
 </div>

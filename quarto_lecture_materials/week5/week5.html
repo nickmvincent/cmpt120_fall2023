@@ -803,8 +803,8 @@ True</code></pre>
 <span id="cb40-46"><a href="#cb40-46"></a>    <span class="bu">print</span>(<span class="st">", "</span>.join(row))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>name, favorite_movie, second_favorite_movie, preferred_political_party, ideal_diet
-Jack Sparrow, Lord of the Rings: The Fellowship of the Ring, Pulp Fiction, right wing, balanced
-Lara Croft, Frozen, Frozen, very right wing, dairy-heavy</code></pre>
+Serena Williams, Shrek, Toy Story, very left wing, fruit-heavy
+Mulan, Titanic, The Shawshank Redemption, right wing, balanced</code></pre>
 </div>
 </div>
 </section>
@@ -827,7 +827,7 @@ Lara Croft, Frozen, Frozen, very right wing, dairy-heavy</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>name,favorite_movie,second_favorite_movie,preferred_political_party,ideal_diet
 
-Jack Sparrow,Lord of the Rings: The Fellowship of the Ring,Pulp Fiction,right wing,balanced
+Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
 </code></pre>
 </div>
 </div>
@@ -987,56 +987,56 @@ Jack Sparrow,Lord of the Rings: The Fellowship of the Ring,Pulp Fiction,right wi
 <span id="cb48-23"><a href="#cb48-23"></a>        <span class="bu">print</span>(columns)</span>
 <span id="cb48-24"><a href="#cb48-24"></a>        <span class="co"># use a nested loop to go through each item</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['Jack Sparrow', 'Lord of the Rings: The Fellowship of the Ring', 'Pulp Fiction', 'right wing', 'balanced']
-['Lara Croft', 'Frozen', 'Frozen', 'very right wing', 'dairy-heavy']
-['Hannibal Lecter', 'Back to the Future', 'Star Wars: Episode IV', 'very right wing', 'fruit-heavy']
-['Marilyn Monroe', 'Psycho', 'Gone with the Wind', 'right wing', 'fruit-heavy']
-['Sheldon Cooper', 'Gone with the Wind', 'Jaws', 'very left wing', 'balanced']
-['James Bond', 'Pulp Fiction', 'Avengers: Endgame', 'right wing', 'balanced']
-['Katniss Everdeen', 'Shrek', 'Frozen', 'very right wing', 'meat-heavy']
-['Lady Gaga', 'Back to the Future', 'Star Wars: Episode IV', 'very left wing', 'balanced']
-['Arya Stark', 'Avengers: Endgame', 'The Dark Knight', 'very left wing', 'dairy-heavy']
-['Kermit the Frog', 'The Godfather', 'The Shawshank Redemption', 'very left wing', 'dairy-heavy']
-['Beyonce', 'Jaws', 'Casablanca', 'left wing', 'meat-heavy']
-['Hannibal Lecter', 'Jaws', 'Psycho', 'left wing', 'plant-heavy']
-['Goku', 'Fight Club', 'Forrest Gump', 'left wing', 'dairy-heavy']
-['Scarlett Johansson', 'Back to the Future', 'Star Wars: Episode IV', 'right wing', 'fruit-heavy']
-['James Bond', 'Shrek', 'Finding Nemo', 'left wing', 'plant-heavy']
-['Morpheus', 'Avengers: Endgame', 'Jurassic Park', 'left wing', 'balanced']
-['Taylor Swift', 'Back to the Future', 'Star Wars: Episode IV', 'very right wing', 'balanced']
-['Ash Ketchum', 'Casablanca', 'Citizen Kane', 'very right wing', 'meat-heavy']
-['Sheldon Cooper', 'Lord of the Rings: The Fellowship of the Ring', 'The Dark Knight', 'very left wing', 'dairy-heavy']
-['Freddie Mercury', 'The Shawshank Redemption', 'Fight Club', 'very right wing', 'meat-heavy']
-['Mulan', 'Casablanca', 'Casablanca', 'right wing', 'meat-heavy']
-['Taylor Swift', 'The Matrix', 'The Matrix', 'very left wing', 'balanced']
-['Elsa', 'Fight Club', 'Titanic', 'very right wing', 'balanced']
-['Spider-Man', 'Titanic', 'Fight Club', 'left wing', 'dairy-heavy']
-['Katniss Everdeen', 'Star Wars: Episode IV', 'The Matrix', 'very left wing', 'dairy-heavy']
-['Scarlett Johansson', 'Toy Story', 'Toy Story', 'very right wing', 'dairy-heavy']
-['Mickey Mouse', 'Fight Club', 'The Shawshank Redemption', 'very left wing', 'dairy-heavy']
-['Lara Croft', 'Titanic', 'The Shawshank Redemption', 'very left wing', 'meat-heavy']
-['Wonder Woman', 'Jurassic Park', 'The Dark Knight', 'right wing', 'dairy-heavy']
-['Bugs Bunny', 'Citizen Kane', 'Gone with the Wind', 'left wing', 'fruit-heavy']
-['Sheldon Cooper', 'Casablanca', 'Jaws', 'left wing', 'fruit-heavy']
-['Bugs Bunny', 'Toy Story', 'The Lion King', 'right wing', 'fruit-heavy']
-['James Bond', 'Titanic', 'The Godfather', 'left wing', 'meat-heavy']
-['Naruto', 'Back to the Future', 'Star Wars: Episode IV', 'very right wing', 'dairy-heavy']
-['Goku', 'The Lion King', 'The Lion King', 'left wing', 'dairy-heavy']
-['Cinderella', 'Citizen Kane', 'Gone with the Wind', 'left wing', 'meat-heavy']
-['Jack Sparrow', 'Star Wars: Episode IV', 'Inception', 'very left wing', 'meat-heavy']
-['Hannibal Lecter', 'Avengers: Endgame', 'The Dark Knight', 'very left wing', 'balanced']
-['Beyonce', 'Toy Story', 'Frozen', 'left wing', 'dairy-heavy']
-['Spider-Man', 'Citizen Kane', 'Casablanca', 'left wing', 'plant-heavy']
-['Rihanna', 'Jaws', 'Casablanca', 'very right wing', 'dairy-heavy']
-['Sherlock Holmes', 'The Lion King', 'Shrek', 'very right wing', 'balanced']
-['Mario', 'Citizen Kane', 'Psycho', 'right wing', 'balanced']
-['Rihanna', 'Jurassic Park', 'Lord of the Rings: The Fellowship of the Ring', 'very right wing', 'dairy-heavy']
-['Mickey Mouse', 'Star Wars: Episode IV', 'The Matrix', 'very left wing', 'fruit-heavy']
-['Neo', 'The Matrix', 'Blade Runner', 'right wing', 'balanced']
-['Simba', 'Back to the Future', 'Blade Runner', 'very left wing', 'balanced']
-['Luke Skywalker', 'Frozen', 'The Lion King', 'very left wing', 'dairy-heavy']
-['Michael Jordan', 'Inception', 'The Matrix', 'right wing', 'meat-heavy']
-['Mickey Mouse', 'Jurassic Park', 'Avengers: Endgame', 'left wing', 'plant-heavy']</code></pre>
+<pre><code>['Serena Williams', 'Shrek', 'Toy Story', 'very left wing', 'fruit-heavy']
+['Mulan', 'Titanic', 'The Shawshank Redemption', 'right wing', 'balanced']
+['Captain America', 'Toy Story', 'The Lion King', 'right wing', 'meat-heavy']
+['Kermit the Frog', 'The Lion King', 'The Lion King', 'very left wing', 'balanced']
+['Superman', 'Shrek', 'The Lion King', 'very left wing', 'balanced']
+['Wonder Woman', 'Inception', 'Inception', 'left wing', 'plant-heavy']
+['Arya Stark', 'Star Wars: Episode IV', 'The Matrix', 'very right wing', 'plant-heavy']
+['Ash Ketchum', 'Jurassic Park', 'Pulp Fiction', 'right wing', 'plant-heavy']
+['Sheldon Cooper', 'Finding Nemo', 'Shrek', 'very left wing', 'dairy-heavy']
+['Hermione Granger', 'The Lion King', 'Shrek', 'very left wing', 'plant-heavy']
+['Superman', 'Finding Nemo', 'Shrek', 'very left wing', 'plant-heavy']
+['Walter White', 'Citizen Kane', 'Citizen Kane', 'very right wing', 'dairy-heavy']
+['Mulan', 'Casablanca', 'Jaws', 'very right wing', 'plant-heavy']
+['Elsa', 'Citizen Kane', 'Psycho', 'very right wing', 'balanced']
+['Arya Stark', 'Star Wars: Episode IV', 'Star Wars: Episode IV', 'very left wing', 'dairy-heavy']
+['Elsa', 'Titanic', 'The Godfather', 'right wing', 'dairy-heavy']
+['Bugs Bunny', 'Forrest Gump', 'The Godfather', 'very left wing', 'meat-heavy']
+['Leonardo DiCaprio', 'The Godfather', 'The Shawshank Redemption', 'very left wing', 'fruit-heavy']
+['Goku', 'Lord of the Rings: The Fellowship of the Ring', 'Lord of the Rings: The Fellowship of the Ring', 'very right wing', 'dairy-heavy']
+['Luke Skywalker', 'Shrek', 'The Lion King', 'right wing', 'balanced']
+['Wolverine', 'Blade Runner', 'Inception', 'right wing', 'meat-heavy']
+['Neo', 'Back to the Future', 'Inception', 'left wing', 'meat-heavy']
+['Thor', 'Finding Nemo', 'Finding Nemo', 'left wing', 'plant-heavy']
+['Katniss Everdeen', 'Toy Story', 'Shrek', 'right wing', 'balanced']
+['Michael Jordan', 'The Shawshank Redemption', 'The Godfather', 'very left wing', 'plant-heavy']
+['Lady Gaga', 'Casablanca', 'Citizen Kane', 'very left wing', 'plant-heavy']
+['Goku', 'Jurassic Park', 'Jurassic Park', 'left wing', 'balanced']
+['Jack Sparrow', 'The Dark Knight', 'Jurassic Park', 'right wing', 'plant-heavy']
+['Kermit the Frog', 'Avengers: Endgame', 'Avengers: Endgame', 'left wing', 'fruit-heavy']
+['Thor', 'Forrest Gump', 'Fight Club', 'left wing', 'balanced']
+['Wonder Woman', 'Frozen', 'Shrek', 'very right wing', 'dairy-heavy']
+['Morpheus', 'The Shawshank Redemption', 'The Shawshank Redemption', 'very right wing', 'balanced']
+['Oprah Winfrey', 'Casablanca', 'Casablanca', 'very right wing', 'dairy-heavy']
+['Simba', 'Casablanca', 'Casablanca', 'very right wing', 'meat-heavy']
+['Jack Sparrow', 'Titanic', 'Fight Club', 'left wing', 'plant-heavy']
+['Walter White', 'Toy Story', 'The Lion King', 'very left wing', 'meat-heavy']
+['Luffy', 'Titanic', 'Fight Club', 'right wing', 'dairy-heavy']
+['Wolverine', 'Jurassic Park', 'Jurassic Park', 'left wing', 'plant-heavy']
+['Wolverine', 'Forrest Gump', 'Titanic', 'right wing', 'balanced']
+['Superman', 'Finding Nemo', 'Frozen', 'left wing', 'dairy-heavy']
+['James Bond', 'Star Wars: Episode IV', 'The Matrix', 'very right wing', 'plant-heavy']
+['Walter White', 'Frozen', 'Toy Story', 'left wing', 'balanced']
+['Wonder Woman', 'Psycho', 'Casablanca', 'very left wing', 'plant-heavy']
+['Oprah Winfrey', 'Avengers: Endgame', 'Lord of the Rings: The Fellowship of the Ring', 'left wing', 'dairy-heavy']
+['Naruto', 'Titanic', 'Forrest Gump', 'right wing', 'fruit-heavy']
+['Rihanna', 'Jurassic Park', 'The Dark Knight', 'left wing', 'dairy-heavy']
+['Lara Croft', 'The Matrix', 'Star Wars: Episode IV', 'left wing', 'meat-heavy']
+['Captain America', 'Casablanca', 'Citizen Kane', 'left wing', 'fruit-heavy']
+['Tom Hanks', 'Inception', 'Star Wars: Episode IV', 'very right wing', 'meat-heavy']
+['Spider-Man', 'Shrek', 'The Lion King', 'right wing', 'balanced']</code></pre>
 </div>
 </div>
 </section>
@@ -1101,14 +1101,14 @@ Jack Sparrow,Lord of the Rings: The Fellowship of the Ring,Pulp Fiction,right wi
 </section>
 <section id="nested-loop-output" class="slide level2 output-location-slide"><h2>Nested loop</h2><div class="cell output-location-slide" data-execution_count="26">
 <div class="cell-output cell-output-stdout">
-<pre><code>Skipping  Ash Ketchum,Casablanca,Citizen Kane,very right wing,meat-heavy
+<pre><code>Skipping  Leonardo DiCaprio,The Godfather,The Shawshank Redemption,very left wing,fruit-heavy
 
-You are ['Ash Ketchum', 'Casablanca', 'Citizen Kane', 'very right wing', 'meat-heavy']
+You are ['Leonardo DiCaprio', 'The Godfather', 'The Shawshank Redemption', 'very left wing', 'fruit-heavy']
 After careful consideration, we have found that the most similar user is
-Katniss Everdeen,Shrek,Frozen,very right wing,meat-heavy
+Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
 
 You have a similarity score of 2
-We recommend you watch Frozen</code></pre>
+We recommend you watch Toy Story</code></pre>
 </div>
 </div></section><section id="ok-lets-take-a-step-back" class="slide level2">
 <h2>Ok, let’s take a step back</h2>

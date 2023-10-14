@@ -133,7 +133,7 @@ print(items_we_grab)
 ```
 
 
-## Week 5 Learning Objective
+## Week 5 Learning Objectives
 
 
 ## Open + read lines from a file

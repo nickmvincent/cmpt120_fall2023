@@ -1,12 +1,6 @@
 # %% [markdown]
 # ## Quick note for those reading slides
-# There's only one set of slide for week 5 (Monday was a holiday).
-# 
-# ## 5-1 Housekeeping
-# 
-# - Updates on marking
-# - Updates on additional study materials (and how to get feedback)
-# - Office hours today
+# There's only one set of slides for week 5 (Monday was a holiday).
 # 
 # ## 5-1 agenda
 # 
@@ -117,7 +111,7 @@ for item in items:
 print(items_we_grab)
 
 # %% [markdown]
-# ## Week 5 Learning Objective
+# ## Week 5 Learning Objectives
 # 
 # 
 # ## Open + read lines from a file
@@ -254,7 +248,6 @@ print(flat_list)  # [1, 2, 3, 4]
 
 # %%
 #| echo: true
-
 values = [3, 5, 2, 8, 6]
 maximum = values[0]
 for value in values:
@@ -356,7 +349,7 @@ with open("fake_data.csv", "r") as file:
 # %% [markdown]
 # ## Similarity
 # 
-# Our initial definition definition: "common interests counter"
+# Our initial definition: "common interests counter"
 # 
 # - If we have the same favorite movie, that's one common interest
 # - If we have the same preferred political party, that's one common interest.
@@ -493,7 +486,7 @@ with open("fake_data.csv", "r") as file:
 
     # use a loop to go through all other record lines (one record = one user)
     for record in records:
-        if line == user_record:
+        if record == user_record:
             continue
 
         # split each record line into a list of items
@@ -507,10 +500,6 @@ with open("fake_data.csv", "r") as file:
 # As we write this code, at each step let's make our code print something out so we know we're making progress!
 # 
 # When you're feeling stuck, trying printing something for every new line of code you write.
-# 
-# 
-# ##
-# ![How to draw an owl dot jpeg](owl.jpg)
 # 
 # 
 # ## Nested loop
@@ -561,10 +550,5 @@ print(top_record)
 print(f"You have a similarity score of {top_score}")
 
 print("We recommend you watch", recommendation)
-
-# %% [markdown]
-# ## Ok, let's take a step back
-# 
-# - switch to live coding here
 
 

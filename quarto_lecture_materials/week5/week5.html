@@ -410,15 +410,7 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="quick-note-for-those-reading-slides" class="slide level2">
 <h2>Quick note for those reading slides</h2>
-<p>There’s only one set of slide for week 5 (Monday was a holiday).</p>
-</section>
-<section id="housekeeping" class="slide level2">
-<h2>5-1 Housekeeping</h2>
-<ul>
-<li>Updates on marking</li>
-<li>Updates on additional study materials (and how to get feedback)</li>
-<li>Office hours today</li>
-</ul>
+<p>There’s only one set of slides for week 5 (Monday was a holiday).</p>
 </section>
 <section id="agenda" class="slide level2">
 <h2>5-1 agenda</h2>
@@ -561,8 +553,8 @@ f
 </div>
 </div>
 </section>
-<section id="week-5-learning-objective" class="slide level2">
-<h2>Week 5 Learning Objective</h2>
+<section id="week-5-learning-objectives" class="slide level2">
+<h2>Week 5 Learning Objectives</h2>
 </section>
 <section id="open-read-lines-from-a-file" class="slide level2">
 <h2>Open + read lines from a file</h2>
@@ -803,8 +795,8 @@ True</code></pre>
 <span id="cb40-46"><a href="#cb40-46"></a>    <span class="bu">print</span>(<span class="st">", "</span>.join(row))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>name, favorite_movie, second_favorite_movie, preferred_political_party, ideal_diet
-Serena Williams, Shrek, Toy Story, very left wing, fruit-heavy
-Mulan, Titanic, The Shawshank Redemption, right wing, balanced</code></pre>
+Arya Stark, Lord of the Rings: The Fellowship of the Ring, Lord of the Rings: The Fellowship of the Ring, left wing, balanced
+Superman, Inception, The Matrix, right wing, plant-heavy</code></pre>
 </div>
 </div>
 </section>
@@ -827,14 +819,14 @@ Mulan, Titanic, The Shawshank Redemption, right wing, balanced</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>name,favorite_movie,second_favorite_movie,preferred_political_party,ideal_diet
 
-Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
+Arya Stark,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,left wing,balanced
 </code></pre>
 </div>
 </div>
 </section>
 <section id="similarity" class="slide level2">
 <h2>Similarity</h2>
-<p>Our initial definition definition: “common interests counter”</p>
+<p>Our initial definition: “common interests counter”</p>
 <ul>
 <li>If we have the same favorite movie, that’s one common interest</li>
 <li>If we have the same preferred political party, that’s one common interest.</li>
@@ -979,7 +971,7 @@ Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
 <span id="cb48-15"><a href="#cb48-15"></a></span>
 <span id="cb48-16"><a href="#cb48-16"></a>    <span class="co"># use a loop to go through all other record lines (one record = one user)</span></span>
 <span id="cb48-17"><a href="#cb48-17"></a>    <span class="cf">for</span> record <span class="kw">in</span> records:</span>
-<span id="cb48-18"><a href="#cb48-18"></a>        <span class="cf">if</span> line <span class="op">==</span> user_record:</span>
+<span id="cb48-18"><a href="#cb48-18"></a>        <span class="cf">if</span> record <span class="op">==</span> user_record:</span>
 <span id="cb48-19"><a href="#cb48-19"></a>            <span class="cf">continue</span></span>
 <span id="cb48-20"><a href="#cb48-20"></a></span>
 <span id="cb48-21"><a href="#cb48-21"></a>        <span class="co"># split each record line into a list of items</span></span>
@@ -987,56 +979,55 @@ Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
 <span id="cb48-23"><a href="#cb48-23"></a>        <span class="bu">print</span>(columns)</span>
 <span id="cb48-24"><a href="#cb48-24"></a>        <span class="co"># use a nested loop to go through each item</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['Serena Williams', 'Shrek', 'Toy Story', 'very left wing', 'fruit-heavy']
-['Mulan', 'Titanic', 'The Shawshank Redemption', 'right wing', 'balanced']
-['Captain America', 'Toy Story', 'The Lion King', 'right wing', 'meat-heavy']
-['Kermit the Frog', 'The Lion King', 'The Lion King', 'very left wing', 'balanced']
-['Superman', 'Shrek', 'The Lion King', 'very left wing', 'balanced']
-['Wonder Woman', 'Inception', 'Inception', 'left wing', 'plant-heavy']
-['Arya Stark', 'Star Wars: Episode IV', 'The Matrix', 'very right wing', 'plant-heavy']
-['Ash Ketchum', 'Jurassic Park', 'Pulp Fiction', 'right wing', 'plant-heavy']
-['Sheldon Cooper', 'Finding Nemo', 'Shrek', 'very left wing', 'dairy-heavy']
-['Hermione Granger', 'The Lion King', 'Shrek', 'very left wing', 'plant-heavy']
-['Superman', 'Finding Nemo', 'Shrek', 'very left wing', 'plant-heavy']
-['Walter White', 'Citizen Kane', 'Citizen Kane', 'very right wing', 'dairy-heavy']
-['Mulan', 'Casablanca', 'Jaws', 'very right wing', 'plant-heavy']
-['Elsa', 'Citizen Kane', 'Psycho', 'very right wing', 'balanced']
-['Arya Stark', 'Star Wars: Episode IV', 'Star Wars: Episode IV', 'very left wing', 'dairy-heavy']
-['Elsa', 'Titanic', 'The Godfather', 'right wing', 'dairy-heavy']
-['Bugs Bunny', 'Forrest Gump', 'The Godfather', 'very left wing', 'meat-heavy']
-['Leonardo DiCaprio', 'The Godfather', 'The Shawshank Redemption', 'very left wing', 'fruit-heavy']
-['Goku', 'Lord of the Rings: The Fellowship of the Ring', 'Lord of the Rings: The Fellowship of the Ring', 'very right wing', 'dairy-heavy']
-['Luke Skywalker', 'Shrek', 'The Lion King', 'right wing', 'balanced']
-['Wolverine', 'Blade Runner', 'Inception', 'right wing', 'meat-heavy']
-['Neo', 'Back to the Future', 'Inception', 'left wing', 'meat-heavy']
-['Thor', 'Finding Nemo', 'Finding Nemo', 'left wing', 'plant-heavy']
-['Katniss Everdeen', 'Toy Story', 'Shrek', 'right wing', 'balanced']
-['Michael Jordan', 'The Shawshank Redemption', 'The Godfather', 'very left wing', 'plant-heavy']
-['Lady Gaga', 'Casablanca', 'Citizen Kane', 'very left wing', 'plant-heavy']
-['Goku', 'Jurassic Park', 'Jurassic Park', 'left wing', 'balanced']
-['Jack Sparrow', 'The Dark Knight', 'Jurassic Park', 'right wing', 'plant-heavy']
-['Kermit the Frog', 'Avengers: Endgame', 'Avengers: Endgame', 'left wing', 'fruit-heavy']
-['Thor', 'Forrest Gump', 'Fight Club', 'left wing', 'balanced']
-['Wonder Woman', 'Frozen', 'Shrek', 'very right wing', 'dairy-heavy']
-['Morpheus', 'The Shawshank Redemption', 'The Shawshank Redemption', 'very right wing', 'balanced']
-['Oprah Winfrey', 'Casablanca', 'Casablanca', 'very right wing', 'dairy-heavy']
-['Simba', 'Casablanca', 'Casablanca', 'very right wing', 'meat-heavy']
-['Jack Sparrow', 'Titanic', 'Fight Club', 'left wing', 'plant-heavy']
-['Walter White', 'Toy Story', 'The Lion King', 'very left wing', 'meat-heavy']
-['Luffy', 'Titanic', 'Fight Club', 'right wing', 'dairy-heavy']
-['Wolverine', 'Jurassic Park', 'Jurassic Park', 'left wing', 'plant-heavy']
-['Wolverine', 'Forrest Gump', 'Titanic', 'right wing', 'balanced']
-['Superman', 'Finding Nemo', 'Frozen', 'left wing', 'dairy-heavy']
-['James Bond', 'Star Wars: Episode IV', 'The Matrix', 'very right wing', 'plant-heavy']
-['Walter White', 'Frozen', 'Toy Story', 'left wing', 'balanced']
-['Wonder Woman', 'Psycho', 'Casablanca', 'very left wing', 'plant-heavy']
-['Oprah Winfrey', 'Avengers: Endgame', 'Lord of the Rings: The Fellowship of the Ring', 'left wing', 'dairy-heavy']
-['Naruto', 'Titanic', 'Forrest Gump', 'right wing', 'fruit-heavy']
-['Rihanna', 'Jurassic Park', 'The Dark Knight', 'left wing', 'dairy-heavy']
-['Lara Croft', 'The Matrix', 'Star Wars: Episode IV', 'left wing', 'meat-heavy']
-['Captain America', 'Casablanca', 'Citizen Kane', 'left wing', 'fruit-heavy']
-['Tom Hanks', 'Inception', 'Star Wars: Episode IV', 'very right wing', 'meat-heavy']
-['Spider-Man', 'Shrek', 'The Lion King', 'right wing', 'balanced']</code></pre>
+<pre><code>['Arya Stark', 'Lord of the Rings: The Fellowship of the Ring', 'Lord of the Rings: The Fellowship of the Ring', 'left wing', 'balanced']
+['Superman', 'Inception', 'The Matrix', 'right wing', 'plant-heavy']
+['Spider-Man', 'Pulp Fiction', 'The Dark Knight', 'very left wing', 'balanced']
+['Rihanna', 'Citizen Kane', 'Citizen Kane', 'very right wing', 'balanced']
+['Luffy', 'Finding Nemo', 'The Lion King', 'left wing', 'dairy-heavy']
+['Ash Ketchum', 'Shrek', 'Shrek', 'very right wing', 'plant-heavy']
+['Wonder Woman', 'Avengers: Endgame', 'Avengers: Endgame', 'very left wing', 'fruit-heavy']
+['Lara Croft', 'Star Wars: Episode IV', 'The Matrix', 'very right wing', 'plant-heavy']
+['Walter White', 'Shrek', 'The Lion King', 'very right wing', 'meat-heavy']
+['Walter White', 'Citizen Kane', 'Gone with the Wind', 'very left wing', 'balanced']
+['Luffy', 'Titanic', 'Titanic', 'very right wing', 'meat-heavy']
+['Wonder Woman', 'Shrek', 'The Lion King', 'right wing', 'fruit-heavy']
+['Wolverine', 'Shrek', 'Shrek', 'left wing', 'plant-heavy']
+['Bugs Bunny', 'Shrek', 'Toy Story', 'very right wing', 'balanced']
+['Mickey Mouse', 'Star Wars: Episode IV', 'Back to the Future', 'left wing', 'balanced']
+['Morpheus', 'Casablanca', 'Citizen Kane', 'very left wing', 'balanced']
+['James Bond', 'Shrek', 'Shrek', 'right wing', 'balanced']
+['Morpheus', 'Shrek', 'Shrek', 'very right wing', 'fruit-heavy']
+['Lara Croft', 'Finding Nemo', 'The Lion King', 'right wing', 'meat-heavy']
+['Scarlett Johansson', 'Jurassic Park', 'The Dark Knight', 'very right wing', 'balanced']
+['Goku', 'Psycho', 'Jaws', 'right wing', 'dairy-heavy']
+['Tony Stark', 'Psycho', 'Citizen Kane', 'right wing', 'plant-heavy']
+['Luke Skywalker', 'The Dark Knight', 'Jurassic Park', 'very left wing', 'balanced']
+['Oprah Winfrey', 'Titanic', 'Titanic', 'very left wing', 'balanced']
+['Tony Stark', 'Toy Story', 'Finding Nemo', 'left wing', 'fruit-heavy']
+['Indiana Jones', 'Fight Club', 'Fight Club', 'left wing', 'balanced']
+['Thor', 'Fight Club', 'Forrest Gump', 'right wing', 'dairy-heavy']
+['Beyonce', 'Finding Nemo', 'Shrek', 'left wing', 'fruit-heavy']
+['Ash Ketchum', 'The Godfather', 'The Shawshank Redemption', 'right wing', 'fruit-heavy']
+['Tom Hanks', 'The Lion King', 'Finding Nemo', 'very right wing', 'balanced']
+['Lara Croft', 'Back to the Future', 'Back to the Future', 'right wing', 'balanced']
+['Freddie Mercury', 'Psycho', 'Gone with the Wind', 'very left wing', 'plant-heavy']
+['Michael Jordan', 'Titanic', 'Forrest Gump', 'left wing', 'balanced']
+['Serena Williams', 'Gone with the Wind', 'Gone with the Wind', 'very left wing', 'meat-heavy']
+['Arya Stark', 'Finding Nemo', 'Frozen', 'left wing', 'fruit-heavy']
+['Serena Williams', 'Star Wars: Episode IV', 'Inception', 'left wing', 'fruit-heavy']
+['Hermione Granger', 'The Matrix', 'Inception', 'very right wing', 'plant-heavy']
+['Jack Sparrow', 'Gone with the Wind', 'Citizen Kane', 'very right wing', 'meat-heavy']
+['Goku', 'Fight Club', 'The Shawshank Redemption', 'very right wing', 'fruit-heavy']
+['Leonardo DiCaprio', 'Toy Story', 'The Lion King', 'very left wing', 'balanced']
+['Kermit the Frog', 'Lord of the Rings: The Fellowship of the Ring', 'Avengers: Endgame', 'left wing', 'meat-heavy']
+['Indiana Jones', 'Jurassic Park', 'Pulp Fiction', 'very right wing', 'balanced']
+['The Rock', 'Finding Nemo', 'Toy Story', 'very right wing', 'meat-heavy']
+['James Bond', 'Psycho', 'Jaws', 'very left wing', 'balanced']
+['Spider-Man', 'Fight Club', 'The Shawshank Redemption', 'very right wing', 'dairy-heavy']
+['Sheldon Cooper', 'Jurassic Park', 'Jurassic Park', 'left wing', 'balanced']
+['Elsa', 'Fight Club', 'The Shawshank Redemption', 'very right wing', 'meat-heavy']
+['Lady Gaga', 'Avengers: Endgame', 'Lord of the Rings: The Fellowship of the Ring', 'right wing', 'balanced']
+['Goku', 'Inception', 'Blade Runner', 'very left wing', 'fruit-heavy']</code></pre>
 </div>
 </div>
 </section>
@@ -1045,10 +1036,6 @@ Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
 <p>As we write this code, at each step let’s make our code print something out so we know we’re making progress!</p>
 <p>When you’re feeling stuck, trying printing something for every new line of code you write.</p>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
-
-<img data-src="owl.jpg" class="r-stretch quarto-figure-center"><p class="caption">How to draw an owl dot jpeg</p></section>
 <section id="nested-loop" class="slide level2">
 <h2>Nested loop</h2>
 <div class="cell" data-execution_count="26">
@@ -1098,28 +1085,26 @@ Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
 <span id="cb50-44"><a href="#cb50-44"></a><span class="bu">print</span>(<span class="st">"We recommend you watch"</span>, recommendation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-</section>
-<section id="nested-loop-output" class="slide level2 output-location-slide"><h2>Nested loop</h2><div class="cell output-location-slide" data-execution_count="26">
-<div class="cell-output cell-output-stdout">
-<pre><code>Skipping  Leonardo DiCaprio,The Godfather,The Shawshank Redemption,very left wing,fruit-heavy
-
-You are ['Leonardo DiCaprio', 'The Godfather', 'The Shawshank Redemption', 'very left wing', 'fruit-heavy']
-After careful consideration, we have found that the most similar user is
-Serena Williams,Shrek,Toy Story,very left wing,fruit-heavy
-
-You have a similarity score of 2
-We recommend you watch Toy Story</code></pre>
-</div>
-</div></section><section id="ok-lets-take-a-step-back" class="slide level2">
-<h2>Ok, let’s take a step back</h2>
-<ul>
-<li>switch to live coding here</li>
-</ul>
 <div class="footer footer-default">
 
 </div>
 </section>
-    </div>
+    <section id="nested-loop-output" class="slide level2 output-location-slide"><h2>Nested loop</h2><div class="cell output-location-slide" data-execution_count="26">
+<div class="cell-output cell-output-stdout">
+<pre><code>Skipping  Wonder Woman,Avengers: Endgame,Avengers: Endgame,very left wing,fruit-heavy
+
+Skipping  Wonder Woman,Shrek,The Lion King,right wing,fruit-heavy
+
+Skipping  Wonder Woman,The Godfather,Forrest Gump,left wing,plant-heavy
+
+You are ['Wonder Woman', 'The Godfather', 'Forrest Gump', 'left wing', 'plant-heavy']
+After careful consideration, we have found that the most similar user is
+Wolverine,Shrek,Shrek,left wing,plant-heavy
+
+You have a similarity score of 2
+We recommend you watch Shrek</code></pre>
+</div>
+</div></section></div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>

@@ -63,6 +63,7 @@ values = [3, 5, 2, 8, 6]
 maximum = values[0]
 index_of_max = 0
 for i in range(len(values)):
+    value = values[i]
     if value > maximum:
         maximum = value
         index_of_max = i
@@ -162,7 +163,9 @@ Fun fact -- there's a binary message in the room where I studied computing scien
 https://newsroom.ucla.edu/stories/a-coded-message-hidden-in-floor-247232
 
 ## Why binary 
-- What are (digital) computers?
+
+What are (digital) computers?
+
 - Machines that convert low and high electrical signals into 0's and 1's
 - Then we do some magic with the 0's and 1's
 
@@ -180,9 +183,10 @@ In "decimal" (aka numbers you are used to seeing), e.g. 10, 250, 11713
 each digit represents powers of ten. 
 
 In the number '345'
-the 3 represents 3 * 10^3 = 300, because 10^3=100
-the 4 represents 4 * 10^2= 40
-The 5 represents 5 * 10^1 = 5
+
+- the 3 represents 3 * 10^3 = 300, because 10^2=100
+- the 4 represents 4 * 10^1 = 40
+- The 5 represents 5 * 10^0 = 5
 
 As we add digits to the *left* hand side of our decimal numbers, we get higher powers of ten
 
@@ -198,18 +202,14 @@ In the binary the bits represents powers of 2
 
 ## Example of 2 digit binary numbers
 
-- 00 -> 0
-- 01 -> 1
-- 10 -> 2
-- 11 -> 3
-
-## Example of 3 digit binary numbers
-
-- 00
+- 00 -> 0*1 + 0*2 = 0
+- 01 -> 1*1 + 0*2 = 1
+- 10 -> 0*1 + 1*2 = 2
+- 11 -> 0*1 + 1*2 = 3
 
 ## Challenge
 - What is the maximum number we can store with 4 bits
-- What about a byte
+- What about a byte?
 - Extreme challenge (trying using your Python terminal): 4 bytes
 
 ## Answer
@@ -247,6 +247,8 @@ print(f"The decimal representation of binary {binary_str} is {binary_to_decimal(
 ## With an extra built-in method
 
 ```{python}
+#| echo: true
+
 def binary_to_decimal(binary_str):
     return int(binary_str, 2)
 
@@ -270,3 +272,6 @@ print(f"The decimal representation of binary {binary_str} is {binary_to_decimal(
 - Unicode
 - Mojibake
   - https://en.wikipedia.org/wiki/Mojibake
+
+
+

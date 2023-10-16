@@ -458,12 +458,13 @@ Prof.&nbsp;Nick Vincent
 <span id="cb3-2"><a href="#cb3-2"></a>maximum <span class="op">=</span> values[<span class="dv">0</span>]</span>
 <span id="cb3-3"><a href="#cb3-3"></a>index_of_max <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(values)):</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> maximum:</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        maximum <span class="op">=</span> value</span>
-<span id="cb3-7"><a href="#cb3-7"></a>        index_of_max <span class="op">=</span> i</span>
-<span id="cb3-8"><a href="#cb3-8"></a><span class="bu">print</span>(maximum, i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5"></a>    value <span class="op">=</span> values[i]</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="cf">if</span> value <span class="op">&gt;</span> maximum:</span>
+<span id="cb3-7"><a href="#cb3-7"></a>        maximum <span class="op">=</span> value</span>
+<span id="cb3-8"><a href="#cb3-8"></a>        index_of_max <span class="op">=</span> i</span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="bu">print</span>(maximum, i)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>6 4</code></pre>
+<pre><code>8 4</code></pre>
 </div>
 </div>
 </section>
@@ -566,8 +567,8 @@ Prof.&nbsp;Nick Vincent
 </section>
 <section id="why-binary" class="slide level2">
 <h2>Why binary</h2>
+<p>What are (digital) computers?</p>
 <ul>
-<li>What are (digital) computers?</li>
 <li>Machines that convert low and high electrical signals into 0’s and 1’s</li>
 <li>Then we do some magic with the 0’s and 1’s</li>
 </ul>
@@ -587,7 +588,12 @@ Prof.&nbsp;Nick Vincent
 <section id="using-decimal-to-represent-numbers" class="slide level2">
 <h2>Using decimal to represent numbers</h2>
 <p>In “decimal” (aka numbers you are used to seeing), e.g.&nbsp;10, 250, 11713 each digit represents powers of ten.</p>
-<p>In the number ‘345’ the 3 represents 3 * 10^3 = 300, because 10^3=100 the 4 represents 4 * 10^2= 40 The 5 represents 5 * 10^1 = 5</p>
+<p>In the number ‘345’</p>
+<ul>
+<li>the 3 represents 3 * 10^3 = 300, because 10^2=100</li>
+<li>the 4 represents 4 * 10^1 = 40</li>
+<li>The 5 represents 5 * 10^0 = 5</li>
+</ul>
 <p>As we add digits to the <em>left</em> hand side of our decimal numbers, we get higher powers of ten</p>
 </section>
 <section id="using-binary-to-represent-numbers" class="slide level2">
@@ -605,23 +611,17 @@ Prof.&nbsp;Nick Vincent
 <section id="example-of-2-digit-binary-numbers" class="slide level2">
 <h2>Example of 2 digit binary numbers</h2>
 <ul>
-<li>00 -&gt; 0</li>
-<li>01 -&gt; 1</li>
-<li>10 -&gt; 2</li>
-<li>11 -&gt; 3</li>
-</ul>
-</section>
-<section id="example-of-3-digit-binary-numbers" class="slide level2">
-<h2>Example of 3 digit binary numbers</h2>
-<ul>
-<li>00</li>
+<li>00 -&gt; 0<em>1 + 0</em>2 = 0</li>
+<li>01 -&gt; 1<em>1 + 0</em>2 = 1</li>
+<li>10 -&gt; 0<em>1 + 1</em>2 = 2</li>
+<li>11 -&gt; 0<em>1 + 1</em>2 = 3</li>
 </ul>
 </section>
 <section id="challenge" class="slide level2">
 <h2>Challenge</h2>
 <ul>
 <li>What is the maximum number we can store with 4 bits</li>
-<li>What about a byte</li>
+<li>What about a byte?</li>
 <li>Extreme challenge (trying using your Python terminal): 4 bytes</li>
 </ul>
 </section>
@@ -658,6 +658,12 @@ Prof.&nbsp;Nick Vincent
 <section id="with-an-extra-built-in-method" class="slide level2">
 <h2>With an extra built-in method</h2>
 <div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> binary_to_decimal(binary_str):</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="cf">return</span> <span class="bu">int</span>(binary_str, <span class="dv">2</span>)</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="co"># Example usage:</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>binary_str <span class="op">=</span> <span class="st">"1101"</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="bu">print</span>(<span class="ss">f"The decimal representation of binary </span><span class="sc">{</span>binary_str<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>binary_to_decimal(binary_str)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The decimal representation of binary 1101 is 13</code></pre>
 </div>

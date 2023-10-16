@@ -507,7 +507,7 @@ with open("fake_data.csv", "r") as file:
 
     # use a loop to go through all other record lines (one record = one user)
     for record in records:
-        if line == user_record:
+        if record == user_record:
             continue
 
         # split each record line into a list of items
@@ -522,10 +522,6 @@ with open("fake_data.csv", "r") as file:
 As we write this code, at each step let's make our code print something out so we know we're making progress!
 
 When you're feeling stuck, trying printing something for every new line of code you write.
-
-
-##
-![How to draw an owl dot jpeg](owl.jpg)
 
 
 ## Nested loop
@@ -577,7 +573,3 @@ print(f"You have a similarity score of {top_score}")
 
 print("We recommend you watch", recommendation)
 ```
-
-## Ok, let's take a step back
-
-- switch to live coding here

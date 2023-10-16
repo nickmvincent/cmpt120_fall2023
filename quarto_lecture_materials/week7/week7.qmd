@@ -15,23 +15,21 @@ jupyter: python3
 ## 7-1 Housekeeping
 Review announcements
 
-- Midterm, assignment, 
+- Midterm, assignment
 
 ## 7-1 
 
-- Review final learning goal for midterm: min and max
+- Review: min and max
 - Talk through completed example of recommender system
-- New material: bits, bytes, and codes
+- New material: bits, bytes, and codes (not on midterm)
 
 ```{python}
 #| echo: true
 #| output-location: slide
-# placeholder 1
 ```
 
 ```{python}
 #| echo: true
-# placeholder 2
 ```
 
 ## Min and max
@@ -43,17 +41,41 @@ Pseudo code:
 - If item is larger (smaller) thatn current value of variable, store it in our variable
 - After all items are seen, we have the max
 
-## Question: Write the code
+## Max: code
+```{python}
+#| echo: true
+values = [3, 5, 2, 8, 6]
+maximum = values[0]
+for value in values:
+    if value > maximum:
+        maximum = value
+print(maximum)  # 8
+```
 
-## Question
+## Index of max
 
 How to keep track of the *index* of the max or min?
 
-
-## Review rec sys
+## Index of max: code
 ```{python}
 #| echo: true
-#| output-location: slide
+values = [3, 5, 2, 8, 6]
+maximum = values[0]
+index_of_max = 0
+for i in range(len(values)):
+    if value > maximum:
+        maximum = value
+        index_of_max = i
+print(maximum, i)
+```
+
+## Variables used for max
+To find the person with a max or min score in a file, how many variables do you need to use? What data types will you use?
+
+- Answer: just one number!
+
+## Review rec sys
+```{.python}
 # select a user + init variables to keep track of scores
 index_of_user = 17
 top_score = 0
@@ -109,6 +131,7 @@ print("We recommend you watch", recommendation)
 Loop within a loop!
 
 basic breakdown of how nested loops work:
+
 - The outer loop begins its first iteration.
 - As the outer loop runs, it encounters the inner loop.
 - The inner loop then runs to completion.
@@ -116,16 +139,12 @@ basic breakdown of how nested loops work:
 - This process continues until the outer loop has completed all of its iterations.
 
 
-## Concept review: Max
-To find the person with a max or min score in a file, how many variables do you need to use? What data types will you use?
-
 ## Concept review: Lists
 How do we add items to a list?
 
 How do we access the second item of a list?
 
 How do we access the second to last item of a list?
-
 
 
 ## Binary numbers and ASCII

@@ -13,13 +13,7 @@ jupyter: python3
 ---
 
 ## Quick note for those reading slides
-There's only one set of slide for week 5 (Monday was a holiday).
-
-## 5-1 Housekeeping
-
-- Updates on marking
-- Updates on additional study materials (and how to get feedback)
-- Office hours today
+There's only one set of slides for week 5 (Monday was a holiday).
 
 ## 5-1 agenda
 
@@ -270,7 +264,6 @@ print(flat_list)  # [1, 2, 3, 4]
 
 ```{python}
 #| echo: true
-
 values = [3, 5, 2, 8, 6]
 maximum = values[0]
 for value in values:
@@ -374,7 +367,7 @@ with open("fake_data.csv", "r") as file:
 
 ## Similarity
 
-Our initial definition definition: "common interests counter"
+Our initial definition: "common interests counter"
 
 - If we have the same favorite movie, that's one common interest
 - If we have the same preferred political party, that's one common interest.

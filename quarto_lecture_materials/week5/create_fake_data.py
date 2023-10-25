@@ -27,7 +27,7 @@ diets = ["plant-heavy", "meat-heavy", "fruit-heavy", "balanced", "dairy-heavy"]
 
 # Generate 50 records
 records = [["name", "favorite_movie", "second_favorite_movie", "preferred_political_party", "ideal_diet"]]
-for _ in range(50):
+for _ in range(500):
     name = random.choice(names)
     genre = random.choice(list(movies_by_genre.keys()))
     movie = random.choice(movies_by_genre[genre])

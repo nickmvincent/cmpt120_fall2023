@@ -151,7 +151,7 @@ How do we access the second to last item of a list?
 ## Binary numbers and ASCII
 - New content!
 - Not on midterm.
-- Why learn: it's how information is stored on our computers
+- Why learn? It's how information is stored on our computers
 
 ## Immersion program
 01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100
@@ -184,7 +184,7 @@ each digit represents powers of ten.
 
 In the number '345'
 
-- the 3 represents 3 * 10^3 = 300, because 10^2=100
+- the 3 represents 3 * 10^2 = 300, because 10^2=100
 - the 4 represents 4 * 10^1 = 40
 - The 5 represents 5 * 10^0 = 5
 
@@ -231,18 +231,36 @@ print(f"The maximum number that can be stored with {n_bits} bits is {max_number_
 
 - Any ideas how we'd do it?
 
-## Converting binary to decimal in Python: the answer
+
+## Converting binary to decimal in Python
+```{python}
+binary_str = "1101"
+decimal = 0
+length = len(binary_str)
+
+for i in range(length):
+    bit = binary_str[i]
+    if bit == '1':
+        decimal += 2 ** (length - i - 1)
+
+print(f"The decimal representation of binary {binary_str} is {decimal}")
+```
+
+## With a few bells and whistles
+```{python}
 def binary_to_decimal(binary_str):
     decimal = 0
     length = len(binary_str)
     for i, bit in enumerate(binary_str):
         decimal += int(bit) * (2 ** (length - i - 1))
     return decimal
+```
 
 # Example usage:
+```{python}
 binary_str = "1101"
 print(f"The decimal representation of binary {binary_str} is {binary_to_decimal(binary_str)}")
-
+```
 
 ## With an extra built-in method
 
@@ -274,4 +292,40 @@ print(f"The decimal representation of binary {binary_str} is {binary_to_decimal(
   - https://en.wikipedia.org/wiki/Mojibake
 
 
+## Parallel lists
+```{python}
+print("Lets find the most popular coffee shop")
 
+survey_responses = [
+    "tims", "sbux", "ren", "tims", "sbux", "blenz",
+    "blenz", "ren", "blenz"
+]
+options = ["tims", "sbux", "ren", "blenz"]
+
+list_of_counting_vars = len(options) * [0]
+
+# you could also init an empty array and use += or append
+# basically, we want a list of [0,0,0,0], but without hardcoding
+
+for response in survey_responses:
+    # if processing file, we might need to strip, split, etc. 
+    for i in range(len(options)):
+        if options[i] == response:
+            list_of_counting_vars[i] += 1
+
+for i in range(len(options)):
+    print(options[i], list_of_counting_vars[i])
+```
+
+## Example ASCII <-> Dec
+```{python}
+dec = ["65", "66", "67"]
+chars = ["A", "B", "C"]
+
+characters_as_dec = ["65", "65", "65", "67", "67", "67"]
+
+for i in range(len(characters_as_dec)):
+    for j in range(len(dec)):
+        if characters_as_dec[i] == dec[j]:
+            print(chars[j])
+```

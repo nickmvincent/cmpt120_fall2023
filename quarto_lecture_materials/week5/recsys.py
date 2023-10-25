@@ -5,7 +5,7 @@ top_record = ""
 recommendation = ""
 
 # load data
-with open("fake_data.csv", "r") as file:
+with open("./fake_data.csv", "r") as file:
     all_lines = file.readlines()
     header = all_lines[0]
     records = all_lines[1:]
@@ -24,8 +24,8 @@ with open("fake_data.csv", "r") as file:
         # split each record line into a list of items
         
         # use a nested loop to go through each item
-        # use manually defined [1,3,4,5] to get only
-        # favorite_movie, party, diet (skip)
+        # use manually defined [1,3,4] to get only
+        # favorite_movie, party, diet
         for column_index in [1,3,4]:
             if columns[column_index] == user_record[column_index]:
                 score_for_current_record += 1

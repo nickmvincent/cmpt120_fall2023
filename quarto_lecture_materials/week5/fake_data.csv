@@ -1,51 +1,501 @@
 name,favorite_movie,second_favorite_movie,preferred_political_party,ideal_diet
-Arya Stark,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,left wing,balanced
-Superman,Inception,The Matrix,right wing,plant-heavy
-Spider-Man,Pulp Fiction,The Dark Knight,very left wing,balanced
-Rihanna,Citizen Kane,Citizen Kane,very right wing,balanced
-Luffy,Finding Nemo,The Lion King,left wing,dairy-heavy
-Ash Ketchum,Shrek,Shrek,very right wing,plant-heavy
-Wonder Woman,Avengers: Endgame,Avengers: Endgame,very left wing,fruit-heavy
-Lara Croft,Star Wars: Episode IV,The Matrix,very right wing,plant-heavy
-Walter White,Shrek,The Lion King,very right wing,meat-heavy
-Walter White,Citizen Kane,Gone with the Wind,very left wing,balanced
-Luffy,Titanic,Titanic,very right wing,meat-heavy
-Wonder Woman,Shrek,The Lion King,right wing,fruit-heavy
-Wolverine,Shrek,Shrek,left wing,plant-heavy
-Bugs Bunny,Shrek,Toy Story,very right wing,balanced
-Mickey Mouse,Star Wars: Episode IV,Back to the Future,left wing,balanced
-Morpheus,Casablanca,Citizen Kane,very left wing,balanced
-James Bond,Shrek,Shrek,right wing,balanced
-Wonder Woman,The Godfather,Forrest Gump,left wing,plant-heavy
-Morpheus,Shrek,Shrek,very right wing,fruit-heavy
-Lara Croft,Finding Nemo,The Lion King,right wing,meat-heavy
-Scarlett Johansson,Jurassic Park,The Dark Knight,very right wing,balanced
-Goku,Psycho,Jaws,right wing,dairy-heavy
-Tony Stark,Psycho,Citizen Kane,right wing,plant-heavy
-Luke Skywalker,The Dark Knight,Jurassic Park,very left wing,balanced
-Oprah Winfrey,Titanic,Titanic,very left wing,balanced
-Tony Stark,Toy Story,Finding Nemo,left wing,fruit-heavy
-Indiana Jones,Fight Club,Fight Club,left wing,balanced
-Thor,Fight Club,Forrest Gump,right wing,dairy-heavy
-Beyonce,Finding Nemo,Shrek,left wing,fruit-heavy
-Ash Ketchum,The Godfather,The Shawshank Redemption,right wing,fruit-heavy
-Tom Hanks,The Lion King,Finding Nemo,very right wing,balanced
-Lara Croft,Back to the Future,Back to the Future,right wing,balanced
-Freddie Mercury,Psycho,Gone with the Wind,very left wing,plant-heavy
-Michael Jordan,Titanic,Forrest Gump,left wing,balanced
-Serena Williams,Gone with the Wind,Gone with the Wind,very left wing,meat-heavy
-Arya Stark,Finding Nemo,Frozen,left wing,fruit-heavy
-Serena Williams,Star Wars: Episode IV,Inception,left wing,fruit-heavy
-Hermione Granger,The Matrix,Inception,very right wing,plant-heavy
-Jack Sparrow,Gone with the Wind,Citizen Kane,very right wing,meat-heavy
-Goku,Fight Club,The Shawshank Redemption,very right wing,fruit-heavy
-Leonardo DiCaprio,Toy Story,The Lion King,very left wing,balanced
-Kermit the Frog,Lord of the Rings: The Fellowship of the Ring,Avengers: Endgame,left wing,meat-heavy
-Indiana Jones,Jurassic Park,Pulp Fiction,very right wing,balanced
-The Rock,Finding Nemo,Toy Story,very right wing,meat-heavy
-James Bond,Psycho,Jaws,very left wing,balanced
-Spider-Man,Fight Club,The Shawshank Redemption,very right wing,dairy-heavy
-Sheldon Cooper,Jurassic Park,Jurassic Park,left wing,balanced
-Elsa,Fight Club,The Shawshank Redemption,very right wing,meat-heavy
-Lady Gaga,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,right wing,balanced
-Goku,Inception,Blade Runner,very left wing,fruit-heavy
+Superman,The Godfather,Forrest Gump,right wing,fruit-heavy
+Taylor Swift,Citizen Kane,Jaws,left wing,dairy-heavy
+Oprah Winfrey,Gone with the Wind,Gone with the Wind,very right wing,meat-heavy
+Wonder Woman,Star Wars: Episode IV,Back to the Future,right wing,fruit-heavy
+Marilyn Monroe,Pulp Fiction,Lord of the Rings: The Fellowship of the Ring,left wing,dairy-heavy
+Sherlock Holmes,The Godfather,Forrest Gump,very right wing,dairy-heavy
+The Rock,Jaws,Citizen Kane,very right wing,meat-heavy
+Taylor Swift,Pulp Fiction,Lord of the Rings: The Fellowship of the Ring,very right wing,dairy-heavy
+Superman,Star Wars: Episode IV,Blade Runner,left wing,dairy-heavy
+Sheldon Cooper,Frozen,Shrek,left wing,fruit-heavy
+Mulan,Forrest Gump,The Godfather,right wing,balanced
+Elsa,Gone with the Wind,Gone with the Wind,very right wing,fruit-heavy
+Arya Stark,Titanic,Forrest Gump,left wing,meat-heavy
+Spider-Man,The Godfather,The Shawshank Redemption,left wing,meat-heavy
+Michael Jordan,Gone with the Wind,Jaws,right wing,balanced
+Leonardo DiCaprio,Psycho,Casablanca,left wing,meat-heavy
+Naruto,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,right wing,meat-heavy
+Arya Stark,Casablanca,Casablanca,left wing,plant-heavy
+Tony Stark,Casablanca,Gone with the Wind,very right wing,balanced
+Beyonce,Casablanca,Citizen Kane,very left wing,dairy-heavy
+James Bond,Gone with the Wind,Citizen Kane,left wing,plant-heavy
+Morpheus,Avengers: Endgame,Pulp Fiction,right wing,plant-heavy
+Ash Ketchum,Inception,Inception,very right wing,fruit-heavy
+Katniss Everdeen,Inception,Blade Runner,very right wing,fruit-heavy
+The Rock,The Dark Knight,Pulp Fiction,left wing,balanced
+Leonardo DiCaprio,Jaws,Jaws,left wing,balanced
+Hermione Granger,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,left wing,plant-heavy
+Luffy,Frozen,The Lion King,left wing,dairy-heavy
+Hermione Granger,Fight Club,Titanic,right wing,meat-heavy
+Elsa,Star Wars: Episode IV,Star Wars: Episode IV,very left wing,balanced
+Mario,Toy Story,Frozen,very left wing,balanced
+Scarlett Johansson,The Lion King,Toy Story,left wing,dairy-heavy
+Beyonce,Lord of the Rings: The Fellowship of the Ring,Pulp Fiction,very right wing,fruit-heavy
+James Bond,Shrek,Frozen,very left wing,balanced
+Darth Vader,Gone with the Wind,Jaws,very left wing,fruit-heavy
+Taylor Swift,Jurassic Park,The Dark Knight,right wing,fruit-heavy
+Ash Ketchum,The Matrix,Back to the Future,right wing,dairy-heavy
+Darth Vader,The Dark Knight,Avengers: Endgame,right wing,balanced
+Sheldon Cooper,Finding Nemo,The Lion King,left wing,fruit-heavy
+Oprah Winfrey,Jaws,Jaws,left wing,fruit-heavy
+Elsa,Blade Runner,Inception,right wing,balanced
+Usain Bolt,Blade Runner,Inception,right wing,meat-heavy
+Dexter Morgan,Forrest Gump,Forrest Gump,very left wing,balanced
+Sherlock Holmes,The Lion King,Finding Nemo,left wing,meat-heavy
+James Bond,Inception,Back to the Future,very left wing,dairy-heavy
+Thor,Inception,The Matrix,right wing,fruit-heavy
+Lara Croft,Finding Nemo,Shrek,left wing,plant-heavy
+Ash Ketchum,The Lion King,Toy Story,very right wing,fruit-heavy
+Lady Gaga,Forrest Gump,Titanic,left wing,meat-heavy
+Luffy,Pulp Fiction,Lord of the Rings: The Fellowship of the Ring,very right wing,plant-heavy
+Taylor Swift,The Lion King,The Lion King,very right wing,fruit-heavy
+Lara Croft,Shrek,Shrek,very left wing,balanced
+Bugs Bunny,Jurassic Park,Jurassic Park,very right wing,fruit-heavy
+Mulan,The Dark Knight,Avengers: Endgame,left wing,balanced
+Indiana Jones,Blade Runner,Blade Runner,very right wing,meat-heavy
+Kermit the Frog,Toy Story,Toy Story,very right wing,plant-heavy
+Captain America,Inception,Inception,left wing,balanced
+Leonardo DiCaprio,Back to the Future,Blade Runner,left wing,meat-heavy
+Serena Williams,Forrest Gump,Fight Club,very left wing,dairy-heavy
+Sheldon Cooper,Finding Nemo,Shrek,left wing,dairy-heavy
+Neo,Toy Story,Toy Story,very right wing,balanced
+Walter White,Shrek,The Lion King,right wing,fruit-heavy
+The Rock,Finding Nemo,Frozen,very right wing,balanced
+Darth Vader,Casablanca,Gone with the Wind,right wing,meat-heavy
+Tony Stark,Forrest Gump,Fight Club,very right wing,fruit-heavy
+Taylor Swift,Frozen,Shrek,right wing,fruit-heavy
+Indiana Jones,The Matrix,Blade Runner,left wing,plant-heavy
+Morpheus,Back to the Future,The Matrix,very left wing,plant-heavy
+Arya Stark,Casablanca,Citizen Kane,left wing,meat-heavy
+Mulan,The Matrix,Back to the Future,right wing,fruit-heavy
+Arya Stark,The Shawshank Redemption,Forrest Gump,very right wing,plant-heavy
+Elvis Presley,Citizen Kane,Casablanca,right wing,balanced
+Sheldon Cooper,Shrek,Toy Story,very right wing,fruit-heavy
+Leonardo DiCaprio,Avengers: Endgame,The Dark Knight,very right wing,fruit-heavy
+Lady Gaga,The Shawshank Redemption,Titanic,very left wing,dairy-heavy
+Katniss Everdeen,Titanic,The Godfather,very right wing,balanced
+Lady Gaga,Psycho,Casablanca,very right wing,balanced
+Lady Gaga,Star Wars: Episode IV,Blade Runner,right wing,dairy-heavy
+Arya Stark,Fight Club,The Godfather,very left wing,balanced
+Dexter Morgan,Gone with the Wind,Citizen Kane,right wing,fruit-heavy
+Neo,Jurassic Park,Avengers: Endgame,left wing,plant-heavy
+James Bond,Back to the Future,Blade Runner,right wing,dairy-heavy
+Sherlock Holmes,Inception,Back to the Future,very left wing,balanced
+Spider-Man,Gone with the Wind,Casablanca,very left wing,meat-heavy
+Neo,The Godfather,Titanic,very left wing,fruit-heavy
+Darth Vader,Inception,Back to the Future,very left wing,meat-heavy
+Ash Ketchum,Casablanca,Jaws,very right wing,dairy-heavy
+Ash Ketchum,The Matrix,Blade Runner,left wing,fruit-heavy
+Mario,Back to the Future,Back to the Future,right wing,fruit-heavy
+Sheldon Cooper,The Shawshank Redemption,Forrest Gump,very left wing,meat-heavy
+Ash Ketchum,Jurassic Park,Avengers: Endgame,left wing,balanced
+Usain Bolt,Jaws,Gone with the Wind,very left wing,fruit-heavy
+Beyonce,Jurassic Park,The Dark Knight,right wing,plant-heavy
+Arya Stark,The Matrix,Star Wars: Episode IV,left wing,meat-heavy
+Superman,Jaws,Citizen Kane,right wing,fruit-heavy
+Dexter Morgan,Blade Runner,The Matrix,very right wing,fruit-heavy
+Elvis Presley,Fight Club,Forrest Gump,left wing,fruit-heavy
+Mulan,Blade Runner,Blade Runner,very right wing,balanced
+Tony Stark,The Matrix,Inception,right wing,meat-heavy
+Ash Ketchum,Inception,Inception,very left wing,fruit-heavy
+Tony Stark,Forrest Gump,The Godfather,very right wing,dairy-heavy
+Wonder Woman,Lord of the Rings: The Fellowship of the Ring,The Dark Knight,very right wing,plant-heavy
+Freddie Mercury,Pulp Fiction,Jurassic Park,very right wing,dairy-heavy
+Kermit the Frog,Frozen,The Lion King,left wing,balanced
+Wolverine,Back to the Future,The Matrix,very left wing,balanced
+Spider-Man,Blade Runner,The Matrix,very right wing,dairy-heavy
+Luffy,Psycho,Casablanca,left wing,balanced
+Leonardo DiCaprio,Avengers: Endgame,Jurassic Park,very right wing,balanced
+Dexter Morgan,Lord of the Rings: The Fellowship of the Ring,Jurassic Park,left wing,fruit-heavy
+Rihanna,Citizen Kane,Psycho,very right wing,dairy-heavy
+Simba,The Dark Knight,Jurassic Park,very right wing,fruit-heavy
+Mulan,Inception,Back to the Future,very right wing,balanced
+Marilyn Monroe,Blade Runner,Back to the Future,very left wing,plant-heavy
+Serena Williams,Inception,Star Wars: Episode IV,very left wing,dairy-heavy
+Goku,The Godfather,The Shawshank Redemption,very right wing,balanced
+Leonardo DiCaprio,Jurassic Park,Avengers: Endgame,left wing,dairy-heavy
+Mickey Mouse,Jurassic Park,Pulp Fiction,very right wing,balanced
+Freddie Mercury,Toy Story,The Lion King,very right wing,dairy-heavy
+Leonardo DiCaprio,The Shawshank Redemption,Forrest Gump,very left wing,dairy-heavy
+Indiana Jones,The Shawshank Redemption,The Shawshank Redemption,left wing,plant-heavy
+Simba,Fight Club,Titanic,very right wing,balanced
+Mario,Inception,Blade Runner,left wing,balanced
+Tony Stark,The Godfather,The Godfather,very left wing,fruit-heavy
+James Bond,Back to the Future,Inception,right wing,fruit-heavy
+Superman,Inception,Back to the Future,very right wing,meat-heavy
+Dexter Morgan,Casablanca,Jaws,right wing,fruit-heavy
+Simba,Frozen,The Lion King,left wing,plant-heavy
+Kermit the Frog,Jurassic Park,The Dark Knight,left wing,plant-heavy
+Spider-Man,Finding Nemo,The Lion King,right wing,meat-heavy
+Hermione Granger,Gone with the Wind,Jaws,very left wing,plant-heavy
+Captain America,Star Wars: Episode IV,Back to the Future,very left wing,fruit-heavy
+Mulan,The Dark Knight,Pulp Fiction,right wing,dairy-heavy
+Sherlock Holmes,Toy Story,Frozen,very right wing,dairy-heavy
+Usain Bolt,Blade Runner,Star Wars: Episode IV,right wing,fruit-heavy
+Taylor Swift,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,left wing,fruit-heavy
+Freddie Mercury,Shrek,Toy Story,very right wing,meat-heavy
+Spider-Man,Blade Runner,Inception,very left wing,dairy-heavy
+Spider-Man,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,right wing,meat-heavy
+Thor,Star Wars: Episode IV,Star Wars: Episode IV,right wing,fruit-heavy
+Neo,Star Wars: Episode IV,Star Wars: Episode IV,right wing,plant-heavy
+Katniss Everdeen,The Shawshank Redemption,Titanic,very left wing,balanced
+Usain Bolt,Finding Nemo,Shrek,right wing,dairy-heavy
+Kermit the Frog,Blade Runner,Back to the Future,very right wing,plant-heavy
+Captain America,Psycho,Citizen Kane,left wing,meat-heavy
+Freddie Mercury,Gone with the Wind,Casablanca,very right wing,dairy-heavy
+Kermit the Frog,Fight Club,The Shawshank Redemption,right wing,meat-heavy
+James Bond,The Godfather,The Godfather,right wing,balanced
+Simba,Jaws,Psycho,right wing,fruit-heavy
+Cinderella,Gone with the Wind,Gone with the Wind,very right wing,plant-heavy
+Tom Hanks,Casablanca,Casablanca,very left wing,meat-heavy
+Walter White,The Godfather,Titanic,right wing,plant-heavy
+Naruto,Pulp Fiction,Avengers: Endgame,very left wing,dairy-heavy
+Tom Hanks,Pulp Fiction,The Dark Knight,very right wing,fruit-heavy
+Kermit the Frog,Toy Story,Finding Nemo,very left wing,meat-heavy
+Michael Jordan,Fight Club,Titanic,left wing,fruit-heavy
+The Rock,Toy Story,Toy Story,left wing,dairy-heavy
+Captain America,Finding Nemo,Shrek,right wing,meat-heavy
+Usain Bolt,The Lion King,The Lion King,very left wing,dairy-heavy
+Arya Stark,Pulp Fiction,The Dark Knight,very left wing,fruit-heavy
+Tom Hanks,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,very right wing,dairy-heavy
+Tony Stark,Jaws,Jaws,right wing,balanced
+Bugs Bunny,Inception,Blade Runner,right wing,balanced
+Sheldon Cooper,Titanic,Forrest Gump,right wing,dairy-heavy
+Morpheus,Star Wars: Episode IV,Star Wars: Episode IV,very right wing,fruit-heavy
+Michael Jordan,Citizen Kane,Casablanca,very left wing,fruit-heavy
+Simba,Star Wars: Episode IV,Back to the Future,very right wing,fruit-heavy
+Sheldon Cooper,The Lion King,Shrek,right wing,meat-heavy
+Elsa,Back to the Future,Blade Runner,very left wing,fruit-heavy
+Wolverine,The Matrix,The Matrix,left wing,balanced
+Jack Sparrow,Avengers: Endgame,Pulp Fiction,very left wing,meat-heavy
+Oprah Winfrey,Jaws,Citizen Kane,very left wing,plant-heavy
+Bugs Bunny,Lord of the Rings: The Fellowship of the Ring,Jurassic Park,very left wing,dairy-heavy
+Neo,Back to the Future,Blade Runner,left wing,meat-heavy
+Marilyn Monroe,The Godfather,The Shawshank Redemption,left wing,dairy-heavy
+Wolverine,Lord of the Rings: The Fellowship of the Ring,Avengers: Endgame,right wing,meat-heavy
+Tony Stark,Fight Club,The Godfather,right wing,fruit-heavy
+Wolverine,Toy Story,Finding Nemo,very right wing,dairy-heavy
+Captain America,Lord of the Rings: The Fellowship of the Ring,Avengers: Endgame,very right wing,plant-heavy
+Goku,Finding Nemo,Shrek,left wing,fruit-heavy
+Captain America,Inception,Back to the Future,very right wing,plant-heavy
+Michael Jordan,Back to the Future,Star Wars: Episode IV,very right wing,meat-heavy
+Mickey Mouse,The Shawshank Redemption,Forrest Gump,very right wing,balanced
+Luke Skywalker,Casablanca,Casablanca,very right wing,plant-heavy
+Indiana Jones,The Shawshank Redemption,The Shawshank Redemption,right wing,plant-heavy
+James Bond,Jurassic Park,Pulp Fiction,right wing,plant-heavy
+Michael Jordan,Star Wars: Episode IV,Blade Runner,very right wing,meat-heavy
+Simba,The Godfather,The Godfather,left wing,meat-heavy
+Mario,The Godfather,The Godfather,left wing,plant-heavy
+Superman,Blade Runner,The Matrix,left wing,plant-heavy
+Hannibal Lecter,Avengers: Endgame,Avengers: Endgame,left wing,plant-heavy
+Michael Jordan,The Godfather,The Godfather,right wing,plant-heavy
+Wolverine,Back to the Future,The Matrix,very left wing,plant-heavy
+Serena Williams,Toy Story,Frozen,left wing,balanced
+Beyonce,The Godfather,Titanic,right wing,fruit-heavy
+Elvis Presley,Toy Story,Frozen,left wing,meat-heavy
+Elvis Presley,Titanic,Titanic,very right wing,balanced
+Wonder Woman,Titanic,The Godfather,left wing,plant-heavy
+Katniss Everdeen,Finding Nemo,The Lion King,right wing,fruit-heavy
+Simba,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,left wing,fruit-heavy
+Naruto,Lord of the Rings: The Fellowship of the Ring,Jurassic Park,right wing,fruit-heavy
+Mickey Mouse,Frozen,Shrek,very right wing,dairy-heavy
+Sherlock Holmes,Blade Runner,The Matrix,right wing,dairy-heavy
+Ash Ketchum,The Lion King,The Lion King,very right wing,plant-heavy
+Darth Vader,Inception,Inception,very right wing,meat-heavy
+The Rock,Frozen,Frozen,left wing,dairy-heavy
+Wonder Woman,Blade Runner,Back to the Future,left wing,meat-heavy
+Walter White,Inception,The Matrix,very right wing,balanced
+James Bond,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,right wing,fruit-heavy
+James Bond,The Dark Knight,The Dark Knight,very right wing,meat-heavy
+Luke Skywalker,Forrest Gump,The Godfather,very right wing,dairy-heavy
+Usain Bolt,Jurassic Park,The Dark Knight,very left wing,dairy-heavy
+Leonardo DiCaprio,Pulp Fiction,Pulp Fiction,right wing,meat-heavy
+Usain Bolt,Blade Runner,Back to the Future,right wing,dairy-heavy
+Mario,Jurassic Park,Avengers: Endgame,very left wing,meat-heavy
+Rihanna,The Matrix,Inception,very left wing,dairy-heavy
+Oprah Winfrey,Fight Club,The Shawshank Redemption,very left wing,meat-heavy
+Tom Hanks,Jurassic Park,Jurassic Park,right wing,fruit-heavy
+Hermione Granger,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,very right wing,balanced
+Wolverine,Toy Story,Finding Nemo,very left wing,fruit-heavy
+Katniss Everdeen,The Matrix,Back to the Future,right wing,fruit-heavy
+Ash Ketchum,Blade Runner,Back to the Future,very right wing,balanced
+Marilyn Monroe,The Shawshank Redemption,Forrest Gump,very left wing,balanced
+Lara Croft,Inception,Back to the Future,left wing,meat-heavy
+Luke Skywalker,Star Wars: Episode IV,Back to the Future,very left wing,dairy-heavy
+Bugs Bunny,Frozen,Toy Story,left wing,fruit-heavy
+Beyonce,The Dark Knight,Jurassic Park,left wing,dairy-heavy
+Katniss Everdeen,The Lion King,The Lion King,right wing,fruit-heavy
+Usain Bolt,Shrek,Frozen,left wing,fruit-heavy
+Taylor Swift,Star Wars: Episode IV,Star Wars: Episode IV,left wing,dairy-heavy
+Hermione Granger,Fight Club,Fight Club,right wing,plant-heavy
+Lady Gaga,Jurassic Park,Lord of the Rings: The Fellowship of the Ring,very left wing,plant-heavy
+Jack Sparrow,Finding Nemo,Toy Story,very left wing,meat-heavy
+Cinderella,The Matrix,Back to the Future,very left wing,plant-heavy
+Neo,Avengers: Endgame,The Dark Knight,right wing,meat-heavy
+Sherlock Holmes,The Godfather,The Godfather,very left wing,balanced
+Rihanna,Inception,The Matrix,left wing,meat-heavy
+Walter White,Jaws,Casablanca,right wing,balanced
+Usain Bolt,Inception,Back to the Future,right wing,fruit-heavy
+James Bond,Inception,Back to the Future,very left wing,fruit-heavy
+Rihanna,Finding Nemo,Shrek,left wing,plant-heavy
+Freddie Mercury,Back to the Future,Blade Runner,very left wing,meat-heavy
+Mickey Mouse,Casablanca,Citizen Kane,very left wing,meat-heavy
+Ash Ketchum,Pulp Fiction,The Dark Knight,very left wing,fruit-heavy
+Sheldon Cooper,Fight Club,Titanic,left wing,dairy-heavy
+Marilyn Monroe,Psycho,Jaws,left wing,fruit-heavy
+Marilyn Monroe,Frozen,Shrek,very left wing,fruit-heavy
+Oprah Winfrey,Blade Runner,The Matrix,very left wing,balanced
+Luffy,Pulp Fiction,The Dark Knight,very left wing,meat-heavy
+Tom Hanks,Avengers: Endgame,The Dark Knight,very left wing,plant-heavy
+Leonardo DiCaprio,Star Wars: Episode IV,Star Wars: Episode IV,very right wing,balanced
+Darth Vader,Psycho,Psycho,very left wing,balanced
+Bugs Bunny,Casablanca,Gone with the Wind,left wing,meat-heavy
+Luffy,Shrek,Finding Nemo,very right wing,plant-heavy
+Spider-Man,The Lion King,Shrek,right wing,meat-heavy
+Jack Sparrow,Jaws,Psycho,very right wing,meat-heavy
+Leonardo DiCaprio,Back to the Future,Back to the Future,very right wing,balanced
+Elsa,The Lion King,Shrek,left wing,fruit-heavy
+Cinderella,The Matrix,Inception,very left wing,plant-heavy
+Lady Gaga,Casablanca,Citizen Kane,very right wing,fruit-heavy
+Cinderella,Psycho,Casablanca,left wing,meat-heavy
+Oprah Winfrey,Lord of the Rings: The Fellowship of the Ring,The Dark Knight,very right wing,fruit-heavy
+Freddie Mercury,Shrek,Toy Story,very left wing,balanced
+Thor,Citizen Kane,Jaws,right wing,meat-heavy
+Kermit the Frog,Star Wars: Episode IV,Blade Runner,left wing,meat-heavy
+Simba,Star Wars: Episode IV,Back to the Future,very right wing,dairy-heavy
+Ash Ketchum,Forrest Gump,Forrest Gump,right wing,dairy-heavy
+Superman,Fight Club,Forrest Gump,left wing,fruit-heavy
+The Rock,Toy Story,Finding Nemo,very left wing,fruit-heavy
+Dexter Morgan,The Lion King,Shrek,right wing,balanced
+Darth Vader,Inception,Blade Runner,very right wing,dairy-heavy
+Michael Jordan,The Matrix,Star Wars: Episode IV,left wing,dairy-heavy
+Lara Croft,Star Wars: Episode IV,Back to the Future,very right wing,fruit-heavy
+The Rock,Shrek,Shrek,right wing,dairy-heavy
+Marilyn Monroe,Lord of the Rings: The Fellowship of the Ring,Jurassic Park,very left wing,fruit-heavy
+Hannibal Lecter,The Godfather,The Shawshank Redemption,very right wing,dairy-heavy
+Oprah Winfrey,Blade Runner,Blade Runner,left wing,balanced
+Walter White,Gone with the Wind,Citizen Kane,very right wing,dairy-heavy
+Tom Hanks,Finding Nemo,Frozen,very left wing,balanced
+Michael Jordan,Pulp Fiction,Jurassic Park,left wing,meat-heavy
+Arya Stark,Titanic,Fight Club,left wing,dairy-heavy
+Naruto,Avengers: Endgame,Pulp Fiction,left wing,meat-heavy
+Rihanna,Forrest Gump,Fight Club,very left wing,balanced
+Serena Williams,Frozen,The Lion King,left wing,meat-heavy
+Ash Ketchum,Back to the Future,Star Wars: Episode IV,left wing,fruit-heavy
+Elsa,Finding Nemo,Finding Nemo,very right wing,fruit-heavy
+Wolverine,Blade Runner,Inception,left wing,dairy-heavy
+Lady Gaga,The Matrix,The Matrix,left wing,meat-heavy
+Serena Williams,Toy Story,The Lion King,very right wing,fruit-heavy
+Hermione Granger,Star Wars: Episode IV,The Matrix,very left wing,balanced
+Scarlett Johansson,Fight Club,Titanic,very left wing,plant-heavy
+Wonder Woman,Jaws,Casablanca,very right wing,plant-heavy
+Darth Vader,Jurassic Park,Pulp Fiction,right wing,dairy-heavy
+Captain America,Avengers: Endgame,Avengers: Endgame,very right wing,balanced
+James Bond,Finding Nemo,Shrek,left wing,meat-heavy
+Wolverine,Star Wars: Episode IV,Blade Runner,very right wing,fruit-heavy
+Rihanna,Psycho,Jaws,very right wing,meat-heavy
+Leonardo DiCaprio,The Godfather,The Shawshank Redemption,right wing,dairy-heavy
+Kermit the Frog,Inception,The Matrix,very right wing,fruit-heavy
+Rihanna,The Godfather,The Godfather,left wing,meat-heavy
+Elvis Presley,Shrek,Finding Nemo,right wing,meat-heavy
+Dexter Morgan,Citizen Kane,Citizen Kane,very left wing,fruit-heavy
+Serena Williams,Pulp Fiction,Pulp Fiction,very right wing,fruit-heavy
+Luke Skywalker,The Dark Knight,Pulp Fiction,right wing,plant-heavy
+Naruto,Fight Club,Titanic,very left wing,balanced
+Tony Stark,Toy Story,Finding Nemo,very left wing,dairy-heavy
+Michael Jordan,Back to the Future,Inception,left wing,plant-heavy
+Dexter Morgan,The Matrix,Back to the Future,very left wing,balanced
+Goku,The Lion King,Toy Story,very left wing,dairy-heavy
+Jack Sparrow,Gone with the Wind,Gone with the Wind,very right wing,dairy-heavy
+Hannibal Lecter,Inception,Star Wars: Episode IV,right wing,dairy-heavy
+Katniss Everdeen,The Matrix,Inception,left wing,meat-heavy
+James Bond,Frozen,Finding Nemo,very left wing,plant-heavy
+Elsa,Inception,Inception,right wing,dairy-heavy
+Cinderella,Fight Club,Fight Club,right wing,dairy-heavy
+Morpheus,Back to the Future,The Matrix,left wing,plant-heavy
+Wonder Woman,Frozen,Shrek,left wing,balanced
+Mulan,Forrest Gump,The Godfather,very right wing,fruit-heavy
+Naruto,Finding Nemo,Shrek,right wing,meat-heavy
+Wonder Woman,Shrek,Shrek,right wing,meat-heavy
+Elvis Presley,Fight Club,The Godfather,right wing,meat-heavy
+Goku,Jaws,Gone with the Wind,very left wing,fruit-heavy
+Serena Williams,Forrest Gump,Titanic,very right wing,meat-heavy
+Hermione Granger,Casablanca,Psycho,very left wing,balanced
+Jack Sparrow,The Shawshank Redemption,Fight Club,left wing,dairy-heavy
+Mickey Mouse,Pulp Fiction,Avengers: Endgame,very right wing,fruit-heavy
+Wolverine,Star Wars: Episode IV,The Matrix,very right wing,plant-heavy
+Wonder Woman,The Shawshank Redemption,The Godfather,left wing,plant-heavy
+Mickey Mouse,The Dark Knight,Pulp Fiction,right wing,plant-heavy
+Indiana Jones,Forrest Gump,The Godfather,very left wing,dairy-heavy
+Katniss Everdeen,Forrest Gump,Titanic,very right wing,fruit-heavy
+Mario,Pulp Fiction,Jurassic Park,left wing,dairy-heavy
+Serena Williams,The Godfather,The Godfather,very left wing,meat-heavy
+Darth Vader,Back to the Future,The Matrix,very left wing,fruit-heavy
+Kermit the Frog,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,right wing,meat-heavy
+Freddie Mercury,Citizen Kane,Casablanca,right wing,plant-heavy
+Thor,Back to the Future,The Matrix,right wing,dairy-heavy
+Taylor Swift,Casablanca,Citizen Kane,very right wing,fruit-heavy
+Indiana Jones,The Shawshank Redemption,Fight Club,very left wing,dairy-heavy
+Usain Bolt,Forrest Gump,The Godfather,right wing,fruit-heavy
+Spider-Man,Jurassic Park,Pulp Fiction,right wing,dairy-heavy
+Michael Jordan,The Lion King,Shrek,very left wing,dairy-heavy
+Mario,Shrek,Frozen,left wing,balanced
+Katniss Everdeen,Pulp Fiction,Lord of the Rings: The Fellowship of the Ring,very left wing,meat-heavy
+Wonder Woman,The Dark Knight,Pulp Fiction,right wing,dairy-heavy
+Hannibal Lecter,The Dark Knight,Pulp Fiction,very right wing,balanced
+Captain America,The Lion King,The Lion King,very right wing,plant-heavy
+Freddie Mercury,Titanic,Fight Club,very right wing,plant-heavy
+Luffy,Titanic,Titanic,right wing,balanced
+Elvis Presley,Gone with the Wind,Casablanca,right wing,fruit-heavy
+Scarlett Johansson,The Shawshank Redemption,Titanic,left wing,plant-heavy
+Cinderella,Jurassic Park,Jurassic Park,very right wing,plant-heavy
+Wonder Woman,Toy Story,The Lion King,right wing,plant-heavy
+Taylor Swift,Gone with the Wind,Jaws,very left wing,balanced
+Kermit the Frog,Citizen Kane,Psycho,right wing,meat-heavy
+Katniss Everdeen,The Shawshank Redemption,The Shawshank Redemption,very left wing,dairy-heavy
+Luffy,The Godfather,The Shawshank Redemption,very right wing,fruit-heavy
+Morpheus,Titanic,Titanic,right wing,balanced
+Spider-Man,Blade Runner,Inception,very left wing,balanced
+Lady Gaga,Inception,Inception,left wing,meat-heavy
+Usain Bolt,The Dark Knight,Avengers: Endgame,very right wing,dairy-heavy
+Michael Jordan,Inception,Inception,very left wing,dairy-heavy
+Indiana Jones,Inception,Blade Runner,right wing,meat-heavy
+Elsa,Blade Runner,Back to the Future,right wing,meat-heavy
+Lady Gaga,Back to the Future,Star Wars: Episode IV,very left wing,meat-heavy
+Simba,Gone with the Wind,Jaws,very right wing,meat-heavy
+Indiana Jones,Lord of the Rings: The Fellowship of the Ring,The Dark Knight,very right wing,balanced
+Bugs Bunny,Lord of the Rings: The Fellowship of the Ring,Avengers: Endgame,very right wing,plant-heavy
+Neo,Shrek,Finding Nemo,left wing,plant-heavy
+Mulan,Finding Nemo,Shrek,left wing,balanced
+Hermione Granger,The Shawshank Redemption,Forrest Gump,very right wing,meat-heavy
+Freddie Mercury,Frozen,Frozen,very right wing,dairy-heavy
+Neo,Gone with the Wind,Jaws,left wing,balanced
+The Rock,The Dark Knight,Avengers: Endgame,very left wing,meat-heavy
+Katniss Everdeen,Blade Runner,Blade Runner,very right wing,meat-heavy
+Wonder Woman,Finding Nemo,Toy Story,left wing,dairy-heavy
+Hermione Granger,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,very left wing,balanced
+The Rock,Forrest Gump,Titanic,right wing,balanced
+Superman,The Matrix,Star Wars: Episode IV,right wing,fruit-heavy
+Lara Croft,Finding Nemo,Frozen,right wing,fruit-heavy
+Tony Stark,The Shawshank Redemption,The Godfather,left wing,balanced
+Tom Hanks,Citizen Kane,Psycho,left wing,dairy-heavy
+Mickey Mouse,The Matrix,Back to the Future,very left wing,meat-heavy
+Goku,Fight Club,Titanic,very left wing,dairy-heavy
+Simba,Blade Runner,The Matrix,very right wing,fruit-heavy
+Dexter Morgan,Pulp Fiction,The Dark Knight,very right wing,fruit-heavy
+Indiana Jones,Titanic,The Shawshank Redemption,very left wing,plant-heavy
+Taylor Swift,Titanic,Titanic,very left wing,dairy-heavy
+Wonder Woman,Finding Nemo,Toy Story,left wing,dairy-heavy
+Scarlett Johansson,The Lion King,Shrek,left wing,meat-heavy
+Lady Gaga,Toy Story,The Lion King,right wing,balanced
+Walter White,Shrek,Toy Story,left wing,meat-heavy
+Scarlett Johansson,Lord of the Rings: The Fellowship of the Ring,Lord of the Rings: The Fellowship of the Ring,left wing,balanced
+Serena Williams,Star Wars: Episode IV,Blade Runner,left wing,balanced
+Mickey Mouse,Toy Story,Toy Story,very left wing,fruit-heavy
+Bugs Bunny,Inception,Blade Runner,very right wing,fruit-heavy
+Usain Bolt,Frozen,Frozen,very right wing,plant-heavy
+Captain America,Toy Story,Finding Nemo,right wing,balanced
+Luke Skywalker,Fight Club,The Godfather,left wing,plant-heavy
+Mario,Shrek,Toy Story,very right wing,meat-heavy
+Scarlett Johansson,Fight Club,The Shawshank Redemption,right wing,balanced
+Elsa,Jaws,Citizen Kane,left wing,plant-heavy
+Cinderella,The Dark Knight,Avengers: Endgame,right wing,balanced
+Wolverine,Pulp Fiction,Avengers: Endgame,right wing,balanced
+Lara Croft,Jaws,Gone with the Wind,very right wing,fruit-heavy
+Neo,Inception,Inception,left wing,meat-heavy
+Elsa,Inception,Back to the Future,very left wing,dairy-heavy
+Thor,Citizen Kane,Citizen Kane,left wing,balanced
+Sherlock Holmes,Toy Story,The Lion King,right wing,balanced
+Morpheus,Titanic,Forrest Gump,very left wing,balanced
+Captain America,Avengers: Endgame,Jurassic Park,left wing,plant-heavy
+Ash Ketchum,Jaws,Psycho,very left wing,fruit-heavy
+Wonder Woman,Fight Club,Forrest Gump,right wing,meat-heavy
+Mulan,Frozen,The Lion King,very right wing,fruit-heavy
+Lara Croft,The Lion King,Finding Nemo,very left wing,meat-heavy
+Oprah Winfrey,Titanic,The Shawshank Redemption,left wing,fruit-heavy
+Beyonce,The Matrix,Back to the Future,very left wing,fruit-heavy
+Morpheus,Fight Club,Titanic,very right wing,balanced
+Indiana Jones,Inception,Star Wars: Episode IV,left wing,dairy-heavy
+Scarlett Johansson,Toy Story,Frozen,right wing,balanced
+Beyonce,Pulp Fiction,Avengers: Endgame,right wing,meat-heavy
+Katniss Everdeen,Finding Nemo,Shrek,very right wing,meat-heavy
+Wolverine,Gone with the Wind,Citizen Kane,left wing,meat-heavy
+Goku,Fight Club,Fight Club,right wing,dairy-heavy
+Sheldon Cooper,Jurassic Park,Avengers: Endgame,very left wing,balanced
+Cinderella,Finding Nemo,Toy Story,right wing,balanced
+Elsa,Inception,Inception,very left wing,fruit-heavy
+Scarlett Johansson,Star Wars: Episode IV,Inception,right wing,balanced
+Indiana Jones,Shrek,Toy Story,right wing,balanced
+Naruto,The Godfather,The Godfather,right wing,fruit-heavy
+Lady Gaga,Psycho,Citizen Kane,right wing,meat-heavy
+Captain America,The Dark Knight,Pulp Fiction,very left wing,balanced
+Lara Croft,Blade Runner,Star Wars: Episode IV,very left wing,balanced
+Superman,Casablanca,Psycho,left wing,plant-heavy
+James Bond,Back to the Future,Inception,right wing,balanced
+Captain America,Titanic,The Godfather,very right wing,balanced
+Ash Ketchum,Toy Story,Shrek,very left wing,dairy-heavy
+Kermit the Frog,Forrest Gump,Fight Club,right wing,meat-heavy
+Naruto,Gone with the Wind,Citizen Kane,right wing,plant-heavy
+Serena Williams,Psycho,Gone with the Wind,left wing,fruit-heavy
+Tom Hanks,Toy Story,Shrek,right wing,fruit-heavy
+Kermit the Frog,The Godfather,The Godfather,right wing,fruit-heavy
+Elsa,Jurassic Park,Jurassic Park,right wing,fruit-heavy
+Beyonce,Jaws,Jaws,right wing,meat-heavy
+Kermit the Frog,Forrest Gump,Titanic,left wing,plant-heavy
+Elvis Presley,Blade Runner,The Matrix,right wing,balanced
+Leonardo DiCaprio,Inception,Back to the Future,very right wing,balanced
+Tony Stark,Blade Runner,The Matrix,very left wing,balanced
+Beyonce,The Lion King,Frozen,very right wing,fruit-heavy
+Marilyn Monroe,Casablanca,Psycho,very left wing,plant-heavy
+Hannibal Lecter,Forrest Gump,Forrest Gump,very right wing,balanced
+Hannibal Lecter,Psycho,Casablanca,very right wing,balanced
+Mulan,The Shawshank Redemption,Titanic,right wing,fruit-heavy
+Sherlock Holmes,Psycho,Citizen Kane,very left wing,balanced
+Darth Vader,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,very left wing,balanced
+Lady Gaga,Gone with the Wind,Jaws,very right wing,balanced
+Elsa,Shrek,Toy Story,very left wing,fruit-heavy
+Dexter Morgan,Star Wars: Episode IV,Back to the Future,very left wing,dairy-heavy
+Neo,Forrest Gump,The Godfather,right wing,plant-heavy
+Beyonce,Citizen Kane,Psycho,left wing,balanced
+Morpheus,The Dark Knight,Lord of the Rings: The Fellowship of the Ring,left wing,plant-heavy
+Darth Vader,The Shawshank Redemption,Fight Club,right wing,meat-heavy
+Darth Vader,Jaws,Psycho,left wing,dairy-heavy
+Morpheus,Pulp Fiction,Lord of the Rings: The Fellowship of the Ring,very right wing,fruit-heavy
+Bugs Bunny,Lord of the Rings: The Fellowship of the Ring,Avengers: Endgame,right wing,dairy-heavy
+Luffy,Blade Runner,Back to the Future,very right wing,dairy-heavy
+Morpheus,The Matrix,Blade Runner,right wing,fruit-heavy
+Elsa,The Matrix,Blade Runner,very right wing,fruit-heavy
+Oprah Winfrey,Jurassic Park,Pulp Fiction,very right wing,plant-heavy
+Beyonce,Psycho,Casablanca,left wing,fruit-heavy
+Mario,Back to the Future,The Matrix,left wing,fruit-heavy
+Katniss Everdeen,Fight Club,Titanic,very right wing,balanced
+Morpheus,Star Wars: Episode IV,Blade Runner,right wing,fruit-heavy
+Darth Vader,Star Wars: Episode IV,The Matrix,very right wing,dairy-heavy
+Thor,The Shawshank Redemption,The Godfather,right wing,meat-heavy
+Lara Croft,Psycho,Psycho,very right wing,plant-heavy
+Oprah Winfrey,Titanic,The Godfather,very left wing,plant-heavy
+Mario,Jurassic Park,Pulp Fiction,very right wing,fruit-heavy
+Taylor Swift,The Shawshank Redemption,Forrest Gump,very left wing,balanced
+Spider-Man,Avengers: Endgame,Lord of the Rings: The Fellowship of the Ring,very right wing,plant-heavy
+Jack Sparrow,The Godfather,The Shawshank Redemption,very left wing,fruit-heavy
+Usain Bolt,Frozen,Shrek,very left wing,plant-heavy
+Katniss Everdeen,Inception,Back to the Future,very right wing,meat-heavy
+Bugs Bunny,Jaws,Jaws,very left wing,balanced
+Indiana Jones,Psycho,Gone with the Wind,very right wing,dairy-heavy
+Leonardo DiCaprio,The Dark Knight,Lord of the Rings: The Fellowship of the Ring,left wing,meat-heavy
+The Rock,Inception,Back to the Future,very left wing,meat-heavy
+Lara Croft,Frozen,The Lion King,very right wing,fruit-heavy
+Goku,Lord of the Rings: The Fellowship of the Ring,Avengers: Endgame,very left wing,fruit-heavy
+Captain America,Frozen,Shrek,right wing,balanced
+Kermit the Frog,Frozen,Toy Story,left wing,balanced
+Usain Bolt,Fight Club,The Godfather,very right wing,meat-heavy
+Mulan,Blade Runner,Star Wars: Episode IV,very right wing,fruit-heavy
+Katniss Everdeen,Jaws,Gone with the Wind,very right wing,meat-heavy
+The Rock,Back to the Future,Inception,left wing,plant-heavy
+Mickey Mouse,Casablanca,Gone with the Wind,very left wing,plant-heavy
+Ash Ketchum,Toy Story,The Lion King,very right wing,plant-heavy
+Oprah Winfrey,Jaws,Casablanca,very right wing,plant-heavy
+Ash Ketchum,Back to the Future,Star Wars: Episode IV,very right wing,fruit-heavy
+Luke Skywalker,Titanic,Fight Club,left wing,balanced
+Hannibal Lecter,Forrest Gump,Fight Club,very right wing,plant-heavy

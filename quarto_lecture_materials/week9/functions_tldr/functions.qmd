@@ -1,0 +1,14 @@
+---
+title: "CMPT 120: Functions"
+date: "2023-10-25"
+author: "Prof. Nick Vincent"
+institute: "Simon Fraser University"
+format:
+  revealjs:
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    theme: solarized
+jupyter: python3
+---
+

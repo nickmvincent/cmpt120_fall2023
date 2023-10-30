@@ -6,6 +6,9 @@ From the docs:
 
 "The keyword def introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented."
 
+
+Example: 
+
 ```
 def my_math_function(a, b):
     return a*2 + b*3
@@ -56,6 +59,7 @@ def power(base, exponent=2):
     return result
 
 # Usage:
+
 ```
 result1 = power(3)  # Using default exponent value 2
 result2 = power(3, 3)  # Specifying exponent value 3

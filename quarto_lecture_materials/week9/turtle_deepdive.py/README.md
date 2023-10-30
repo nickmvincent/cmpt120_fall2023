@@ -2,7 +2,7 @@
 
 Below is an approximation of an assignment you might be given related to using `turtle`.
 
-Also included (but hidden in a folder for "spoilers" reasons) are three example solutions.
+Also included (but hidden in a folder, `example_solutions` for "spoilers" reasons) are three example solutions.
 
 If you already feel very comfortable with turtle from readings, you can just glance through the examples.
 
@@ -12,6 +12,7 @@ Then, after you've tried for 5-10 minutes, scroll down in this file to receive i
 
 After you're done, take a look at the examples.
 
+The assignment prompt:
 
 Using Python’s turtle module, create a script that generates a unique piece of abstract art. 
 Utilize the random module to ensure that each run of your script produces a different artwork.
@@ -29,7 +30,7 @@ Suggested approaches:
 
 
 Suggested coding tips:
-- to start getting some practice with functions, try putting your main body of code in a function called `main` and then call `main()` at the bottom of the file. See starterkit.py
+- to start getting some practice with functions, try putting your main body of code in a function called `main` and then call `main()` at the bottom of the file. See also `starterkit.py` if you feel totally stuck.
 
 
 SCROLL DOWN AFTER 5-10 MINUTES OF TINKERING
@@ -63,7 +64,9 @@ def draw_random_lines(num_lines):
         t.forward(random.randint(50, 200))
 ```
 
-then, you can call this function under main(), e.g. `draw_random_lines(5)` to draw 5 lines
+then, you can call this function under main(), e.g. `draw_random_lines(5)` to draw 5 lines.
+
+From there, you can start to think about how you might draw circles or squares.
 
 
 

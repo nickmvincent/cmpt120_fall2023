@@ -1,0 +1,343 @@
+---
+title: "CMPT 120"
+date: "2023-11-22"
+author: "Prof. Nick Vincent"
+institute: "Simon Fraser University"
+format:
+  revealjs:
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    theme: solarized
+jupyter: python3
+---
+
+## Context
+- We're back to Quarto for a day!
+- Code heavy slides
+- Some recap
+
+## Agenda
+- Check in on Project Part 1
+- One more quick review of list vs. string
+- Answers to recursive code-writing practice problems
+- Test-taking and interview strategy: mapping new problems to known problems
+- Strategies for working together fairly (important for future courses!)
+
+
+## Lists and Strings: Concat, Append
+
+```{python}
+#| echo: true
+# Example of concatenation
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+concatenated_list = list1 + list2  # Concatenation with lists
+
+string1 = "hello"
+string2 = "world"
+concatenated_string = string1 + string2  # Concatenation with strings
+
+print("Concatenated List:", concatenated_list)
+print("Concatenated String:", concatenated_string)
+
+# Example of append (only for lists)
+list1.append(4)  # Appending an element to a list
+print("List after append:", list1)
+```
+
+## List Access, Mutation
+```{python}
+#| echo: true
+# Example of indexing (applicable to both)
+list_element = list1[0]  # Accessing the first element of the list
+string_char = string1[0]  # Accessing the first character of the string
+print("First element of list:", list_element)
+print("First character of string:", string_char)
+
+# Example of mutating lists (not possible with strings)
+list1[0] = 10  # Changing the first element of the list
+print("List after mutation:", list1)
+
+# Trying to mutate a string (will raise an error)
+try:
+    string1[0] = "H"
+except TypeError as e:
+    print("Error when trying to mutate a string:", e)
+```
+
+## Lists vs. Strings: Summary
+- Concatenation is shown for both lists and strings using the + operator.
+- Append is demonstrated only for a list, as it's a mutable type.
+- Indexing is used to access elements of both lists and strings.
+- Mutating is performed on a list but attempting the same on a string results in a TypeError since strings are immutable in Python.
+
+
+## Recursive code-writing questions from last lecture
+
+- Reverse List
+- Count Vowels
+- Palindrome
+
+## Recursive Reverse List
+```{python}
+#| echo: true
+
+def reverseList(lst):
+    # Base case: if the list is empty or has only one element, return it
+    if len(lst) <= 1:
+        return lst
+    else:
+        # Recursive case: reverse the rest of the list and append the first element
+        return reverseList(lst[1:]) + [lst[0]]
+
+# Example usage
+example_list = [1, 2, 3, 4, 5]
+print("Original List:", example_list)
+print("Reversed List:", reverseList(example_list))
+
+```
+
+## Explanation
+
+- Base Case: If the list is empty or has only one element, return the list as it is. This is because a list with zero or one element is already reversed.
+- Recursive Case: Otherwise, reverse the rest of the list recursively and append the first element at the end.
+- Remember, we can do left to right or right to left!
+
+Quick q: why use `if len(lst) <= 1:`
+
+
+## Recursive Count Vowels
+```{python}
+#| echo: true
+
+def count_vowels(st):
+    vowels = "aeiouAEIOU"
+    
+    # Base case: if the string is empty
+    if len(st) == 0:
+        return 0
+    else:
+        # Check if the first character is a vowel
+        first_char_vowel_count = 1 if st[0] in vowels else 0
+        # Recursive call on the rest of the string
+        return first_char_vowel_count + count_vowels(st[1:])
+
+# Example usage
+example_string = "Hello World"
+print(f"Number of vowels in '{example_string}':", count_vowels(example_string))
+```
+
+## Explanation
+- Base Case: If the string is empty, return 0 since there are no vowels in an empty string.
+- Recursive Case: Check if the first character of the string is a vowel. If it is, return 1 plus the result of the recursive call on the rest of the string. If it's not a vowel, just return the result of the recursive call on the rest of the string.
+
+
+## Recursive Palindrome
+```{python}
+#| echo: true
+
+def count_vowels(st):
+    vowels = "aeiouAEIOU"
+    
+    # Base case: if the string is empty
+    if len(st) == 0:
+        return 0
+    else:
+        # Check if the first character is a vowel
+        first_char_vowel_count = 1 if st[0] in vowels else 0
+        # Recursive call on the rest of the string
+        return first_char_vowel_count + count_vowels(st[1:])
+
+# Example usage
+example_string = "Hello World"
+print(f"Number of vowels in '{example_string}':", count_vowels(example_string))
+```
+
+## Explanation
+
+- Base Case: If the length of the word is 0 or 1, it is a palindrome (a single character or an empty string is trivially a palindrome).
+- Recursive Case: Check if the first and last characters of the word are the same. If they are, make a recursive call with the word minus its first and last characters. If they are not the same, return False.
+
+## Reminder of recursion learning goals
+
+1. Knows the basic elements of a recursive function
+2. Able to analyze a recursively drawn tree in Turtle
+3. Able to write a simple recursive function that does not return any value, e.g. to draw concentric circles
+4. Understands the difference between executing a line of code before a recursive call vs. after a recursive call
+5. Is able to apply the 3 laws of recursion to write or analyze a basic recursive fruitful function
+
+## Reminder of Recursion Learning Goals
+6. Able to write a factorial function recursively
+7. Able to write code that can produce the sum of a list using recursion
+8. Able to write code that can reverse a string using recursion 
+9. Able to write a recursive or iterative function to check if a string is a palindrome
+
+## 4 specific tasks to be familiar with
+
+- factorial
+- sum
+- reverse
+- palindrone
+
+But we also saw count vowels... How to prepare for a new function?
+
+One way: map to known examples
+
+## Example scenario
+
+Say you have on your cheatsheet the complete code for the above four recursive functions
+(this would be allowed, and they're pretty short).
+
+But you're asked to write code to count vowels.
+
+One approach: think about counting vowels as a kind of sum... it's a sum but we skip certain numbers.
+
+In other words: we map our string into an array of zeros and ones.
+
+## Recall: recursive sum
+```{python}
+#| echo: true
+
+def recursive_sum(lst):
+    # Base case: if the list is empty
+    if not lst: # if you prefer len(list) == 0, that works great too!
+        return 0
+    else:
+        # Recursive case: sum the first element with the sum of the rest of the list
+        return lst[0] + recursive_sum(lst[1:])
+
+# Example usage
+example_list = [1, 2, 3, 4, 5]
+print("Sum of the list:", recursive_sum(example_list))
+```
+
+vs
+
+```{python}
+#| echo: true
+
+def count_vowels(st):
+    vowels = "aeiouAEIOU"
+    
+    # Base case: if the string is empty
+    if len(st) == 0:
+        return 0
+    else:
+        # Check if the first character is a vowel
+        first_char_vowel_count = 1 if st[0] in vowels else 0
+        # Recursive call on the rest of the string
+        return first_char_vowel_count + count_vowels(st[1:])
+```
+
+## Sum vs count
+
+We added one key line 
+
+`first_char_vowel_count = 1 if st[0] in vowels else 0`
+
+(the three line, more familiar longer form version of this would be)
+
+```{.python}
+first_char_vowel_count = 0
+if st[0] in vowels:
+    first_char_vowel_count = 1
+```
+
+Everything else is almost the same. However, we need to have a good amount of comfort with Python language features
+(if statements, return, etc.) to make the leap.
+
+## General computational thinking strategy: mapping new problems to known problems
+
+Coming up with brand new solutions on your own is extremely challenging, and generally
+not a sustainable strategy.
+
+It's good to try solving things from first principles, but not a great strategy in expectation.
+
+## Comparison with the "runner up"
+
+The runner up problem from the midterm is an example of this: we're basically finding the max,
+but with one additional condition: we're finding the max value not equal to our already found max.
+
+(Challenge question: now that we've talked about sorting, are there situations in which we might
+want to use a sorting based approach instead?)
+
+## How to apply this strategy
+
+If you're stuck on a question on a midterm (in 120, or future courses), maybe take an initial stab
+at solving from "first principles". But nothing seems to work (or you've written some code, but when you walk through it doesn't seem to fit), try mapping to known problems.
+
+"Counting is actually a kind of summation"
+
+## Applying this strategy for CS interviews
+Note: another place this is very important is CS interview coding. Many "Leetcode"-type problems
+are variants of certain problems you'll see in future CS courses (depth first search, breadth first search, binary tree traversal, etc.).
+
+Some interview questions involve mapping a seemingly "new" problem to a binary search!
+
+## Question break!
+
+## Quick intro to dicts
+
+Dicts -- what are they good for?
+
+Lists store things in order.
+
+Dicts let us map "keys" to "values"
+
+## Mental model of lists vs Dicts
+
+If a list is box we throw sheets of paper into... a dict is an infinitely large set of cabinets where each cabinet has its own name.
+
+## Example: Social Media Profile
+Say we want to write some code to handle a user profile feature for a social media site.
+
+User must have a username, a profile pic, a biography, a friends list, etc.
+
+We could use lists...
+```{python}
+#| echo: true
+my_list = []
+# the user name will go in index zero
+my_list.append("nickmvincent")
+# the profile pic will go in index one...
+my_list.append("images/pic_of_nick.jpeg")
+# the bio will go in index two...
+my_list.append("Nick is an assistant prof in CS...")
+print(my_list)
+```
+
+## Example: Social Media Profile
+But everyone we work with has to memorize this syntax! username at list[0], pic at list[1], etc. This seems like it might frustrate people.
+
+Worse, what if the set of requirements changes (our boss gets rid of user bio!)
+
+## Example: Social Media Profile
+
+-Enter dicts: map key to value.
+-Key can be anything, value can be anything
+
+
+```{python}
+#| echo: true
+my_dict = {
+    "username": "nickmvincent",
+    "prof_pic": "images/pic_of_nick.jpeg",
+    "bio": "Nick is a ...",
+    "friend_count": 6,
+    "friend_lists": ["person1", "person2"]
+}
+```
+
+## Things to note
+
+- Syntax: we use curly braces {}. Each entry of the dict is a key (must be string), a colon, then a value (can be anything!), then a comma
+- We can have infinite keys.
+-If value can be anything, can we have dict of dicts?
+- Yes!
+
+## Try it out
+- As always, try it out
+- See https://realpython.com/python-dicts/ for a nice overview
+
+## Do I need to learn dicts?

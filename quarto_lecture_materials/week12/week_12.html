@@ -420,14 +420,44 @@ Prof.&nbsp;Nick Vincent
 <h2>Agenda</h2>
 <ul>
 <li>Check in on Project Part 1</li>
-<li>One more quick review of list vs.&nbsp;string</li>
-<li>Answers to recursive code-writing practice problems</li>
+<li>Quick review of list vs.&nbsp;string</li>
+<li>Recursive code-writing practice problems</li>
 <li>Test-taking and interview strategy: mapping new problems to known problems</li>
-<li>Strategies for working together fairly (important for future courses!)</li>
+<li>Dicts</li>
+<li>Visualizer, debugger, more comments on study strategies</li>
+<li>Practice Final</li>
 </ul>
 </section>
-<section id="lists-and-strings-concat-append-list-access-mutation" class="slide level2">
-<h2>Lists and Strings: Concat, Append, List Access, Mutation</h2>
+<section id="project" class="slide level2">
+<h2>Project</h2>
+<ul>
+<li>Take a look at latest announcements for some clarifications</li>
+<li>Keep asking questions! I really appreciate them. These kinds of assignments are tough (and in the real world, you’ll have to ask your manager to clarify ambiguous tasks you’ve been given :D )</li>
+<li>Strategies for working together</li>
+</ul>
+</section>
+<section id="project-minify" class="slide level2">
+<h2>Project: minify</h2>
+<ul>
+<li>This is a tough question!</li>
+<li>Try to start with mapping a 2x2 image to a 1x1</li>
+<li>Then try to think about a 4x4 -&gt; 2x2</li>
+<li>It can help to write out: for the pixel in our minified image at coordinate 0,0, which 4 pixels from the original image contribute?</li>
+<li>What abut for 0,1</li>
+<li>1,0? 1,1? etc.</li>
+</ul>
+</section>
+<section id="takeaway-from-this-part-of-the-assignment" class="slide level2">
+<h2>Takeaway from this part of the assignment</h2>
+<ul>
+<li>Take a tough coding ask</li>
+<li>Break it down to the smallest possible version, and get it working</li>
+<li>Expand slightly, make sure it still works</li>
+<li>Might remind you of “proof by induction”</li>
+</ul>
+</section>
+<section id="lists-and-strings-concat-append" class="slide level2">
+<h2>Lists and Strings: Concat, Append</h2>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Example of concatenation</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>list1 <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
@@ -443,33 +473,48 @@ Prof.&nbsp;Nick Vincent
 <span id="cb1-12"><a href="#cb1-12"></a></span>
 <span id="cb1-13"><a href="#cb1-13"></a><span class="co"># Example of append (only for lists)</span></span>
 <span id="cb1-14"><a href="#cb1-14"></a>list1.append(<span class="dv">4</span>)  <span class="co"># Appending an element to a list</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="bu">print</span>(<span class="st">"List after append:"</span>, list1)</span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># Example of indexing (applicable to both)</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a>list_element <span class="op">=</span> list1[<span class="dv">0</span>]  <span class="co"># Accessing the first element of the list</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>string_char <span class="op">=</span> string1[<span class="dv">0</span>]  <span class="co"># Accessing the first character of the string</span></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="bu">print</span>(<span class="st">"First element of list:"</span>, list_element)</span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="bu">print</span>(<span class="st">"First character of string:"</span>, string_char)</span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="co"># Example of mutating lists (not possible with strings)</span></span>
-<span id="cb1-24"><a href="#cb1-24"></a>list1[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Changing the first element of the list</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="bu">print</span>(<span class="st">"List after mutation:"</span>, list1)</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co"># Trying to mutate a string (will raise an error)</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a><span class="cf">try</span>:</span>
-<span id="cb1-29"><a href="#cb1-29"></a>    string1[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"H"</span></span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="cf">except</span> <span class="pp">TypeError</span> <span class="im">as</span> e:</span>
-<span id="cb1-31"><a href="#cb1-31"></a>    <span class="bu">print</span>(<span class="st">"Error when trying to mutate a string:"</span>, e)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="bu">print</span>(<span class="st">"List after append:"</span>, list1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Concatenated List: [1, 2, 3, 4, 5, 6]
 Concatenated String: helloworld
-List after append: [1, 2, 3, 4]
-First element of list: 1
+List after append: [1, 2, 3, 4]</code></pre>
+</div>
+</div>
+</section>
+<section id="list-access-mutation" class="slide level2">
+<h2>List Access, Mutation</h2>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># Example of indexing (applicable to both)</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>list_element <span class="op">=</span> list1[<span class="dv">0</span>]  <span class="co"># Accessing the first element of the list</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>string_char <span class="op">=</span> string1[<span class="dv">0</span>]  <span class="co"># Accessing the first character of the string</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="bu">print</span>(<span class="st">"First element of list:"</span>, list_element)</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="bu">print</span>(<span class="st">"First character of string:"</span>, string_char)</span>
+<span id="cb3-6"><a href="#cb3-6"></a></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co"># Example of mutating lists (not possible with strings)</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a>list1[<span class="dv">0</span>] <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Changing the first element of the list</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="bu">print</span>(<span class="st">"List after mutation:"</span>, list1)</span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="co"># Trying to mutate a string (will raise an error)</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="cf">try</span>:</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    string1[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"H"</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="cf">except</span> <span class="pp">TypeError</span> <span class="im">as</span> e:</span>
+<span id="cb3-15"><a href="#cb3-15"></a>    <span class="bu">print</span>(<span class="st">"Error when trying to mutate a string:"</span>, e)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>First element of list: 1
 First character of string: h
 List after mutation: [10, 2, 3, 4]
 Error when trying to mutate a string: 'str' object does not support item assignment</code></pre>
 </div>
 </div>
+</section>
+<section id="lists-vs.-strings-summary" class="slide level2">
+<h2>Lists vs.&nbsp;Strings: Summary</h2>
+<ul>
+<li>Concatenation is shown for both lists and strings using the + operator.</li>
+<li>Append is demonstrated only for a list, as it’s a mutable type.</li>
+<li>Indexing is used to access elements of both lists and strings.</li>
+<li>Mutating is performed on a list but attempting the same on a string results in a TypeError since strings are immutable in Python.</li>
+</ul>
 </section>
 <section id="recursive-code-writing-questions-from-last-lecture" class="slide level2">
 <h2>Recursive code-writing questions from last lecture</h2>
@@ -481,19 +526,19 @@ Error when trying to mutate a string: 'str' object does not support item assignm
 </section>
 <section id="recursive-reverse-list" class="slide level2">
 <h2>Recursive Reverse List</h2>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> reverseList(lst):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="co"># Base case: if the list is empty or has only one element, return it</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a>    <span class="cf">if</span> <span class="bu">len</span>(lst) <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
-<span id="cb3-4"><a href="#cb3-4"></a>        <span class="cf">return</span> lst</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="cf">else</span>:</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="co"># Recursive case: reverse the rest of the list and append the first element</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>        <span class="cf">return</span> reverseList(lst[<span class="dv">1</span>:]) <span class="op">+</span> [lst[<span class="dv">0</span>]]</span>
-<span id="cb3-8"><a href="#cb3-8"></a></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># Example usage</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a>example_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb3-11"><a href="#cb3-11"></a><span class="bu">print</span>(<span class="st">"Original List:"</span>, example_list)</span>
-<span id="cb3-12"><a href="#cb3-12"></a><span class="bu">print</span>(<span class="st">"Reversed List:"</span>, reverseList(example_list))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> reverseList(lst):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="co"># Base case: if the list is empty or has only one element, return it</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="cf">if</span> <span class="bu">len</span>(lst) <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
+<span id="cb5-4"><a href="#cb5-4"></a>        <span class="cf">return</span> lst</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-6"><a href="#cb5-6"></a>        <span class="co"># Recursive case: reverse the rest of the list and append the first element</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>        <span class="cf">return</span> reverseList(lst[<span class="dv">1</span>:]) <span class="op">+</span> [lst[<span class="dv">0</span>]]</span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co"># Example usage</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a>example_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="bu">print</span>(<span class="st">"Original List:"</span>, example_list)</span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="bu">print</span>(<span class="st">"Reversed List:"</span>, reverseList(example_list))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Original List: [1, 2, 3, 4, 5]
 Reversed List: [5, 4, 3, 2, 1]</code></pre>
@@ -511,36 +556,6 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 </section>
 <section id="recursive-count-vowels" class="slide level2">
 <h2>Recursive Count Vowels</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> count_vowels(st):</span>
-<span id="cb5-2"><a href="#cb5-2"></a>    vowels <span class="op">=</span> <span class="st">"aeiouAEIOU"</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>    </span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="co"># Base case: if the string is empty</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>    <span class="cf">if</span> <span class="bu">len</span>(st) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb5-6"><a href="#cb5-6"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>    <span class="cf">else</span>:</span>
-<span id="cb5-8"><a href="#cb5-8"></a>        <span class="co"># Check if the first character is a vowel</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>        first_char_vowel_count <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> st[<span class="dv">0</span>] <span class="kw">in</span> vowels <span class="cf">else</span> <span class="dv">0</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>        <span class="co"># Recursive call on the rest of the string</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>        <span class="cf">return</span> first_char_vowel_count <span class="op">+</span> count_vowels(st[<span class="dv">1</span>:])</span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a><span class="co"># Example usage</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>example_string <span class="op">=</span> <span class="st">"Hello World"</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a><span class="bu">print</span>(<span class="ss">f"Number of vowels in '</span><span class="sc">{</span>example_string<span class="sc">}</span><span class="ss">':"</span>, count_vowels(example_string))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Number of vowels in 'Hello World': 3</code></pre>
-</div>
-</div>
-</section>
-<section id="explanation-1" class="slide level2">
-<h2>Explanation</h2>
-<ul>
-<li>Base Case: If the string is empty, return 0 since there are no vowels in an empty string.</li>
-<li>Recursive Case: Check if the first character of the string is a vowel. If it is, return 1 plus the result of the recursive call on the rest of the string. If it’s not a vowel, just return the result of the recursive call on the rest of the string.</li>
-</ul>
-</section>
-<section id="recursive-palindrome" class="slide level2">
-<h2>Recursive Palindrome</h2>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> count_vowels(st):</span>
 <span id="cb7-2"><a href="#cb7-2"></a>    vowels <span class="op">=</span> <span class="st">"aeiouAEIOU"</span></span>
@@ -562,20 +577,41 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 </div>
 </div>
 </section>
+<section id="explanation-1" class="slide level2">
+<h2>Explanation</h2>
+<ul>
+<li>Base Case: If the string is empty, return 0 since there are no vowels in an empty string.</li>
+<li>Recursive Case: Check if the first character of the string is a vowel. If it is, return 1 plus the result of the recursive call on the rest of the string. If it’s not a vowel, just return the result of the recursive call on the rest of the string.</li>
+</ul>
+</section>
+<section id="recursive-palindrome" class="slide level2">
+<h2>Recursive Palindrome</h2>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> count_vowels(st):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    vowels <span class="op">=</span> <span class="st">"aeiouAEIOU"</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>    </span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="co"># Base case: if the string is empty</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">if</span> <span class="bu">len</span>(st) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb9-6"><a href="#cb9-6"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="cf">else</span>:</span>
+<span id="cb9-8"><a href="#cb9-8"></a>        <span class="co"># Check if the first character is a vowel</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>        first_char_vowel_count <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> st[<span class="dv">0</span>] <span class="kw">in</span> vowels <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>        <span class="co"># Recursive call on the rest of the string</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>        <span class="cf">return</span> first_char_vowel_count <span class="op">+</span> count_vowels(st[<span class="dv">1</span>:])</span>
+<span id="cb9-12"><a href="#cb9-12"></a></span>
+<span id="cb9-13"><a href="#cb9-13"></a><span class="co"># Example usage</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>example_string <span class="op">=</span> <span class="st">"Hello World"</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a><span class="bu">print</span>(<span class="ss">f"Number of vowels in '</span><span class="sc">{</span>example_string<span class="sc">}</span><span class="ss">':"</span>, count_vowels(example_string))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of vowels in 'Hello World': 3</code></pre>
+</div>
+</div>
+</section>
 <section id="explanation-2" class="slide level2">
 <h2>Explanation</h2>
 <ul>
 <li>Base Case: If the length of the word is 0 or 1, it is a palindrome (a single character or an empty string is trivially a palindrome).</li>
 <li>Recursive Case: Check if the first and last characters of the word are the same. If they are, make a recursive call with the word minus its first and last characters. If they are not the same, return False.</li>
-</ul>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<ul>
-<li>Concatenation is shown for both lists and strings using the + operator.</li>
-<li>Append is demonstrated only for a list, as it’s a mutable type.</li>
-<li>Indexing is used to access elements of both lists and strings.</li>
-<li>Mutating is performed on a list but attempting the same on a string results in a TypeError since strings are immutable in Python.</li>
 </ul>
 </section>
 <section id="reminder-of-recursion-learning-goals" class="slide level2">
@@ -586,6 +622,11 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 <li>Able to write a simple recursive function that does not return any value, e.g.&nbsp;to draw concentric circles</li>
 <li>Understands the difference between executing a line of code before a recursive call vs.&nbsp;after a recursive call</li>
 <li>Is able to apply the 3 laws of recursion to write or analyze a basic recursive fruitful function</li>
+</ol>
+</section>
+<section id="reminder-of-recursion-learning-goals-1" class="slide level2">
+<h2>Reminder of Recursion Learning Goals</h2>
+<ol start="6" type="1">
 <li>Able to write a factorial function recursively</li>
 <li>Able to write code that can produce the sum of a list using recursion</li>
 <li>Able to write code that can reverse a string using recursion</li>
@@ -612,35 +653,35 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 </section>
 <section id="recall-recursive-sum" class="slide level2">
 <h2>Recall: recursive sum</h2>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> recursive_sum(lst):</span>
-<span id="cb9-2"><a href="#cb9-2"></a>    <span class="co"># Base case: if the list is empty</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">if</span> <span class="kw">not</span> lst: <span class="co"># if you prefer len(list) == 0, that works great too!</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb9-5"><a href="#cb9-5"></a>    <span class="cf">else</span>:</span>
-<span id="cb9-6"><a href="#cb9-6"></a>        <span class="co"># Recursive case: sum the first element with the sum of the rest of the list</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a>        <span class="cf">return</span> lst[<span class="dv">0</span>] <span class="op">+</span> recursive_sum(lst[<span class="dv">1</span>:])</span>
-<span id="cb9-8"><a href="#cb9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9"></a><span class="co"># Example usage</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a>example_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="bu">print</span>(<span class="st">"Sum of the list:"</span>, recursive_sum(example_list))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> recursive_sum(lst):</span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="co"># Base case: if the list is empty</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">if</span> <span class="kw">not</span> lst: <span class="co"># if you prefer len(list) == 0, that works great too!</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-6"><a href="#cb11-6"></a>        <span class="co"># Recursive case: sum the first element with the sum of the rest of the list</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a>        <span class="cf">return</span> lst[<span class="dv">0</span>] <span class="op">+</span> recursive_sum(lst[<span class="dv">1</span>:])</span>
+<span id="cb11-8"><a href="#cb11-8"></a></span>
+<span id="cb11-9"><a href="#cb11-9"></a><span class="co"># Example usage</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a>example_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb11-11"><a href="#cb11-11"></a><span class="bu">print</span>(<span class="st">"Sum of the list:"</span>, recursive_sum(example_list))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Sum of the list: 15</code></pre>
 </div>
 </div>
 <p>vs</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">def</span> count_vowels(st):</span>
-<span id="cb11-2"><a href="#cb11-2"></a>    vowels <span class="op">=</span> <span class="st">"aeiouAEIOU"</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>    </span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="co"># Base case: if the string is empty</span></span>
-<span id="cb11-5"><a href="#cb11-5"></a>    <span class="cf">if</span> <span class="bu">len</span>(st) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb11-6"><a href="#cb11-6"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb11-7"><a href="#cb11-7"></a>    <span class="cf">else</span>:</span>
-<span id="cb11-8"><a href="#cb11-8"></a>        <span class="co"># Check if the first character is a vowel</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a>        first_char_vowel_count <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> st[<span class="dv">0</span>] <span class="kw">in</span> vowels <span class="cf">else</span> <span class="dv">0</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a>        <span class="co"># Recursive call on the rest of the string</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a>        <span class="cf">return</span> first_char_vowel_count <span class="op">+</span> count_vowels(st[<span class="dv">1</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> count_vowels(st):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    vowels <span class="op">=</span> <span class="st">"aeiouAEIOU"</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>    </span>
+<span id="cb13-4"><a href="#cb13-4"></a>    <span class="co"># Base case: if the string is empty</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="cf">if</span> <span class="bu">len</span>(st) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb13-6"><a href="#cb13-6"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-8"><a href="#cb13-8"></a>        <span class="co"># Check if the first character is a vowel</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>        first_char_vowel_count <span class="op">=</span> <span class="dv">1</span> <span class="cf">if</span> st[<span class="dv">0</span>] <span class="kw">in</span> vowels <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb13-10"><a href="#cb13-10"></a>        <span class="co"># Recursive call on the rest of the string</span></span>
+<span id="cb13-11"><a href="#cb13-11"></a>        <span class="cf">return</span> first_char_vowel_count <span class="op">+</span> count_vowels(st[<span class="dv">1</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="sum-vs-count" class="slide level2">
@@ -648,11 +689,10 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 <p>We added one key line</p>
 <p><code>first_char_vowel_count = 1 if st[0] in vowels else 0</code></p>
 <p>(the three line, more familiar longer form version of this would be)</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>first_char_vowel_count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a><span class="cf">if</span> st[<span class="dv">0</span>] <span class="kw">in</span> vowels:</span>
-<span id="cb12-3"><a href="#cb12-3"></a>    first_char_vowel_count <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>But everything else is almost the same.</p>
-<p>However, we need to have a good amount of comfort with Python language features (if statements, return, etc.) to make the leap.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>first_char_vowel_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="cf">if</span> st[<span class="dv">0</span>] <span class="kw">in</span> vowels:</span>
+<span id="cb14-3"><a href="#cb14-3"></a>    first_char_vowel_count <span class="op">=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Everything else is almost the same. However, we need to have a good amount of comfort with Python language features (if statements, return, etc.) to make the leap.</p>
 </section>
 <section id="general-computational-thinking-strategy-mapping-new-problems-to-known-problems" class="slide level2">
 <h2>General computational thinking strategy: mapping new problems to known problems</h2>
@@ -668,6 +708,9 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 <h2>How to apply this strategy</h2>
 <p>If you’re stuck on a question on a midterm (in 120, or future courses), maybe take an initial stab at solving from “first principles”. But nothing seems to work (or you’ve written some code, but when you walk through it doesn’t seem to fit), try mapping to known problems.</p>
 <p>“Counting is actually a kind of summation”</p>
+</section>
+<section id="applying-this-strategy-for-cs-interviews" class="slide level2">
+<h2>Applying this strategy for CS interviews</h2>
 <p>Note: another place this is very important is CS interview coding. Many “Leetcode”-type problems are variants of certain problems you’ll see in future CS courses (depth first search, breadth first search, binary tree traversal, etc.).</p>
 <p>Some interview questions involve mapping a seemingly “new” problem to a binary search!</p>
 </section>
@@ -676,6 +719,93 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 </section>
 <section id="quick-intro-to-dicts" class="slide level2">
 <h2>Quick intro to dicts</h2>
+<p>Dicts – what are they good for?</p>
+<p>Lists store things in order.</p>
+<p>Dicts let us map “keys” to “values”</p>
+</section>
+<section id="mental-model-of-lists-vs-dicts" class="slide level2">
+<h2>Mental model of lists vs Dicts</h2>
+<p>If a list is box we throw sheets of paper into… a dict is an infinitely large set of cabinets where each cabinet has its own name.</p>
+</section>
+<section id="example-social-media-profile" class="slide level2">
+<h2>Example: Social Media Profile</h2>
+<p>Say we want to write some code to handle a user profile feature for a social media site.</p>
+<p>User must have a username, a profile pic, a biography, a friends list, etc.</p>
+<p>We could use lists…</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>my_list <span class="op">=</span> []</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co"># the user name will go in index zero</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>my_list.append(<span class="st">"nickmvincent"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="co"># the profile pic will go in index one...</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>my_list.append(<span class="st">"images/pic_of_nick.jpeg"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="co"># the bio will go in index two...</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>my_list.append(<span class="st">"Nick is an assistant prof in CS..."</span>)</span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['nickmvincent', 'images/pic_of_nick.jpeg', 'Nick is an assistant prof in CS...']</code></pre>
+</div>
+</div>
+</section>
+<section id="example-social-media-profile-1" class="slide level2">
+<h2>Example: Social Media Profile</h2>
+<p>But everyone we work with has to memorize this syntax! username at list[0], pic at list[1], etc. This seems like it might frustrate people.</p>
+<p>Worse, what if the set of requirements changes (our boss gets rid of user bio!)</p>
+</section>
+<section id="example-social-media-profile-2" class="slide level2">
+<h2>Example: Social Media Profile</h2>
+<p>-Enter dicts: map key to value. -Key can be anything, value can be anything</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a>my_dict <span class="op">=</span> {</span>
+<span id="cb17-2"><a href="#cb17-2"></a>    <span class="st">"username"</span>: <span class="st">"nickmvincent"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>    <span class="st">"prof_pic"</span>: <span class="st">"images/pic_of_nick.jpeg"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4"></a>    <span class="st">"bio"</span>: <span class="st">"Nick is a ..."</span>,</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    <span class="st">"friend_count"</span>: <span class="dv">6</span>,</span>
+<span id="cb17-6"><a href="#cb17-6"></a>    <span class="st">"friend_lists"</span>: [<span class="st">"person1"</span>, <span class="st">"person2"</span>]</span>
+<span id="cb17-7"><a href="#cb17-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="things-to-note" class="slide level2">
+<h2>Things to note</h2>
+<ul>
+<li>Syntax: we use curly braces {}. Each entry of the dict is a key (must be string), a colon, then a value (can be anything!), then a comma</li>
+<li>We can have infinite keys.</li>
+<li>If value can be anything, can we have dict of dicts?</li>
+<li>Yes!</li>
+</ul>
+</section>
+<section id="try-it-out" class="slide level2">
+<h2>Try it out</h2>
+<ul>
+<li>As always, try it out</li>
+<li>See https://realpython.com/python-dicts/ for a nice overview</li>
+</ul>
+</section>
+<section id="do-i-need-to-learn-dicts" class="slide level2">
+<h2>Do I need to learn dicts?</h2>
+<ul>
+<li>Not required for assignments</li>
+<li>But might be helpful</li>
+<li>Can keep code clean</li>
+<li>Must know basic syntax, but no tricky questions planned</li>
+<li>Recommendation: successfully define a dict in your terminal and write it on your cheat sheet for basic syntax!</li>
+</ul>
+</section>
+<section id="visualizer" class="slide level2">
+<h2>Visualizer</h2>
+<ul>
+<li>A quick reminder to try the visualizer if you feel conceptually stuck.</li>
+<li>It can also help work through problems.</li>
+</ul>
+</section>
+<section id="the-debugger" class="slide level2">
+<h2>The Debugger</h2>
+<ul>
+<li>Resource for VS Code: https://code.visualstudio.com/docs/editor/debugging</li>
+<li>Resource for Replit: https://docs.replit.com/programming-ide/workspace-features/debugging</li>
+<li>Idea: “step through” your code</li>
+<li>Kind of like having print statements on every line</li>
+<li>You can see all the variables in Python’s “temporary universe”, much like the visualizer</li>
+</ul>
 <div class="footer footer-default">
 
 </div>

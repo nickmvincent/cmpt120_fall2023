@@ -19,11 +19,34 @@ jupyter: python3
 
 ## Agenda
 - Check in on Project Part 1
-- One more quick review of list vs. string
-- Answers to recursive code-writing practice problems
+- Quick review of list vs. string
+- Recursive code-writing practice problems
 - Test-taking and interview strategy: mapping new problems to known problems
-- Strategies for working together fairly (important for future courses!)
+- Dicts
+- Visualizer, debugger, more comments on study strategies
+- Practice Final
 
+
+## Project
+
+- Take a look at latest announcements for some clarifications
+- Keep asking questions! I really appreciate them. These kinds of assignments are tough (and in the real world, you'll have to ask your manager to clarify ambiguous tasks you've been given :D )
+- Strategies for working together
+
+## Project: minify
+
+- This is a tough question!
+- Try to start with mapping a 2x2 image to a 1x1
+- Then try to think about a 4x4 -> 2x2
+- It can help to write out: for the pixel in our minified image at coordinate 0,0, which 4 pixels from the original image contribute? 
+- What abut for 0,1
+- 1,0? 1,1? etc.
+
+## Takeaway from this part of the assignment
+- Take a tough coding ask
+- Break it down to the smallest possible version, and get it working
+- Expand slightly, make sure it still works
+- Might remind you of "proof by induction"
 
 ## Lists and Strings: Concat, Append
 
@@ -333,7 +356,7 @@ my_dict = {
 
 - Syntax: we use curly braces {}. Each entry of the dict is a key (must be string), a colon, then a value (can be anything!), then a comma
 - We can have infinite keys.
--If value can be anything, can we have dict of dicts?
+- If value can be anything, can we have dict of dicts?
 - Yes!
 
 ## Try it out
@@ -341,3 +364,22 @@ my_dict = {
 - See https://realpython.com/python-dicts/ for a nice overview
 
 ## Do I need to learn dicts?
+
+- Not required for assignments
+- But might be helpful
+- Can keep code clean
+- Must know basic syntax, but no tricky questions planned
+- Recommendation: successfully define a dict in your terminal and write it on your cheat sheet for basic syntax!
+
+## Visualizer
+
+- A quick reminder to try the visualizer if you feel conceptually stuck.
+- It can also help work through problems.
+
+
+## The Debugger
+- Resource for VS Code: https://code.visualstudio.com/docs/editor/debugging
+- Resource for Replit: https://docs.replit.com/programming-ide/workspace-features/debugging
+- Idea: "step through" your code
+- Kind of like having print statements on every line
+- You can see all the variables in Python's "temporary universe", much like the visualizer

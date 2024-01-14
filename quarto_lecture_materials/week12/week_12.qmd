@@ -43,9 +43,10 @@ jupyter: python3
 - 1,0? 1,1? etc.
 
 ## Takeaway from this part of the assignment
-- Take a tough coding ask
-- Break it down to the smallest possible version, and get it working
-- Expand slightly, make sure it still works
+
+- Take a tough coding task
+- Break it down to the smallest possible version, and get it working (e.g. solve for 2x2->1x1)
+- Expand slightly, make sure it still works (see if your approach works for 4x4->2x2)
 - Might remind you of "proof by induction"
 
 ## Lists and Strings: Concat, Append
@@ -90,10 +91,12 @@ except TypeError as e:
 ```
 
 ## Lists vs. Strings: Summary
-- Concatenation is shown for both lists and strings using the + operator.
-- Append is demonstrated only for a list, as it's a mutable type.
+- Concatenation for both lists and strings using the + operator.
+- Append only for a list, as it's a mutable type.
 - Indexing is used to access elements of both lists and strings.
 - Mutating is performed on a list but attempting the same on a string results in a TypeError since strings are immutable in Python.
+- In short: conceptually, lists and strings are very similar. But we need to know some Python implementation details to avoid errors.
+- More on the side of "Python trivia" than "deep concepts"
 
 
 ## Recursive code-writing questions from last lecture
@@ -101,6 +104,7 @@ except TypeError as e:
 - Reverse List
 - Count Vowels
 - Palindrome
+- Recursive binary search?
 
 ## Recursive Reverse List
 ```{python}
@@ -352,16 +356,54 @@ my_dict = {
 }
 ```
 
+## Basic dict features
+```{python}
+#| echo: true
+# Creating a dictionary
+my_dict = {"name": "Alice", "age": 25, "city": "New York"}
+
+# Accessing items
+print(my_dict["name"])  # Outputs: Alice
+
+# Adding a new key-value pair
+my_dict["email"] = "alice@example.com"
+
+# Updating an existing key
+my_dict["age"] = 26
+
+# Removing a key-value pair
+del my_dict["city"]
+
+# Print the updated dictionary
+print(my_dict)
+```
+
+## Basic dict features
+Key Characteristics:
+
+- Key-Value Pairs: Each item in a dictionary is a key-value pair.
+- Unordered: Dictionaries are not ordered, meaning the order of items does not matter.
+- Mutable: You can modify, add, or remove items after the dictionary's creation.
+- Unique Keys: No two keys can be the same in a dictionary.
+
+## Basic Operations:
+
+- Creating: Use curly braces {} with key-value pairs or the dict() constructor. (`my_dict = {"k1": v1, "k2": v2}`)
+- Accessing: Access values by referring to their keys. (`my_dict["email"]`)
+- Adding/Updating: Assign a value to a key to add or update. (`my_dict["age"] = 26`)
+- Removing: Use methods like pop() or del. (don't need to worry about this for now!)
+
 ## Things to note
 
 - Syntax: we use curly braces {}. Each entry of the dict is a key (must be string), a colon, then a value (can be anything!), then a comma
+- `my_dict = {"k1": v1, "k2": v2}`
 - We can have infinite keys.
-- If value can be anything, can we have dict of dicts?
-- Yes!
+- If value can be anything, can we have dict of dicts? (Yes!)
 
 ## Try it out
-- As always, try it out
+- As is often the case, best way to learn is to try it out
 - See https://realpython.com/python-dicts/ for a nice overview
+
 
 ## Do I need to learn dicts?
 
@@ -383,3 +425,12 @@ my_dict = {
 - Idea: "step through" your code
 - Kind of like having print statements on every line
 - You can see all the variables in Python's "temporary universe", much like the visualizer
+
+## Tips for Group Work
+
+## Upcoming
+
+- Practice final to be posted
+- Make sure you're caught up on readings!
+- Once caught up on readings and assignments, consider allocating a small amount of time to play around in terminal, try writing code on paper, transcribing code from the slides
+- Optional challenge: try to implement recursive binary search (we'll go over next week)

@@ -450,9 +450,9 @@ Prof.&nbsp;Nick Vincent
 <section id="takeaway-from-this-part-of-the-assignment" class="slide level2">
 <h2>Takeaway from this part of the assignment</h2>
 <ul>
-<li>Take a tough coding ask</li>
-<li>Break it down to the smallest possible version, and get it working</li>
-<li>Expand slightly, make sure it still works</li>
+<li>Take a tough coding task</li>
+<li>Break it down to the smallest possible version, and get it working (e.g.&nbsp;solve for 2x2-&gt;1x1)</li>
+<li>Expand slightly, make sure it still works (see if your approach works for 4x4-&gt;2x2)</li>
 <li>Might remind you of “proof by induction”</li>
 </ul>
 </section>
@@ -510,10 +510,12 @@ Error when trying to mutate a string: 'str' object does not support item assignm
 <section id="lists-vs.-strings-summary" class="slide level2">
 <h2>Lists vs.&nbsp;Strings: Summary</h2>
 <ul>
-<li>Concatenation is shown for both lists and strings using the + operator.</li>
-<li>Append is demonstrated only for a list, as it’s a mutable type.</li>
+<li>Concatenation for both lists and strings using the + operator.</li>
+<li>Append only for a list, as it’s a mutable type.</li>
 <li>Indexing is used to access elements of both lists and strings.</li>
 <li>Mutating is performed on a list but attempting the same on a string results in a TypeError since strings are immutable in Python.</li>
+<li>In short: conceptually, lists and strings are very similar. But we need to know some Python implementation details to avoid errors.</li>
+<li>More on the side of “Python trivia” than “deep concepts”</li>
 </ul>
 </section>
 <section id="recursive-code-writing-questions-from-last-lecture" class="slide level2">
@@ -522,6 +524,7 @@ Error when trying to mutate a string: 'str' object does not support item assignm
 <li>Reverse List</li>
 <li>Count Vowels</li>
 <li>Palindrome</li>
+<li>Recursive binary search?</li>
 </ul>
 </section>
 <section id="recursive-reverse-list" class="slide level2">
@@ -764,19 +767,64 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 <span id="cb17-7"><a href="#cb17-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="basic-dict-features" class="slide level2">
+<h2>Basic dict features</h2>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># Creating a dictionary</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>my_dict <span class="op">=</span> {<span class="st">"name"</span>: <span class="st">"Alice"</span>, <span class="st">"age"</span>: <span class="dv">25</span>, <span class="st">"city"</span>: <span class="st">"New York"</span>}</span>
+<span id="cb18-3"><a href="#cb18-3"></a></span>
+<span id="cb18-4"><a href="#cb18-4"></a><span class="co"># Accessing items</span></span>
+<span id="cb18-5"><a href="#cb18-5"></a><span class="bu">print</span>(my_dict[<span class="st">"name"</span>])  <span class="co"># Outputs: Alice</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a></span>
+<span id="cb18-7"><a href="#cb18-7"></a><span class="co"># Adding a new key-value pair</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a>my_dict[<span class="st">"email"</span>] <span class="op">=</span> <span class="st">"alice@example.com"</span></span>
+<span id="cb18-9"><a href="#cb18-9"></a></span>
+<span id="cb18-10"><a href="#cb18-10"></a><span class="co"># Updating an existing key</span></span>
+<span id="cb18-11"><a href="#cb18-11"></a>my_dict[<span class="st">"age"</span>] <span class="op">=</span> <span class="dv">26</span></span>
+<span id="cb18-12"><a href="#cb18-12"></a></span>
+<span id="cb18-13"><a href="#cb18-13"></a><span class="co"># Removing a key-value pair</span></span>
+<span id="cb18-14"><a href="#cb18-14"></a><span class="kw">del</span> my_dict[<span class="st">"city"</span>]</span>
+<span id="cb18-15"><a href="#cb18-15"></a></span>
+<span id="cb18-16"><a href="#cb18-16"></a><span class="co"># Print the updated dictionary</span></span>
+<span id="cb18-17"><a href="#cb18-17"></a><span class="bu">print</span>(my_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Alice
+{'name': 'Alice', 'age': 26, 'email': 'alice@example.com'}</code></pre>
+</div>
+</div>
+</section>
+<section id="basic-dict-features-1" class="slide level2">
+<h2>Basic dict features</h2>
+<p>Key Characteristics:</p>
+<ul>
+<li>Key-Value Pairs: Each item in a dictionary is a key-value pair.</li>
+<li>Unordered: Dictionaries are not ordered, meaning the order of items does not matter.</li>
+<li>Mutable: You can modify, add, or remove items after the dictionary’s creation.</li>
+<li>Unique Keys: No two keys can be the same in a dictionary.</li>
+</ul>
+</section>
+<section id="basic-operations" class="slide level2">
+<h2>Basic Operations:</h2>
+<ul>
+<li>Creating: Use curly braces {} with key-value pairs or the dict() constructor. (<code>my_dict = {"k1": v1, "k2": v2}</code>)</li>
+<li>Accessing: Access values by referring to their keys. (<code>my_dict["email"]</code>)</li>
+<li>Adding/Updating: Assign a value to a key to add or update. (<code>my_dict["age"] = 26</code>)</li>
+<li>Removing: Use methods like pop() or del. (don’t need to worry about this for now!)</li>
+</ul>
+</section>
 <section id="things-to-note" class="slide level2">
 <h2>Things to note</h2>
 <ul>
 <li>Syntax: we use curly braces {}. Each entry of the dict is a key (must be string), a colon, then a value (can be anything!), then a comma</li>
+<li><code>my_dict = {"k1": v1, "k2": v2}</code></li>
 <li>We can have infinite keys.</li>
-<li>If value can be anything, can we have dict of dicts?</li>
-<li>Yes!</li>
+<li>If value can be anything, can we have dict of dicts? (Yes!)</li>
 </ul>
 </section>
 <section id="try-it-out" class="slide level2">
 <h2>Try it out</h2>
 <ul>
-<li>As always, try it out</li>
+<li>As is often the case, best way to learn is to try it out</li>
 <li>See https://realpython.com/python-dicts/ for a nice overview</li>
 </ul>
 </section>
@@ -805,6 +853,18 @@ Reversed List: [5, 4, 3, 2, 1]</code></pre>
 <li>Idea: “step through” your code</li>
 <li>Kind of like having print statements on every line</li>
 <li>You can see all the variables in Python’s “temporary universe”, much like the visualizer</li>
+</ul>
+</section>
+<section id="tips-for-group-work" class="slide level2">
+<h2>Tips for Group Work</h2>
+</section>
+<section id="upcoming" class="slide level2">
+<h2>Upcoming</h2>
+<ul>
+<li>Practice final to be posted</li>
+<li>Make sure you’re caught up on readings!</li>
+<li>Once caught up on readings and assignments, consider allocating a small amount of time to play around in terminal, try writing code on paper, transcribing code from the slides</li>
+<li>Optional challenge: try to implement recursive binary search (we’ll go over next week)</li>
 </ul>
 <div class="footer footer-default">
 

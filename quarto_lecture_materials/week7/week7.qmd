@@ -282,17 +282,10 @@ print(f"The decimal representation of binary {binary_str} is {binary_to_decimal(
 
 ## Another numbering system: Hexadecimal
 
-- Used for color representations
+- Used for color representations, among other uses
 
 
-## And more!
-
-- Unicode
-- Mojibake
-  - https://en.wikipedia.org/wiki/Mojibake
-
-
-## Parallel lists
+## Using our recsys example (parallel lists) to handle this new content
 ```{python}
 print("Lets find the most popular coffee shop")
 
